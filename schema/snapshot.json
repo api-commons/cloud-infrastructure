@@ -8,12 +8,13 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.828,
-      "x-commons-providers": 24,
+      "x-commons-share": 0.897,
+      "x-commons-providers": 26,
       "x-commons-spellings": [
         "id",
         "snapshotId",
         "slug",
+        "uuid",
         "objectId",
         "snapshot_id",
         "guid"
@@ -22,8 +23,8 @@
     "name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.759,
-      "x-commons-providers": 22,
+      "x-commons-share": 0.793,
+      "x-commons-providers": 23,
       "x-commons-spellings": [
         "name",
         "displayName",
@@ -46,8 +47,8 @@
     "created_at": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.586,
-      "x-commons-providers": 17,
+      "x-commons-share": 0.621,
+      "x-commons-providers": 18,
       "x-commons-spellings": [
         "created_at",
         "createdAt",
@@ -76,8 +77,8 @@
     "size": {
       "type": "integer",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.379,
-      "x-commons-providers": 11,
+      "x-commons-share": 0.448,
+      "x-commons-providers": 13,
       "x-commons-spellings": [
         "size",
         "min_disk_size",
@@ -88,8 +89,8 @@
     "type": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.379,
-      "x-commons-providers": 11,
+      "x-commons-share": 0.414,
+      "x-commons-providers": 12,
       "x-commons-spellings": [
         "type"
       ]
@@ -117,6 +118,31 @@
         "volume_id"
       ]
     },
+    "region": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.276,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "region",
+        "region_id",
+        "location",
+        "zone",
+        "availabilityZone"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.241,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "updated_at",
+        "updatedAt",
+        "updated"
+      ],
+      "format": "date-time"
+    },
     "project_id": {
       "type": "string",
       "x-commons-tier": "extended",
@@ -130,30 +156,6 @@
         "project",
         "tenant_id"
       ]
-    },
-    "region": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.207,
-      "x-commons-providers": 6,
-      "x-commons-spellings": [
-        "region",
-        "location",
-        "zone",
-        "availabilityZone"
-      ]
-    },
-    "updated_at": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.207,
-      "x-commons-providers": 6,
-      "x-commons-spellings": [
-        "updated_at",
-        "updatedAt",
-        "updated"
-      ],
-      "format": "date-time"
     }
   },
   "required": [

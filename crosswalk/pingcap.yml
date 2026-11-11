@@ -17,7 +17,7 @@ concepts:
       name:
       - displayName
       - name
-      id: id
+      id: record_id
     core_coverage: 1.0
     evidence:
     - openapi/_original/pingcap-tidb-cloud-dedicated-v1beta1-openapi-original.json#GET /regions

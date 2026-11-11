@@ -9,10 +9,10 @@ concepts:
     - instance
     - vm
     properties:
+      id: uuid
       status:
       - instance_state
       - state
-      id: uuid
     core_coverage: 0.5
     evidence:
     - openapi/_original/yugabytedb-node-instances-api-openapi.yml#DELETE /api/v1/customers/{cUUID}/providers/{pUUID}/instances/{instanceIP}

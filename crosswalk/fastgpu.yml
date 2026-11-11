@@ -7,8 +7,8 @@ concepts:
     path_segment:
     - instances
     properties:
-      status: status
       id: id
+      status: status
       created_at: created_at
     core_coverage: 0.75
     evidence:

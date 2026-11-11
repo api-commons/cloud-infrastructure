@@ -8,7 +8,6 @@ concepts:
     - servers
     properties:
       id: id
-      metadata: _metadata
       region: location
     core_coverage: 0.25
     evidence:

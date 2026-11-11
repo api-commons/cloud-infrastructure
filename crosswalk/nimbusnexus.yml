@@ -8,11 +8,11 @@ concepts:
     - instance
     - vm
     properties:
-      name: name
-      status: status
       id:
       - id
       - instance_id
+      name: name
+      status: status
       metadata: metadata
       image: image
       description: description
@@ -61,7 +61,8 @@ concepts:
   region:
     path_segment:
     - datacenters
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      name: label
+    core_coverage: 0.5
     evidence:
     - openapi/_original/external.json#GET /api/v1/account/datacenters

@@ -82,10 +82,22 @@ concepts:
       share: 0.068
       tier: long-tail
     properties:
+    - name: id
+      tier: core
+      providers: 64
+      share: 0.771
+      type: string
+      spellings:
+      - id
+      - instanceId
+      - instance_id
+      - slug
+      - guid
+      - uuid
     - name: name
       tier: core
-      providers: 62
-      share: 0.747
+      providers: 63
+      share: 0.759
       type: string
       spellings:
       - name
@@ -106,26 +118,14 @@ concepts:
       - state
       - lifecycleState
       - provisioningState
+      - power_state
       - powerState
       - PowerState
-      - power_state
       - instance_state
-    - name: id
-      tier: core
-      providers: 61
-      share: 0.735
-      type: string
-      spellings:
-      - id
-      - instanceId
-      - instance_id
-      - slug
-      - guid
-      - uuid
     - name: created_at
       tier: core
-      providers: 45
-      share: 0.542
+      providers: 46
+      share: 0.554
       type: string
       spellings:
       - created_at
@@ -138,8 +138,8 @@ concepts:
       - created-at
     - name: metadata
       tier: extended
-      providers: 39
-      share: 0.47
+      providers: 38
+      share: 0.458
       type: object
       spellings:
       - metadata
@@ -180,8 +180,8 @@ concepts:
       - gpuType
     - name: image
       tier: extended
-      providers: 26
-      share: 0.313
+      providers: 27
+      share: 0.325
       type: string
       spellings:
       - image
@@ -207,41 +207,42 @@ concepts:
       - publicIp
     - name: description
       tier: extended
-      providers: 19
-      share: 0.229
+      providers: 20
+      share: 0.241
       type: string
       spellings:
       - description
       - notes
       - Description
-    long_tail_count: 1546
+    long_tail_count: 1564
     long_tail_sample:
     - memory
     - project_id
     - updated_at
     - disk
     - user_data
-    - cpus
     - network_interfaces
+    - cpus
     - disks
     - private_ip
     - resources
     - source
     - version
-    - action
     - cluster
     - error
     - gpu_count
-    - network
     - spec
     - ssh_key
     - ssh_keys
+    - vm_id
     - volumes
+    - action
     - config
     - fqdn
     - host
     - jupyter_token
     - mac_address
+    - network
     - nics
     - operation_type
     - password
@@ -249,11 +250,10 @@ concepts:
     - progress
     - role
     - security_groups
-    - server
+    - start_time
     - started_at
     - target_link
     - time_created
-    - vm_id
     - action_type
     - address
   volume:
@@ -301,8 +301,8 @@ concepts:
     properties:
     - name: id
       tier: core
-      providers: 29
-      share: 0.806
+      providers: 30
+      share: 0.833
       type: string
       spellings:
       - id
@@ -333,8 +333,8 @@ concepts:
       - Status
     - name: created_at
       tier: core
-      providers: 22
-      share: 0.611
+      providers: 23
+      share: 0.639
       type: string
       spellings:
       - created_at
@@ -395,16 +395,16 @@ concepts:
       - Tags
     - name: instance_id
       tier: extended
-      providers: 9
-      share: 0.25
+      providers: 10
+      share: 0.278
       type: array
       spellings:
       - server
+      - attachments
       - attached_to
       - instance_id
       - droplet_ids
       - linode_id
-      - attachments
       - attachedTo
       - serverId
     - name: description
@@ -414,11 +414,11 @@ concepts:
       type: string
       spellings:
       - description
-    long_tail_count: 344
+    long_tail_count: 342
     long_tail_sample:
+    - updated_at
     - project_id
     - snapshot_id
-    - updated_at
     - time_created
     - auto_tuned_vpus_per_gb
     - autotune_policies
@@ -426,6 +426,7 @@ concepts:
     - backup_policy_id
     - block_size
     - block_volume_replicas
+    - bootable
     - cluster_placement_group_id
     - compartment_id
     - defined_tags
@@ -436,6 +437,7 @@ concepts:
     - is_reservations_enabled
     - kms_key_id
     - operation_type
+    - progress
     - size_in_g_bs
     - size_in_m_bs
     - source
@@ -444,8 +446,6 @@ concepts:
     - volume_backup_id
     - volume_group_id
     - vpus_per_gb
-    - action
-    - bootable
     - compute
     - continuation_token
     - deleted_at
@@ -454,8 +454,8 @@ concepts:
     - disk_uri
     - encrypted
     - end_time
+    - error
     - etag
-    - host_caching
   snapshot:
     segments_seen:
       snapshots: 25
@@ -500,20 +500,21 @@ concepts:
     properties:
     - name: id
       tier: core
-      providers: 24
-      share: 0.828
+      providers: 26
+      share: 0.897
       type: string
       spellings:
       - id
       - snapshotId
       - slug
+      - uuid
       - objectId
       - snapshot_id
       - guid
     - name: name
       tier: core
-      providers: 22
-      share: 0.759
+      providers: 23
+      share: 0.793
       type: string
       spellings:
       - name
@@ -532,8 +533,8 @@ concepts:
       - lifecycleState
     - name: created_at
       tier: core
-      providers: 17
-      share: 0.586
+      providers: 18
+      share: 0.621
       type: string
       spellings:
       - created_at
@@ -557,8 +558,8 @@ concepts:
       - attributes
     - name: size
       tier: extended
-      providers: 11
-      share: 0.379
+      providers: 13
+      share: 0.448
       type: integer
       spellings:
       - size
@@ -567,8 +568,8 @@ concepts:
       - sizeGigabytes
     - name: type
       tier: extended
-      providers: 11
-      share: 0.379
+      providers: 12
+      share: 0.414
       type: string
       spellings:
       - type
@@ -591,6 +592,26 @@ concepts:
       - resource_id
       - source
       - volume_id
+    - name: region
+      tier: extended
+      providers: 8
+      share: 0.276
+      type: string
+      spellings:
+      - region
+      - region_id
+      - location
+      - zone
+      - availabilityZone
+    - name: updated_at
+      tier: extended
+      providers: 7
+      share: 0.241
+      type: string
+      spellings:
+      - updated_at
+      - updatedAt
+      - updated
     - name: project_id
       tier: extended
       providers: 6
@@ -603,29 +624,11 @@ concepts:
       - organizationId
       - project
       - tenant_id
-    - name: region
-      tier: extended
-      providers: 6
-      share: 0.207
-      type: string
-      spellings:
-      - region
-      - location
-      - zone
-      - availabilityZone
-    - name: updated_at
-      tier: extended
-      providers: 6
-      share: 0.207
-      type: string
-      spellings:
-      - updated_at
-      - updatedAt
-      - updated
-    long_tail_count: 429
+    long_tail_count: 445
     long_tail_sample:
     - expires_at
     - snapshot_name
+    - version
     - bucket
     - deleted_at
     - disk_id
@@ -634,15 +637,15 @@ concepts:
     - error_message
     - expiration_time
     - kind
-    - limit
-    - offset
+    - min_disk
+    - min_ram
     - policy
     - result
     - retention_period
     - source_vm_id
+    - time
     - time_created
     - timestamp
-    - version
     - a
     - accessibility_tree
     - account
@@ -659,11 +662,10 @@ concepts:
     - app_id
     - application_consistent
     - apply_scope
+    - arch
     - are_annotations_included
     - are_unannotated_records_included
     - asn_info
-    - aspa_objects
-    - authenticate
   network:
     segments_seen:
       networks: 17
@@ -732,8 +734,8 @@ concepts:
       - uuid
     - name: created_at
       tier: extended
-      providers: 15
-      share: 0.441
+      providers: 16
+      share: 0.471
       type: string
       spellings:
       - created_at
@@ -746,8 +748,8 @@ concepts:
       - date_created
     - name: status
       tier: extended
-      providers: 15
-      share: 0.441
+      providers: 16
+      share: 0.471
       type: string
       spellings:
       - status
@@ -805,24 +807,33 @@ concepts:
       spellings:
       - region
       - zone
+      - location
       - dataCenter
       - Zone
-      - location
-    long_tail_count: 234
+    long_tail_count: 248
     long_tail_sample:
     - type
-    - gateway
     - updated_at
+    - gateway
+    - ip_address
     - time_created
     - vlan_id
-    - vpc_id
+    - address_type
+    - assigned_resource_name
+    - assigned_resource_type
+    - assigned_time
+    - associated_public_ip
+    - associated_public_ip_pool
     - availability_domain
     - compartment_id
     - defined_tags
     - dhcp_options_id
+    - dns_host_name
     - dns_label
+    - end_time
     - freeform_tags
-    - ip_inventory_subnet_resource_summary
+    - ip_address_lifetime
+    - ip_id
     - ipv4
     - ipv4_cidr_blocks
     - ipv6
@@ -831,25 +842,16 @@ concepts:
     - ipv6_public_cidr_block
     - ipv6_virtual_router_ip
     - is_default
-    - last_updated_timestamp
+    - is_primary
+    - parent_cidr
+    - private_network_id
     - progress
     - prohibit_public_ip_on_vnic
+    - public_ip_lifetime
     - route_table_id
     - security_list_ids
     - servers
-    - subnet_domain_name
-    - vcn_id
-    - virtual_router_ip
-    - virtual_router_mac
-    - auto_create_subnetworks
-    - config
-    - continuation_token
-    - dns_name
-    - enabled
-    - end_time
-    - firewall
-    - ip_address
-    - mtu
+    - start_time
   firewall:
     segments_seen:
       firewalls: 12
@@ -891,8 +893,8 @@ concepts:
     properties:
     - name: id
       tier: core
-      providers: 16
-      share: 0.8
+      providers: 17
+      share: 0.85
       type: string
       spellings:
       - id
@@ -910,32 +912,32 @@ concepts:
       - label
     - name: status
       tier: core
-      providers: 12
-      share: 0.6
+      providers: 13
+      share: 0.65
       type: string
       spellings:
       - status
       - state
-    - name: description
+    - name: created_at
       tier: core
       providers: 10
       share: 0.5
       type: string
       spellings:
-      - description
-      - notes
-    - name: created_at
+      - createdDate
+      - created_at
+      - createdAt
+      - created
+      - creation_date
+      - date_created
+    - name: description
       tier: extended
       providers: 9
       share: 0.45
       type: string
       spellings:
-      - createdDate
-      - createdAt
-      - created
-      - created_at
-      - creation_date
-      - date_created
+      - description
+      - notes
     - name: metadata
       tier: extended
       providers: 7
@@ -965,48 +967,48 @@ concepts:
       - updated
       - updatedAt
       - date_modified
-    long_tail_count: 89
+    long_tail_count: 97
     long_tail_sample:
     - direction
     - operation_type
-    - project_id
+    - progress
+    - protocol
     - target_link
     - allowed
     - customer_id
     - end_time
+    - error
     - limit
     - network
     - offset
-    - page_size
     - priority
-    - progress
+    - project_id
     - region
     - source_ranges
     - start_time
     - stateful
     - version
     - action
-    - actions
     - annotations
     - applied_to
     - apply_to
     - attached_to
+    - attachments
     - canonical_link
+    - cidr
     - class_name
     - cluster_id
     - cluster_uuid
+    - command
     - company_uuid
-    - data_center_id
     - dest_ports
     - devices
     - droplet_ids
     - egress_rules
     - enable_default_security
     - entities
+    - environment
     - environment_id
-    - error
-    - extensions
-    - failover_enabled
   load_balancer:
     segments_seen:
       load-balancers: 5
@@ -1110,6 +1112,14 @@ concepts:
       type: string
       spellings:
       - description
+    - name: ip
+      tier: extended
+      providers: 4
+      share: 0.308
+      type: string
+      spellings:
+      - ip
+      - vip
     - name: targets
       tier: extended
       providers: 4
@@ -1128,14 +1138,6 @@ concepts:
       spellings:
       - algorithm
       - balancing_algorithm
-    - name: ip
-      tier: extended
-      providers: 3
-      share: 0.231
-      type: string
-      spellings:
-      - ip
-      - vip
     - name: project_id
       tier: extended
       providers: 3
@@ -1144,7 +1146,7 @@ concepts:
       spellings:
       - project_id
       - organization_id
-    long_tail_count: 152
+    long_tail_count: 158
     long_tail_sample:
     - forwarding_rules
     - health_check
@@ -1176,6 +1178,7 @@ concepts:
     - config
     - configs
     - country_pools
+    - default_gateway
     - default_pools
     - defined_tags
     - deleting
@@ -1185,7 +1188,6 @@ concepts:
     - enable_proxy_protocol
     - enabled
     - etag
-    - external_address
   ssh_key:
     segments_seen:
       ssh-keys: 14
@@ -1241,16 +1243,16 @@ concepts:
       - ssh_key
     - name: id
       tier: core
-      providers: 19
-      share: 0.792
+      providers: 20
+      share: 0.833
       type: string
       spellings:
       - id
       - sshKeyId
     - name: created_at
       tier: core
-      providers: 13
-      share: 0.542
+      providers: 14
+      share: 0.583
       type: string
       spellings:
       - created_at
@@ -1260,19 +1262,18 @@ concepts:
       - date_created
     - name: fingerprint
       tier: core
-      providers: 12
-      share: 0.5
+      providers: 13
+      share: 0.542
       type: string
       spellings:
       - fingerprint
       - fingerprints
-    long_tail_count: 43
+    long_tail_count: 40
     long_tail_sample:
     - metadata
     - private_key
     - project_id
     - type
-    - page_size
     - updated_at
     - algorithm
     - attached
@@ -1280,12 +1281,12 @@ concepts:
     - content
     - created_by_user_id
     - cross_org
-    - cse_key_pairs
     - default
     - description
     - disable_time
     - disabled
     - enablement_state
+    - environment
     - environment_name
     - fid
     - key_names
@@ -1293,9 +1294,7 @@ concepts:
     - keypair
     - keys
     - last_used
-    - next_page_token
     - org_name
-    - page_number
     - pages
     - pem
     - pkcs7
@@ -1308,6 +1307,9 @@ concepts:
     - subject_email_addresses
     - time_created
     - time_modified
+    - uid
+    - user
+    - user_id
   region:
     segments_seen:
       regions: 26
@@ -1351,8 +1353,8 @@ concepts:
     properties:
     - name: name
       tier: core
-      providers: 20
-      share: 0.69
+      providers: 23
+      share: 0.793
       type: string
       spellings:
       - name
@@ -1366,19 +1368,12 @@ concepts:
       spellings:
       - id
       - slug
+      - record_id
       - uuid
-    - name: available
-      tier: extended
-      providers: 7
-      share: 0.241
-      type: boolean
-      spellings:
-      - status
-      - available
     - name: description
       tier: extended
-      providers: 7
-      share: 0.241
+      providers: 8
+      share: 0.276
       type: string
       spellings:
       - description
@@ -1394,7 +1389,15 @@ concepts:
       - custom_fields
       - attributes
       - labels
-    long_tail_count: 137
+    - name: available
+      tier: extended
+      providers: 6
+      share: 0.207
+      type: string
+      spellings:
+      - status
+      - available
+    long_tail_count: 141
     long_tail_sample:
     - created_at
     - region
@@ -1402,20 +1405,24 @@ concepts:
     - country
     - key
     - zones
+    - code
     - comments
     - continent
+    - deprecated
     - depth
     - display
     - display_url
+    - features
     - flag
     - last_updated
+    - latitude
+    - longitude
     - owner
     - parent
     - prefix_count
     - provider
     - scope
     - site_count
-    - total_size
     - version
     - active
     - authentication_method_ldap_properties
@@ -1429,10 +1436,6 @@ concepts:
     - city_name
     - cloud_provider
     - cluster_type
-    - code
     - computeclusters
     - config
     - connector
-    - continent_code
-    - coordinates
-    - created_by

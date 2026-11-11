@@ -94,6 +94,16 @@
         "description"
       ]
     },
+    "ip": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.308,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "ip",
+        "vip"
+      ]
+    },
     "targets": {
       "type": "array",
       "x-commons-tier": "extended",
@@ -114,16 +124,6 @@
       "x-commons-spellings": [
         "algorithm",
         "balancing_algorithm"
-      ]
-    },
-    "ip": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.231,
-      "x-commons-providers": 3,
-      "x-commons-spellings": [
-        "ip",
-        "vip"
       ]
     },
     "project_id": {

@@ -7,11 +7,11 @@ concepts:
     path_segment:
     - servers
     properties:
+      id: uuid
       name:
       - hostname
       - name
       status: status
-      id: uuid
       created_at: created_date
       region: location
       instance_type: type
@@ -24,8 +24,14 @@ concepts:
   snapshot:
     path_segment:
     - images
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id:
+      - uuid
+      - id
+      name: name
+      type: type
+      region: region_id
+    core_coverage: 0.5
     evidence:
     - openapi/_original/horizoniq-compass-openapi-original.yml#GET /servers/{serverUUID}/images
   network:
@@ -44,8 +50,8 @@ concepts:
       - hostname
       - name
       status: status
-      description: notes
       created_at: createdDate
+      description: notes
       updated_at: updatedDate
     core_coverage: 1.0
     evidence:

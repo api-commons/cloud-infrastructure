@@ -8,8 +8,8 @@ concepts:
     - servers
     - virtual-machines
     properties:
-      name: name
       id: id
+      name: name
       created_at: created
     core_coverage: 0.75
     evidence:

@@ -8,6 +8,9 @@ concepts:
     - instances
     - servers
     properties:
+      id:
+      - id
+      - instanceId
       name:
       - displayName
       - hostName
@@ -16,9 +19,6 @@ concepts:
       - state
       - lifecycleState
       - status
-      id:
-      - id
-      - instanceId
       metadata: metadata
       region: region
       instance_type: shape
@@ -86,7 +86,7 @@ concepts:
       name: name
       description: description
       rules: rules
-    core_coverage: 0.75
+    core_coverage: 0.5
     evidence:
     - openapi/_original/oci-itas-openapi.yaml#DELETE /{domain}/myservices/api/v1/serviceEntitlements/{serviceEntitlementId}/serviceConfigurations/{serviceConfigurationId}/securityGroups/{id}
     - openapi/_original/oci-itas-openapi.yaml#GET /{domain}/myservices/api/v1/serviceEntitlements/{serviceEntitlementId}/serviceConfigurations/{serviceConfigurationId}/securityGroups

@@ -34,8 +34,8 @@
     "created_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.441,
-      "x-commons-providers": 15,
+      "x-commons-share": 0.471,
+      "x-commons-providers": 16,
       "x-commons-spellings": [
         "created_at",
         "createdAt",
@@ -51,8 +51,8 @@
     "status": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.441,
-      "x-commons-providers": 15,
+      "x-commons-share": 0.471,
+      "x-commons-providers": 16,
       "x-commons-spellings": [
         "status",
         "state",
@@ -119,9 +119,9 @@
       "x-commons-spellings": [
         "region",
         "zone",
+        "location",
         "dataCenter",
-        "Zone",
-        "location"
+        "Zone"
       ]
     }
   },

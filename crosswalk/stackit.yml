@@ -8,15 +8,15 @@ concepts:
     - instances
     - servers
     properties:
+      id:
+      - id
+      - instanceId
       name:
       - displayName
       - name
       status:
       - status
       - state
-      id:
-      - id
-      - instanceId
       created_at:
       - created
       - createdAt
@@ -26,6 +26,7 @@ concepts:
       - metadata
       region:
       - availabilityZone
+      - region
       - regionId
       instance_type:
       - flavor
@@ -113,8 +114,8 @@ concepts:
     properties:
       id: id
       name: name
-      description: description
       created_at: createdAt
+      description: description
       metadata: labels
       rules: rules
       updated_at: updatedAt
@@ -159,8 +160,8 @@ concepts:
     path_segment:
     - regions
     properties:
-      available: status
       metadata: labels
+      available: status
     core_coverage: 0.0
     evidence:
     - openapi/_original/stackit-iaas-openapi.yml#DELETE /v2/organizations/{organizationId}/network-areas/{areaId}/regions/{region}

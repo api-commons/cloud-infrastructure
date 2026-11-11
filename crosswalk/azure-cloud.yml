@@ -7,8 +7,8 @@ concepts:
     path_segment:
     - virtualmachines
     properties:
-      name: name
       id: id
+      name: name
       metadata:
       - tags
       - properties

@@ -7,9 +7,9 @@ concepts:
     path_segment:
     - virtual-machines
     properties:
+      id: id
       name: name
       status: status
-      id: id
       instance_type: type
       image: operating_system
       public_ip: public_ip

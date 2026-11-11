@@ -30,8 +30,8 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.792,
-      "x-commons-providers": 19,
+      "x-commons-share": 0.833,
+      "x-commons-providers": 20,
       "x-commons-spellings": [
         "id",
         "sshKeyId"
@@ -40,8 +40,8 @@
     "created_at": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.542,
-      "x-commons-providers": 13,
+      "x-commons-share": 0.583,
+      "x-commons-providers": 14,
       "x-commons-spellings": [
         "created_at",
         "createdAt",
@@ -54,8 +54,8 @@
     "fingerprint": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.5,
-      "x-commons-providers": 12,
+      "x-commons-share": 0.542,
+      "x-commons-providers": 13,
       "x-commons-spellings": [
         "fingerprint",
         "fingerprints"

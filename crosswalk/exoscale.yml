@@ -7,9 +7,9 @@ concepts:
     path_segment:
     - instance
     properties:
+      id: id
       name: name
       status: state
-      id: id
       created_at: created-at
       metadata: labels
       instance_type: instance-type

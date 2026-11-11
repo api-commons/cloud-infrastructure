@@ -8,9 +8,9 @@ concepts:
     - instances
     - machines
     properties:
+      id: id
       name: label
       status: state
-      id: id
     core_coverage: 0.75
     evidence:
     - openapi/_original/vast-ai-openapi.json#DELETE /api/v0/instances/{id}/

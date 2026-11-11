@@ -23,6 +23,7 @@ concepts:
       cidr: subnet
       metadata: tags
       project_id: organizationId
+      region: location
     core_coverage: 1.0
     evidence:
     - openapi/_original/cisco-hardware-openapi.json#DELETE /networks/{networkId}

@@ -8,8 +8,8 @@
     "name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.69,
-      "x-commons-providers": 20,
+      "x-commons-share": 0.793,
+      "x-commons-providers": 23,
       "x-commons-spellings": [
         "name",
         "label",
@@ -24,24 +24,15 @@
       "x-commons-spellings": [
         "id",
         "slug",
+        "record_id",
         "uuid"
-      ]
-    },
-    "available": {
-      "type": "boolean",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.241,
-      "x-commons-providers": 7,
-      "x-commons-spellings": [
-        "status",
-        "available"
       ]
     },
     "description": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.241,
-      "x-commons-providers": 7,
+      "x-commons-share": 0.276,
+      "x-commons-providers": 8,
       "x-commons-spellings": [
         "description",
         "details"
@@ -58,6 +49,16 @@
         "custom_fields",
         "attributes",
         "labels"
+      ]
+    },
+    "available": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.207,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "status",
+        "available"
       ]
     }
   },

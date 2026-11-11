@@ -7,10 +7,10 @@ concepts:
     path_segment:
     - servers
     properties:
-      name: name
       id:
       - guid
       - id
+      name: name
       metadata: metadata
     core_coverage: 0.5
     evidence:

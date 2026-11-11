@@ -8,8 +8,8 @@ concepts:
     - servers
     - instances
     properties:
-      name: name
       id: id
+      name: name
       metadata:
       - attributes
       - tags

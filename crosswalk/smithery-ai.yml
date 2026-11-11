@@ -7,10 +7,13 @@ concepts:
     path_segment:
     - servers
     properties:
+      id:
+      - id
+      - slug
       name: displayName
       created_at: createdAt
       description: description
-    core_coverage: 0.5
+    core_coverage: 0.75
     evidence:
     - openapi/_original/smithery-registry-api-openapi.yml#DELETE /servers/{qualifiedName}
     - openapi/_original/smithery-registry-api-openapi.yml#GET /servers

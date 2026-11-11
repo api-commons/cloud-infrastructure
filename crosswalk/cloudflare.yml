@@ -8,14 +8,14 @@ concepts:
     - instances
     - servers
     properties:
-      name:
-      - hostname
-      - name
-      status: status
       id:
       - id
       - instance_id
       - instanceId
+      name:
+      - hostname
+      - name
+      status: status
       created_at:
       - created_at
       - created_on

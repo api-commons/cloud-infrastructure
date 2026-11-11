@@ -6,7 +6,9 @@ concepts:
   instance:
     path_segment:
     - instances
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: id
+      name: name
+    core_coverage: 0.5
     evidence:
     - openapi/_original/appengine-openapi.yml#GET /apps/{appsId}/services/{servicesId}/versions/{versionsId}/instances

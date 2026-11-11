@@ -12,14 +12,14 @@ generated. Every number below is a count of providers.
 <!-- commons:summary -->
 | Concept | Expose it | Readable schema | Core properties (share) | Collection named |
 | --- | ---: | ---: | --- | --- |
-| instance | 88 | 83 | name 75%, status 75%, id 74%, created_at 54% | instances 49, servers 22, vms 10, vm 8 |
-| volume | 38 | 36 | id 81%, name 81%, status 78%, created_at 61%, size 58%, type 50% | volumes 24, disks 13, volume 3, disk 3 |
-| snapshot | 31 | 29 | id 83%, name 76%, status 72%, created_at 59% | snapshots 25, snapshot 9, backups 6, images 3 |
+| instance | 88 | 83 | id 77%, name 76%, status 75%, created_at 55% | instances 49, servers 22, vms 10, vm 8 |
+| volume | 38 | 36 | id 83%, name 81%, status 78%, created_at 64%, size 58%, type 50% | volumes 24, disks 13, volume 3, disk 3 |
+| snapshot | 31 | 29 | id 90%, name 79%, status 72%, created_at 62% | snapshots 25, snapshot 9, backups 6, images 3 |
 | network | 36 | 34 | name 82%, id 76% | networks 17, subnets 12, vpcs 10, network 6 |
-| firewall | 21 | 20 | id 80%, name 75%, status 60%, description 50% | firewalls 12, security-groups 4, firewall 2, security_groups 2 |
+| firewall | 21 | 20 | id 85%, name 75%, status 65%, created_at 50% | firewalls 12, security-groups 4, firewall 2, security_groups 2 |
 | load_balancer | 14 | 13 | name 92%, id 85%, metadata 62%, region 62%, status 62%, created_at 54% | load-balancers 5, load_balancers 4, loadbalancers 3, nodebalancers 1 |
-| ssh_key | 24 | 24 | name 88%, public_key 88%, id 79%, created_at 54%, fingerprint 50% | ssh-keys 14, sshkeys 4, keypairs 4, keys 2 |
-| region | 29 | 29 | name 69%, id 52% | regions 26, datacenters 6, region 1 |
+| ssh_key | 24 | 24 | name 88%, public_key 88%, id 83%, created_at 58%, fingerprint 54% | ssh-keys 14, sshkeys 4, keypairs 4, keys 2 |
+| region | 29 | 29 | name 79%, id 52% | regions 26, datacenters 6, region 1 |
 
 Cohort: 384 providers with harvested OpenAPI, 88 crosswalks. Of the providers exposing a instance: 62% create, 93% list, 82% fetch, 48% update, 67% delete. Generated 2026-11-10 by build.py.
 <!-- /commons:summary -->

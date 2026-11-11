@@ -5,11 +5,25 @@
   "description": "The common instance in Cloud Infrastructure, distilled from 83 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.771,
+      "x-commons-providers": 64,
+      "x-commons-spellings": [
+        "id",
+        "instanceId",
+        "instance_id",
+        "slug",
+        "guid",
+        "uuid"
+      ]
+    },
     "name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.747,
-      "x-commons-providers": 62,
+      "x-commons-share": 0.759,
+      "x-commons-providers": 63,
       "x-commons-spellings": [
         "name",
         "displayName",
@@ -31,31 +45,17 @@
         "state",
         "lifecycleState",
         "provisioningState",
+        "power_state",
         "powerState",
         "PowerState",
-        "power_state",
         "instance_state"
-      ]
-    },
-    "id": {
-      "type": "string",
-      "x-commons-tier": "core",
-      "x-commons-share": 0.735,
-      "x-commons-providers": 61,
-      "x-commons-spellings": [
-        "id",
-        "instanceId",
-        "instance_id",
-        "slug",
-        "guid",
-        "uuid"
       ]
     },
     "created_at": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.542,
-      "x-commons-providers": 45,
+      "x-commons-share": 0.554,
+      "x-commons-providers": 46,
       "x-commons-spellings": [
         "created_at",
         "created",
@@ -71,8 +71,8 @@
     "metadata": {
       "type": "object",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.47,
-      "x-commons-providers": 39,
+      "x-commons-share": 0.458,
+      "x-commons-providers": 38,
       "x-commons-spellings": [
         "metadata",
         "tags",
@@ -119,8 +119,8 @@
     "image": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.313,
-      "x-commons-providers": 26,
+      "x-commons-share": 0.325,
+      "x-commons-providers": 27,
       "x-commons-spellings": [
         "image",
         "imageId",
@@ -150,8 +150,8 @@
     "description": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.229,
-      "x-commons-providers": 19,
+      "x-commons-share": 0.241,
+      "x-commons-providers": 20,
       "x-commons-spellings": [
         "description",
         "notes",

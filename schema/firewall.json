@@ -8,8 +8,8 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.8,
-      "x-commons-providers": 16,
+      "x-commons-share": 0.85,
+      "x-commons-providers": 17,
       "x-commons-spellings": [
         "id",
         "uuid",
@@ -31,37 +31,37 @@
     "status": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.6,
-      "x-commons-providers": 12,
+      "x-commons-share": 0.65,
+      "x-commons-providers": 13,
       "x-commons-spellings": [
         "status",
         "state"
       ]
     },
-    "description": {
+    "created_at": {
       "type": "string",
       "x-commons-tier": "core",
       "x-commons-share": 0.5,
       "x-commons-providers": 10,
       "x-commons-spellings": [
-        "description",
-        "notes"
-      ]
+        "createdDate",
+        "created_at",
+        "createdAt",
+        "created",
+        "creation_date",
+        "date_created"
+      ],
+      "format": "date-time"
     },
-    "created_at": {
+    "description": {
       "type": "string",
       "x-commons-tier": "extended",
       "x-commons-share": 0.45,
       "x-commons-providers": 9,
       "x-commons-spellings": [
-        "createdDate",
-        "createdAt",
-        "created",
-        "created_at",
-        "creation_date",
-        "date_created"
-      ],
-      "format": "date-time"
+        "description",
+        "notes"
+      ]
     },
     "metadata": {
       "type": "object",

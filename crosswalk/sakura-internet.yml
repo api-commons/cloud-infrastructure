@@ -39,6 +39,7 @@ concepts:
       name: name
       id: loadBalancerID
       created_at: created
+      ip: vip
     core_coverage: 0.5
     evidence:
     - openapi/_original/apprun-dedicated-api.yaml#DELETE /clusters/{clusterID}/asg/{autoScalingGroupID}/load_balancers/{loadBalancerID}

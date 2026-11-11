@@ -8,11 +8,11 @@ concepts:
     - instance
     - instances
     properties:
+      id: id
       name:
       - name
       - hostname
       status: state
-      id: id
       description: description
     core_coverage: 0.75
     evidence:

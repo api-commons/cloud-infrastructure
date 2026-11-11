@@ -9,11 +9,11 @@ concepts:
     - vms
     - vm
     properties:
+      id: id
       name: hostname
       status:
       - powerState
       - state
-      id: id
       created_at: createTime
       metadata: metadata
       instance_type: machineType
@@ -64,9 +64,7 @@ concepts:
     - security-groups
     properties:
       id: id
-      description: description
-      rules: rules
-    core_coverage: 0.5
+    core_coverage: 0.25
     evidence:
     - openapi/_original/cudo-compute-openapi.json#DELETE /v1/projects/{projectId}/security-groups/{id}
     - openapi/_original/cudo-compute-openapi.json#GET /v1/projects/{projectId}/security-groups

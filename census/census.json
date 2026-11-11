@@ -23,8 +23,6 @@
      "POST collection"
     ],
     "properties": {
-     "instances": "array",
-     "total": "integer",
      "id": "string",
      "name": "string",
      "gpuType": "string",
@@ -289,8 +287,6 @@
      "PUT collection"
     ],
     "properties": {
-     "network": "object",
-     "servers": "array",
      "host": "string",
      "port": "integer",
      "roles": "array",
@@ -591,10 +587,6 @@
      "POST collection"
     ],
     "properties": {
-     "machines": "array",
-     "pageNumber": "integer",
-     "pageSize": "integer",
-     "totalCount": "integer",
      "architecture": "string",
      "commitmentTerm": "string",
      "cpuCores": "integer",
@@ -956,9 +948,6 @@
      "GET item"
     ],
     "properties": {
-     "balance": "number",
-     "reserved": "number",
-     "instances": "array",
      "id": "string",
      "status": "string",
      "provider": "string",
@@ -1150,11 +1139,7 @@
      "skip_service_registration": "boolean",
      "current_version": "string",
      "ok": "boolean",
-     "error_regions": "array",
-     "last_machine_id": "string",
-     "last_updated_at": "string",
-     "machines": "array",
-     "next_cursor": "string"
+     "app_name": "string"
     },
     "evidence": [
      "openapi/_original/fly-io-openapi.json#DELETE /v1/apps/{app_name}/machines/{machine_id}",
@@ -1180,9 +1165,6 @@
      "PUT item"
     ],
     "properties": {
-     "permissions": "array",
-     "offset": "integer",
-     "total": "integer",
      "id": "string",
      "vmId": "string",
      "identityId": "string",
@@ -1391,8 +1373,17 @@
      "GET collection"
     ],
     "properties": {
-     "instances": "array",
-     "nextPageToken": "string"
+     "name": "string",
+     "id": "string",
+     "appEngineRelease": "string",
+     "availability": "string",
+     "vmName": "string",
+     "vmZoneName": "string",
+     "vmId": "string",
+     "startTime": "string",
+     "requests": "integer",
+     "averageLatency": "integer",
+     "memoryUsage": "string"
     },
     "evidence": [
      "openapi/_original/appengine-openapi.yml#GET /apps/{appsId}/services/{servicesId}/versions/{versionsId}/instances"
@@ -1659,22 +1650,18 @@
      "load_balancers": "array",
      "primary_disk_size": "number",
      "placement_group": "object",
-     "server": "object",
-     "action": "object",
-     "next_actions": "array",
-     "root_password": "string",
-     "start_after_create": "boolean",
-     "ssh_keys": "array",
-     "networks": "array",
-     "firewalls": "array",
-     "user_data": "string",
-     "automount": "boolean",
      "command": "string",
      "started": "string",
      "finished": "string",
      "progress": "integer",
      "resources": "array",
-     "error": "object"
+     "error": "object",
+     "start_after_create": "boolean",
+     "ssh_keys": "array",
+     "networks": "array",
+     "firewalls": "array",
+     "user_data": "string",
+     "automount": "boolean"
     },
     "evidence": [
      "openapi/_original/hetzner-openapi.yml#DELETE /servers/{id}",
@@ -1721,13 +1708,7 @@
      "created_date": "number",
      "updated_date": "number",
      "maintenance": "boolean",
-     "status": "string",
-     "total": "integer",
-     "offset": "integer",
-     "values": "array",
-     "limit": "integer",
-     "sortBy": "string",
-     "direction": "integer"
+     "status": "string"
     },
     "evidence": [
      "openapi/_original/horizoniq-compass-openapi-original.yml#GET /servers",
@@ -1889,10 +1870,6 @@
      "GET item"
     ],
     "properties": {
-     "instances": "array",
-     "limit": "integer",
-     "offset": "integer",
-     "count": "integer",
      "id": "string",
      "description": "string",
      "vcpu": "integer",
@@ -1912,7 +1889,6 @@
      "service_types": "array",
      "volumes_enabled": "boolean",
      "light_sleep_enabled": "boolean",
-     "order": "string",
      "created_at": "string",
      "updated_at": "string",
      "organization_id": "string",
@@ -1923,12 +1899,12 @@
      "replica_index": "integer",
      "region": "string",
      "datacenter": "string",
-     "hypervisor": "string",
      "messages": "array",
+     "xyz_deployment_id": "string",
+     "hypervisor": "string",
      "started_at": "string",
      "succeeded_at": "string",
-     "terminated_at": "string",
-     "xyz_deployment_id": "string"
+     "terminated_at": "string"
     },
     "evidence": [
      "openapi/_original/koyeb-openapi.json#GET /v1/catalog/instances",
@@ -2107,8 +2083,6 @@
      "PUT item"
     ],
     "properties": {
-     "_metadata": "object",
-     "servers": "array",
      "assetId": "string",
      "contract": "object",
      "featureAvailability": "object",
@@ -2795,28 +2769,44 @@
      "POST collection"
     ],
     "properties": {
-     "status": "boolean",
-     "message": "string",
-     "page": "integer",
-     "page_size": "integer",
+     "id": "integer",
+     "name": "string",
+     "status": "string",
+     "environment": "object",
+     "image": "object",
+     "flavor": "object",
+     "os": "string",
+     "keypair": "object",
+     "volume_attachments": "array",
+     "security_rules": "array",
+     "power_state": "string",
+     "vm_state": "string",
+     "fixed_ip": "string",
+     "floating_ip": "string",
+     "floating_ip_status": "string",
+     "port_randomization_status": "string",
+     "port_randomization": "boolean",
+     "callback_url": "string",
+     "locked": "boolean",
+     "contract_id": "integer",
+     "created_at": "string",
+     "labels": "array",
+     "features": "object",
+     "requires_public_ip": "boolean",
      "count": "integer",
-     "instances": "array",
      "environment_name": "string",
      "flavor_name": "string",
      "key_name": "string",
-     "name": "string",
      "image_name": "string",
      "volume_name": "string",
      "create_bootable_volume": "boolean",
-     "flavor": "object",
      "user_data": "string",
-     "callback_url": "string",
      "assign_floating_ip": "boolean",
      "enable_port_randomization": "boolean",
-     "security_rules": "array",
      "profile": "object",
-     "labels": "array",
+     "message": "string",
      "instance": "object",
+     "enhanced_metrics": "object",
      "enhanced_monitoring_enabled": "boolean"
     },
     "evidence": [
@@ -2873,11 +2863,18 @@
      "server_groups": null,
      "user_data": null,
      "metadata": null,
-     "product_id": "string",
-     "cpu": "integer",
-     "ram": "integer",
-     "prices": "array",
-     "rules": "array",
+     "plan_type": null,
+     "price_type": null,
+     "value": null,
+     "direction": "string",
+     "ethertype": "string",
+     "normalized_cidr": null,
+     "port_range_max": null,
+     "port_range_min": null,
+     "protocol": null,
+     "remote_address_group_id": null,
+     "remote_group_id": null,
+     "remote_ip_prefix": null,
      "instance_id": "string",
      "desired_group_ids": "array"
     },
@@ -3367,12 +3364,13 @@
      "total_item_count": "integer",
      "id": "string",
      "name": "string",
-     "context": null,
+     "context": "string",
      "created": "integer",
      "directory_services": "array",
      "dns": "array",
      "local_directory_service": null,
-     "errors": "array",
+     "location_context": null,
+     "message": "string",
      "resource_type": "string",
      "destroyed": "boolean",
      "recover_context": null,
@@ -3557,8 +3555,6 @@
      "PUT collection"
     ],
     "properties": {
-     "instances": "array",
-     "total_count": "integer",
      "created_at": "string",
      "volume": "object",
      "region": "string",
@@ -3765,8 +3761,14 @@
      "backlinkUrl": null,
      "license": null,
      "unlisted": "boolean",
-     "servers": "array",
-     "pagination": "object"
+     "id": "string",
+     "slug": null,
+     "verified": "boolean",
+     "useCount": "number",
+     "isDeployed": "boolean",
+     "bySmithery": "boolean",
+     "owner": null,
+     "score": null
     },
     "evidence": [
      "openapi/_original/smithery-registry-api-openapi.yml#DELETE /servers/{qualifiedName}",
@@ -3934,26 +3936,26 @@
      "queryRangeUrl": "string",
      "queryUrl": "string",
      "retentionDays": "integer",
-     "instances": "array",
-     "message": "string",
+     "bucketName": "string",
      "deletedExperimentRetention": "string",
+     "region": "string",
      "instance": "object",
+     "message": "string",
      "backupSchedule": "string",
      "flavorId": "string",
      "options": "object",
      "replicas": "integer",
      "storage": "object",
+     "error": "string",
+     "serviceName": "string",
      "grafanaAdminEnabled": "boolean",
      "parameter": "object",
-     "error": "string",
      "isUpdatable": "boolean",
      "planSchema": "string",
-     "serviceName": "string",
-     "pagination": "object",
+     "isDeletable": "boolean",
      "encryption": "object",
      "network": "object",
      "connectionInfo": "object",
-     "isDeletable": "boolean",
      "apiUrl": "string",
      "creationFinishedDate": "string",
      "creationStartDate": "string",
@@ -4067,16 +4069,16 @@
      "size": "string",
      "storage_size_gib": "integer",
      "unix_user": "string",
-     "firewalls": "array",
-     "private_ipv4": "string",
-     "private_ipv6": "string",
-     "subnet": "string",
-     "gpu": "string",
+     "cidr": "string",
+     "port_range": "string",
+     "protocol": "string",
+     "description": "string",
      "init_script": "string",
      "enable_ip4": "boolean",
      "private_subnet_id": "string",
      "public_key": "string",
-     "storage_size": "integer"
+     "storage_size": "integer",
+     "gpu": "string"
     },
     "evidence": [
      "openapi/_original/ubicloud-openapi.yml#DELETE /project/{project_id}/location/{location}/vm/{vm_reference}",
@@ -4644,7 +4646,12 @@
      "metrics": "object",
      "connectedClients": "array",
      "authorizedUsers": "array",
-     "diskId": "string",
+     "type": "string",
+     "principal": "string",
+     "nickname": "string",
+     "tokenSuffix": "string",
+     "token": "string",
+     "identifier": "string",
      "authMethods": "array",
      "success": "boolean"
     },
@@ -4737,7 +4744,11 @@
      "state": "object",
      "status": "string",
      "terminatedAt": "string",
-     "events": "array"
+     "canaryRevision": "string",
+     "message": "string",
+     "revision": "string",
+     "time": "string",
+     "type": "string"
     },
     "evidence": [
      "openapi/_original/blaxel-openapi.yml#DELETE /volumes/{volumeName}",
@@ -4835,21 +4846,16 @@
      "POST collection"
     ],
     "properties": {
-     "disks": "array",
-     "pageNumber": "integer",
-     "pageSize": "integer",
-     "totalCount": "integer",
      "createTime": "string",
      "dataCenterId": "string",
      "diskState": "string",
      "diskType": "string",
      "id": "string",
      "privateImageId": "string",
+     "projectId": "string",
      "publicImageId": "string",
      "sizeGib": "integer",
      "vmId": "string",
-     "projectId": "string",
-     "volumes": "array",
      "commitmentEndTime": "string",
      "commitmentTerm": "string",
      "gibPriceHr": "object",
@@ -5018,8 +5024,6 @@
      "PUT item"
     ],
     "properties": {
-     "Volumes": "array",
-     "Warnings": "array",
      "Name": "string",
      "Driver": "string",
      "Mountpoint": "string",
@@ -5114,10 +5118,8 @@
      "snapshot_id": "string",
      "source_volume_id": "string",
      "unique_zone_app_wide": "boolean",
-     "last_updated_at": "string",
-     "last_volume_id": "string",
-     "next_cursor": "string",
-     "volumes": "array"
+     "app_name": "string",
+     "updated_at": "string"
     },
     "evidence": [
      "openapi/_original/fly-io-openapi.json#DELETE /v1/apps/{app_name}/volumes/{volume_id}",
@@ -5278,9 +5280,12 @@
      "labels": "object",
      "status": "string",
      "format": "string",
-     "volume": "object",
-     "action": "object",
-     "next_actions": "array",
+     "command": "string",
+     "started": "string",
+     "finished": "string",
+     "progress": "integer",
+     "resources": "array",
+     "error": "object",
      "automount": "boolean"
     },
     "evidence": [
@@ -5391,10 +5396,6 @@
      "POST item"
     ],
     "properties": {
-     "volumes": "array",
-     "limit": "integer",
-     "offset": "integer",
-     "has_next": "boolean",
      "id": "string",
      "name": "string",
      "snapshot_id": "string",
@@ -5731,20 +5732,22 @@
      "POST collection"
     ],
     "properties": {
-     "status": "boolean",
-     "message": "string",
-     "page": "integer",
-     "page_size": "integer",
-     "count": "integer",
-     "volumes": "array",
-     "volume": "object",
-     "environment_name": "string",
+     "id": "integer",
      "name": "string",
-     "size": "integer",
-     "volume_type": "string",
+     "environment": "object",
      "description": "string",
+     "volume_type": "string",
+     "size": "integer",
+     "status": "string",
+     "bootable": "boolean",
      "image_id": "integer",
      "callback_url": "string",
+     "created_at": "string",
+     "updated_at": "string",
+     "attachments": "array",
+     "message": "string",
+     "volume": "object",
+     "environment_name": "string",
      "updates": "object",
      "billing_history_volume": "object",
      "billing_history_volume_details": "object"
@@ -6021,10 +6024,11 @@
      "continuation_token": "string",
      "more_items_remaining": "boolean",
      "total_item_count": "integer",
-     "context": null,
+     "context": "string",
      "group": "object",
      "member": null,
-     "errors": "array",
+     "location_context": null,
+     "message": "string",
      "id": "string",
      "name": "string",
      "resource_type": "string",
@@ -6541,9 +6545,17 @@
      "volume_only": "boolean",
      "description": "string",
      "id": "integer",
-     "snapshots": "array",
-     "action": "string",
      "set": "integer",
+     "time": "string",
+     "snap": "string",
+     "snap-id": "string",
+     "revision": "string",
+     "size": "integer",
+     "auto": "boolean",
+     "epoch": "object",
+     "sha3-384": "object",
+     "summary": "string",
+     "action": "string",
      "snaps": "array",
      "users": "array"
     },
@@ -7122,8 +7134,6 @@
      "POST collection"
     ],
     "properties": {
-     "snapshots": "array",
-     "totalCount": "integer",
      "autoDeleteFromPlan": "boolean",
      "autoDeleteSeconds": [
       "integer",
@@ -7203,8 +7213,6 @@
      "PUT item"
     ],
     "properties": {
-     "snapshots": "array",
-     "nextPageToken": "string",
      "name": "string",
      "topic": "string",
      "expireTime": "string",
@@ -7238,8 +7246,12 @@
      "golden": "boolean",
      "name": "string",
      "snapshotId": "integer",
-     "deviceSnapshotRecords": "array",
-     "deviceSnapshotMap": "object",
+     "hostname": "string",
+     "region": "string",
+     "site": "string",
+     "snapshotCount": "integer",
+     "snapshots": "array",
+     "uptime": "object",
      "author": "object",
      "createdOn": "object",
      "data": "object",
@@ -7262,12 +7274,30 @@
      "GET collection"
     ],
     "properties": {
-     "total": "integer",
-     "offset": "integer",
-     "values": "array",
-     "limit": "integer",
-     "sortBy": "string",
-     "direction": "string"
+     "skip_upgrade": "boolean",
+     "os": "string",
+     "service_price": "number",
+     "min_disk": "integer",
+     "service_plan": "string",
+     "region_id": "string",
+     "includes_cpanel": "string",
+     "cloud_init": "boolean",
+     "type": "string",
+     "uuid": "string",
+     "version": "string",
+     "client_id": "string",
+     "hourly_per_gb": "number",
+     "ready": "boolean",
+     "price": "number",
+     "name": "string",
+     "gb_on_disk": "number",
+     "is_custom": "string",
+     "id": "integer",
+     "arch": "string",
+     "cloud_id": "string",
+     "cpanel_price": "number",
+     "min_ram": "integer",
+     "region_code": "string"
     },
     "evidence": [
      "openapi/_original/horizoniq-compass-openapi-original.yml#GET /servers/{serverUUID}/images"
@@ -7312,10 +7342,6 @@
      "POST item"
     ],
     "properties": {
-     "snapshots": "array",
-     "limit": "integer",
-     "offset": "integer",
-     "has_next": "boolean",
      "id": "string",
      "name": "string",
      "size": "integer",
@@ -7404,8 +7430,6 @@
      "POST collection"
     ],
     "properties": {
-     "automatic": "array",
-     "snapshot": "object",
      "available": "boolean",
      "configs": "array",
      "created": "string",
@@ -7654,16 +7678,20 @@
      "POST collection"
     ],
     "properties": {
-     "status": "boolean",
-     "message": "string",
-     "snapshots": "array",
-     "count": "integer",
-     "page": "integer",
-     "page_size": "integer",
-     "snapshot": "object",
+     "created_at": "string",
      "description": "string",
+     "id": "integer",
+     "is_image": "boolean",
      "name": "string",
+     "region_id": "integer",
+     "size": "integer",
+     "status": "string",
+     "updated_at": "string",
+     "vm_id": "integer",
+     "has_floating_ip": "boolean",
      "labels": "array",
+     "message": "string",
+     "snapshot": "object",
      "billing_history_volume": "object",
      "billing_history_volume_details": "object"
     },
@@ -7941,13 +7969,14 @@
      "continuation_token": "string",
      "more_items_remaining": "boolean",
      "total_item_count": "integer",
-     "context": null,
+     "context": "string",
      "member": null,
      "policy": null,
      "destroyed": "boolean",
      "enabled": "boolean",
      "time_remaining": "integer",
-     "errors": "array",
+     "location_context": null,
+     "message": "string",
      "policies": "array",
      "id": "string",
      "name": "string",
@@ -8008,8 +8037,6 @@
      "node_type": "string",
      "volume_type": "object",
      "region": "string",
-     "snapshots": "array",
-     "total_count": "integer",
      "organization": "string",
      "project": "string",
      "tags": "array",
@@ -8112,8 +8139,6 @@
      "alertRulesBackups": "array",
      "grafanaBackups": "array",
      "scrapeConfigBackups": "array",
-     "backups": "array",
-     "pagination": "object",
      "completionTime": "string",
      "retainedUntil": "string",
      "type": "string",
@@ -8128,8 +8153,7 @@
      "sizeGigabytes": "integer",
      "snaplockExpiryTime": "string",
      "snapshotName": "string",
-     "snaplockRetentionHours": "integer",
-     "databases": "array"
+     "snaplockRetentionHours": "integer"
     },
     "evidence": [
      "openapi/_original/stackit-iaas-openapi.yml#DELETE /v2/projects/{projectId}/regions/{region}/snapshots/{snapshotId}",
@@ -8304,9 +8328,11 @@
      "GET collection"
     ],
     "properties": {
-     "total": "integer",
-     "count": "integer",
-     "networks": "array"
+     "essid": "string",
+     "type": "string",
+     "client_count": "integer",
+     "group_name": "string",
+     "site": "string"
     },
     "evidence": [
      "openapi/_original/aruba-central-api.yml#GET /monitoring/v2/networks"
@@ -8372,10 +8398,12 @@
      "POST collection"
     ],
     "properties": {
-     "events": "array",
-     "metadata": "object",
-     "spec": "object",
-     "status": "string"
+     "canaryRevision": "string",
+     "message": "string",
+     "revision": "string",
+     "status": "string",
+     "time": "string",
+     "type": "string"
     },
     "evidence": [
      "openapi/_original/blaxel-openapi.yml#DELETE /vpcs/{vpcName}",
@@ -8450,12 +8478,13 @@
      "policy": "object",
      "network": "object",
      "firewall": "object",
-     "pageItems": "integer",
-     "contents": "array",
-     "pageIndex": "integer",
-     "totalItems": "integer",
-     "hasNext": "boolean",
-     "hasPrevious": "boolean"
+     "startTime": "string",
+     "endTime": "string",
+     "powerConsumption": "number",
+     "carbonEmissions": "number",
+     "powerCost": "number",
+     "percentageOfTotal": "number",
+     "location": "object"
     },
     "evidence": [
      "openapi/_original/cisco-hardware-openapi.json#DELETE /networks/{networkId}",
@@ -8596,10 +8625,6 @@
      "POST collection"
     ],
     "properties": {
-     "networks": "array",
-     "pageNumber": "integer",
-     "pageSize": "integer",
-     "totalCount": "integer",
      "createTime": "string",
      "dataCenterId": "string",
      "externalIpAddress": "string",
@@ -8742,11 +8767,9 @@
      "changeLog": "object",
      "links": "array",
      "type": "string",
-     "name": "string",
-     "scope": "string",
-     "location": "object",
-     "project": "object",
-     "notifications": "array",
+     "sendInterval": "string",
+     "emails": "array",
+     "registeredUsers": "array",
      "op": "string",
      "path": "string",
      "value": null
@@ -8958,13 +8981,12 @@
       "integer",
       "null"
      ],
-     "vpc": "string",
-     "totalCount": "integer",
-     "vpcs": "array",
-     "cidr": [
-      "string",
+     "cidr": "string",
+     "metric": [
+      "integer",
       "null"
      ],
+     "via": "string",
      "cidrV6": "string",
      "firewall": null
     },
@@ -9020,12 +9042,10 @@
      "POST collection"
     ],
     "properties": {
-     "createdAt": "string",
+     "cidr": "string",
      "id": "string",
-     "idc": "string",
      "name": "string",
-     "orgId": "string",
-     "subnets": "array",
+     "idc": "string",
      "result": "string"
     },
     "evidence": [
@@ -9402,13 +9422,22 @@
      "PUT item"
     ],
     "properties": {
-     "compartmentId": "string",
-     "count": "integer",
-     "ipInventorySubnetResourceSummary": "array",
-     "lastUpdatedTimestamp": "string",
-     "message": "string",
+     "addressType": "string",
+     "assignedResourceName": "string",
+     "assignedResourceType": "string",
+     "assignedTime": "string",
+     "associatedPublicIp": "string",
+     "associatedPublicIpPool": "string",
+     "dnsHostName": "string",
+     "ipAddress": "string",
+     "ipAddressLifetime": "string",
+     "ipId": "string",
+     "isPrimary": "boolean",
+     "parentCidr": "string",
+     "publicIpLifetime": "string",
      "availabilityDomain": "string",
      "cidrBlock": "string",
+     "compartmentId": "string",
      "definedTags": "object",
      "dhcpOptionsId": "string",
      "displayName": "string",
@@ -9451,13 +9480,22 @@
      "PUT item"
     ],
     "properties": {
-     "compartmentId": "string",
-     "count": "integer",
-     "ipInventorySubnetResourceSummary": "array",
-     "lastUpdatedTimestamp": "string",
-     "message": "string",
+     "addressType": "string",
+     "assignedResourceName": "string",
+     "assignedResourceType": "string",
+     "assignedTime": "string",
+     "associatedPublicIp": "string",
+     "associatedPublicIpPool": "string",
+     "dnsHostName": "string",
+     "ipAddress": "string",
+     "ipAddressLifetime": "string",
+     "ipId": "string",
+     "isPrimary": "boolean",
+     "parentCidr": "string",
+     "publicIpLifetime": "string",
      "availabilityDomain": "string",
      "cidrBlock": "string",
+     "compartmentId": "string",
      "definedTags": "object",
      "dhcpOptionsId": "string",
      "displayName": "string",
@@ -9519,13 +9557,22 @@
      "PUT item"
     ],
     "properties": {
-     "compartmentId": "string",
-     "count": "integer",
-     "ipInventorySubnetResourceSummary": "array",
-     "lastUpdatedTimestamp": "string",
-     "message": "string",
+     "addressType": "string",
+     "assignedResourceName": "string",
+     "assignedResourceType": "string",
+     "assignedTime": "string",
+     "associatedPublicIp": "string",
+     "associatedPublicIpPool": "string",
+     "dnsHostName": "string",
+     "ipAddress": "string",
+     "ipAddressLifetime": "string",
+     "ipId": "string",
+     "isPrimary": "boolean",
+     "parentCidr": "string",
+     "publicIpLifetime": "string",
      "availabilityDomain": "string",
      "cidrBlock": "string",
+     "compartmentId": "string",
      "definedTags": "object",
      "dhcpOptionsId": "string",
      "displayName": "string",
@@ -9697,10 +9744,6 @@
      "PUT item"
     ],
     "properties": {
-     "Total": "integer",
-     "From": "integer",
-     "Count": "integer",
-     "Subnets": "array",
      "SRN": "string",
      "Name": "string",
      "Description": "string",
@@ -9737,8 +9780,14 @@
      "GET collection"
     ],
     "properties": {
-     "private_network": "array",
-     "total_count": "integer"
+     "lb": "object",
+     "ipam_ids": "array",
+     "static_config": "object",
+     "dhcp_config": "object",
+     "private_network_id": "string",
+     "status": "string",
+     "created_at": "string",
+     "updated_at": "string"
     },
     "evidence": [
      "openapi/_original/scaleway-load-balancer-openapi.yml#GET /lb/v1/zones/{zone}/lbs/{lb_id}/private-networks"
@@ -9774,11 +9823,13 @@
      "projectId": "string",
      "space": "string",
      "vlans": "object",
+     "az": "string",
+     "isPrivate": "boolean",
+     "mapPublicIpOnLaunch": "boolean",
+     "subnetId": "string",
      "cidrBlock": "string",
-     "subnets": "array",
-     "vpcId": "string",
-     "addressSpaces": "array",
-     "location": "string",
+     "nsgResourceGroup": "string",
+     "securityGroupName": "string",
      "networks": "array",
      "description": "string"
     },
@@ -10142,15 +10193,12 @@
      "POST collection"
     ],
     "properties": {
-     "pageNumber": "integer",
-     "pageSize": "integer",
-     "securityGroups": "array",
-     "totalCount": "integer",
-     "dataCenterId": "string",
-     "description": "string",
+     "icmpType": "string",
      "id": "string",
-     "projectId": "string",
-     "rules": "array"
+     "ipRangeCidr": "string",
+     "ports": "string",
+     "protocol": "string",
+     "ruleType": "string"
     },
     "evidence": [
      "openapi/_original/cudo-compute-openapi.json#DELETE /v1/projects/{projectId}/security-groups/{id}",
@@ -10309,8 +10357,9 @@
     ],
     "properties": {
      "description": "string",
-     "inboundRules": "array",
-     "name": "string",
+     "portRange": "object",
+     "protocol": "string",
+     "remoteIpPrefix": "string",
      "idc": "string",
      "assoInstances": "array",
      "assoContainers": "array",
@@ -10411,8 +10460,13 @@
      "created": "string",
      "rules": "array",
      "applied_to": "array",
-     "firewall": "object",
-     "actions": "array",
+     "command": "string",
+     "status": "string",
+     "started": "string",
+     "finished": "string",
+     "progress": "integer",
+     "resources": "array",
+     "error": "object",
      "apply_to": "array"
     },
     "evidence": [
@@ -10565,16 +10619,17 @@
      "POST collection"
     ],
     "properties": {
-     "status": "boolean",
-     "message": "string",
-     "page": "integer",
-     "page_size": "integer",
-     "count": "integer",
-     "firewalls": "array",
-     "firewall": "object",
-     "environment_id": "integer",
+     "id": "integer",
      "name": "string",
-     "description": "string"
+     "description": "string",
+     "environment": "object",
+     "status": "string",
+     "created_at": "string",
+     "rules": "array",
+     "attachments": "array",
+     "message": "string",
+     "firewall": "object",
+     "environment_id": "integer"
     },
     "evidence": [
      "openapi/_original/nexgen-cloud-hyperstack-openapi.json#DELETE /core/firewalls/{id}",
@@ -10727,12 +10782,14 @@
      "POST item"
     ],
     "properties": {
-     "description": "string",
-     "firewall_rules": "array",
+     "cidr": "string",
      "id": "string",
+     "port_range": "string",
+     "protocol": "string",
+     "description": "string",
+     "firewalls": "array",
      "location": "string",
      "name": "string",
-     "firewalls": "array",
      "net4": "string",
      "net6": "string",
      "nics": "array",
@@ -10959,7 +11016,10 @@
      "operation_id": "string",
      "result": null,
      "started_at": "string",
-     "state": "string"
+     "state": "string",
+     "ip": "string",
+     "port": "integer",
+     "status": "string"
     },
     "evidence": [
      "openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#DELETE /projects/{project_id}/networking/load-balancers/{load_balancer_id}",
@@ -11273,16 +11333,22 @@
      "POST collection"
     ],
     "properties": {
-     "loadBalancers": "array",
-     "nextCursor": null,
-     "loadBalancer": null,
+     "loadBalancerID": null,
      "name": "string",
      "serviceClassPath": "string",
      "nameServers": "array",
-     "interfaces": "array",
-     "loadBalancerID": null,
      "created": "integer",
-     "deleting": "boolean"
+     "deleting": "boolean",
+     "loadBalancer": null,
+     "interfaceIndex": "integer",
+     "upstream": "string",
+     "ipPool": "array",
+     "netmaskLen": "integer",
+     "defaultGateway": "string",
+     "vip": "string",
+     "virtualRouterID": "integer",
+     "packetFilterID": "string",
+     "interfaces": "array"
     },
     "evidence": [
      "openapi/_original/apprun-dedicated-api.yaml#DELETE /clusters/{clusterID}/asg/{autoScalingGroupID}/load_balancers/{loadBalancerID}",
@@ -11307,8 +11373,6 @@
      "PUT item"
     ],
     "properties": {
-     "lbs": "array",
-     "total_count": "integer",
      "id": "string",
      "name": "string",
      "description": "string",
@@ -11354,8 +11418,6 @@
      "PUT item"
     ],
     "properties": {
-     "loadBalancers": "array",
-     "nextPageId": "string",
      "disableTargetSecurityGroupAssignment": "boolean",
      "errors": "array",
      "externalAddress": "string",
@@ -11453,8 +11515,6 @@
      "PUT item"
     ],
     "properties": {
-     "total": "integer",
-     "keys": "array",
      "$id": "string",
      "$createdAt": "string",
      "$updatedAt": "string",
@@ -11535,11 +11595,7 @@
      "fingerprint": "string",
      "id": "string",
      "publicKey": "string",
-     "type": "string",
-     "pageNumber": "integer",
-     "pageSize": "integer",
-     "sshKeys": "array",
-     "totalCount": "integer"
+     "type": "string"
     },
     "evidence": [
      "openapi/_original/cudo-compute-openapi.json#DELETE /v1/ssh-keys/{id}",
@@ -11706,9 +11762,7 @@
      "subjectEmailAddresses": "array",
      "enablementState": "string",
      "disableTime": "string",
-     "privateKeyMetadata": "array",
-     "cseKeyPairs": "array",
-     "nextPageToken": "string"
+     "privateKeyMetadata": "array"
     },
     "evidence": [
      "openapi/_original/google-gmail-api-openapi.yml#GET /gmail/v1/users/{userId}/settings/cse/keypairs",
@@ -11880,16 +11934,16 @@
      "POST collection"
     ],
     "properties": {
+     "id": "integer",
+     "name": "string",
+     "environment": "object",
+     "public_key": "string",
+     "fingerprint": "string",
+     "created_at": "string",
      "status": "boolean",
      "message": "string",
-     "keypairs": "array",
-     "page": "integer",
-     "page_size": "integer",
-     "count": "integer",
      "keypair": "object",
-     "environment_name": "string",
-     "name": "string",
-     "public_key": "string"
+     "environment_name": "string"
     },
     "evidence": [
      "openapi/_original/nexgen-cloud-hyperstack-openapi.json#GET /core/keypairs",
@@ -12100,8 +12154,6 @@
      "POST collection"
     ],
     "properties": {
-     "ssh_keys": "array",
-     "total_count": "integer",
      "id": "string",
      "name": "string",
      "public_key": "string",
@@ -12294,8 +12346,12 @@
      "GET collection"
     ],
     "properties": {
-     "total": "integer",
-     "regions": "array"
+     "$id": "string",
+     "name": "string",
+     "available": "boolean",
+     "disabled": "boolean",
+     "default": "boolean",
+     "flag": "string"
     },
     "evidence": [
      "openapi/_original/appwrite-open-api3-latest.json#GET /console/regions",
@@ -12582,9 +12638,7 @@
      "display_name": "string",
      "id": "object",
      "last_update_time": "string",
-     "name": "string",
-     "edges": "array",
-     "page": "object"
+     "name": "string"
     },
     "evidence": [
      "openapi/_original/firebolt-openapi.json#GET /compute/v1/providers/{provider_id}/regions/{region_id}",
@@ -12635,8 +12689,15 @@
      "GET collection"
     ],
     "properties": {
-     "nearest": "string",
-     "regions": "array"
+     "code": "string",
+     "deprecated": "boolean",
+     "gateway_available": "boolean",
+     "geo_region": "string",
+     "latitude": "number",
+     "longitude": "number",
+     "mpg_available": "boolean",
+     "name": "string",
+     "requires_paid_plan": "boolean"
     },
     "evidence": [
      "openapi/_original/fly-io-openapi.json#GET /v1/platform/regions"
@@ -12684,9 +12745,6 @@
      "GET item"
     ],
     "properties": {
-     "datacenters": "array",
-     "recommendation": "integer",
-     "meta": "object",
      "id": "integer",
      "name": "string",
      "description": "string",
@@ -12742,9 +12800,6 @@
      "coordinates": "array",
      "use_gpu": "boolean",
      "regions": "array",
-     "limit": "integer",
-     "offset": "integer",
-     "count": "integer",
      "name": "string",
      "status": "string",
      "instances": "array",
@@ -12996,8 +13051,12 @@
      "GET collection"
     ],
     "properties": {
-     "status": "boolean",
-     "message": "string",
+     "id": "integer",
+     "name": "string",
+     "country": "string",
+     "description": "string",
+     "green_status": "string",
+     "features": "object",
      "regions": "array"
     },
     "evidence": [
@@ -13015,8 +13074,10 @@
      "GET collection"
     ],
     "properties": {
-     "current": null,
-     "datacenters": "array"
+     "region_name": null,
+     "label": null,
+     "order": null,
+     "healthy": null
     },
     "evidence": [
      "openapi/_original/external.json#GET /api/v1/account/datacenters"
@@ -13094,16 +13155,14 @@
     ],
     "properties": {
      "region": "string",
-     "id": "string",
-     "name": "string",
-     "regions": "array",
+     "openstackId": "string",
      "status": null,
-     "type": null,
-     "vlanId": "integer",
      "continentCode": null,
      "datacenterLocation": "string",
      "ipCountries": "array",
-     "services": "array"
+     "name": "string",
+     "services": "array",
+     "type": null
     },
     "evidence": [
      "openapi/_original/ovh-cloud-openapi-original.yml#GET /cloud/project/{serviceName}/capabilities/kube/regions",
@@ -13125,9 +13184,6 @@
      "GET item"
     ],
     "properties": {
-     "regions": "array",
-     "totalSize": "integer",
-     "nextPageToken": "string",
      "name": "string",
      "regionId": "string",
      "cloudProvider": null,
@@ -13139,7 +13195,8 @@
      "region": "string",
      "tidb": "array",
      "tikv": "array",
-     "tiflash": "array"
+     "tiflash": "array",
+     "supportedServicePlans": "array"
     },
     "evidence": [
      "openapi/_original/pingcap-tidb-cloud-dedicated-v1beta1-openapi-original.json#GET /regions",
@@ -13169,10 +13226,7 @@
      "endpoint": "string",
      "provider": "object",
      "datacenter": "object",
-     "environmental_impact": "object",
-     "count": "integer",
-     "regions": "array",
-     "_links": "object"
+     "environmental_impact": "object"
     },
     "evidence": [
      "openapi/_original/platform.sh-developer-portal-openapi-original.json#GET /ref/regions",
@@ -13346,27 +13400,26 @@
      "GET item"
     ],
     "properties": {
-     "regions": "array",
-     "nextPageToken": "string",
      "regionId": "string",
      "cloudProvider": "string",
      "displayName": "string",
-     "totalSize": "integer",
      "name": "string",
      "provider": "string",
      "servicePlans": "array",
+     "supportedServicePlans": "array",
      "cluster_type": "string",
      "cloud_provider": "string",
      "region": "string",
      "tidb": "array",
      "tikv": "array",
      "tiflash": "array",
-     "id": "integer",
-     "start_key": "string",
-     "end_key": "string",
-     "frames": "array",
+     "db_name": "string",
      "table_name": "string",
      "table_id": "integer",
+     "is_record": "boolean",
+     "record_id": "integer",
+     "index_name": "string",
+     "index_id": "integer",
      "record_regions": "array",
      "indices": "array"
     },
@@ -16622,6 +16675,7 @@
     "zerotier"
    ],
    "snake_case": [
+    "aruba",
     "canonical",
     "chef-software",
     "cloudflare",
@@ -16752,12 +16806,10 @@
     "appwrite",
     "contabo",
     "infoblox",
-    "leaseweb",
     "netapp",
     "netbox",
     "netbox-labs",
     "nimbusnexus",
-    "platform.sh",
     "pure-storage",
     "vmware"
    ],
@@ -16772,6 +16824,7 @@
     "sakura-internet"
    ],
    "kebab-case": [
+    "canonical",
     "exoscale",
     "haproxy"
    ]

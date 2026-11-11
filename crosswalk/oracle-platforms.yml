@@ -7,13 +7,13 @@ concepts:
     path_segment:
     - instances
     properties:
+      id:
+      - id
+      - instanceId
       name: displayName
       status:
       - state
       - lifecycleState
-      id:
-      - id
-      - instanceId
       metadata: metadata
       region: region
       instance_type: shape

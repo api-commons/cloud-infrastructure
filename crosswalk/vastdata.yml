@@ -8,13 +8,13 @@ concepts:
     - vms
     - virtual-machines
     properties:
+      id:
+      - guid
+      - id
       name:
       - name
       - title
       status: state
-      id:
-      - guid
-      - id
       created_at: created
       public_ip: ip
       description: description

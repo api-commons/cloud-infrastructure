@@ -8,11 +8,11 @@ concepts:
     - vm
     - vms
     properties:
-      name: displayName
-      status: state
       id:
       - id
       - slug
+      name: displayName
+      status: state
       created_at: createdAt
       metadata: metadata
       image: image

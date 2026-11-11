@@ -7,11 +7,18 @@ concepts:
     path_segment:
     - virtual-machines
     properties:
+      id: id
       name: name
-      status: status
+      status:
+      - status
+      - power_state
+      created_at: created_at
       metadata: labels
       instance_type: flavor
-    core_coverage: 0.5
+      image:
+      - image
+      - os
+    core_coverage: 1.0
     evidence:
     - openapi/_original/nexgen-cloud-hyperstack-openapi.json#DELETE /core/virtual-machines/{vm_id}
     - openapi/_original/nexgen-cloud-hyperstack-openapi.json#GET /core/virtual-machines
@@ -23,12 +30,15 @@ concepts:
     - volumes
     - volume
     properties:
+      id: id
       name: name
       status: status
+      created_at: created_at
       size: size
       type: volume_type
+      instance_id: attachments
       description: description
-    core_coverage: 0.667
+    core_coverage: 1.0
     evidence:
     - openapi/_original/nexgen-cloud-hyperstack-openapi.json#DELETE /core/volumes/{volume_id}
     - openapi/_original/nexgen-cloud-hyperstack-openapi.json#GET /billing/billing/history/volume
@@ -40,11 +50,16 @@ concepts:
     - snapshots
     - snapshot
     properties:
+      id: id
       name: name
       status: status
+      created_at: created_at
       metadata: labels
+      size: size
       description: description
-    core_coverage: 0.5
+      region: region_id
+      updated_at: updated_at
+    core_coverage: 1.0
     evidence:
     - openapi/_original/nexgen-cloud-hyperstack-openapi.json#DELETE /core/snapshots/{id}
     - openapi/_original/nexgen-cloud-hyperstack-openapi.json#GET /billing/billing/history/snapshot
@@ -55,10 +70,13 @@ concepts:
     path_segment:
     - firewalls
     properties:
+      id: id
       name: name
       status: status
+      created_at: created_at
       description: description
-    core_coverage: 0.75
+      rules: rules
+    core_coverage: 1.0
     evidence:
     - openapi/_original/nexgen-cloud-hyperstack-openapi.json#DELETE /core/firewalls/{id}
     - openapi/_original/nexgen-cloud-hyperstack-openapi.json#GET /core/firewalls
@@ -71,7 +89,10 @@ concepts:
     properties:
       name: name
       public_key: public_key
-    core_coverage: 0.4
+      id: id
+      created_at: created_at
+      fingerprint: fingerprint
+    core_coverage: 1.0
     evidence:
     - openapi/_original/nexgen-cloud-hyperstack-openapi.json#GET /core/keypairs
     - openapi/_original/nexgen-cloud-hyperstack-openapi.json#POST /core/keypairs
@@ -81,8 +102,10 @@ concepts:
     path_segment:
     - regions
     properties:
-      available: status
-    core_coverage: 0.0
+      name: name
+      id: id
+      description: description
+    core_coverage: 1.0
     evidence:
     - openapi/_original/nexgen-cloud-hyperstack-openapi.json#GET /core/regions
     - openapi/_original/nexgen-cloud-hyperstack-openapi.json#GET /object-storage/regions

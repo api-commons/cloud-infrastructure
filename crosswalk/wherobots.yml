@@ -7,11 +7,11 @@ concepts:
     path_segment:
     - instance
     properties:
-      name: name
-      status: status
       id:
       - id
       - instanceId
+      name: name
+      status: status
       created_at: createTime
     core_coverage: 1.0
     evidence:

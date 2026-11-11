@@ -11,6 +11,9 @@ concepts:
     - servers
     - instance
     properties:
+      id:
+      - instanceId
+      - id
       name:
       - displayName
       - name
@@ -19,9 +22,6 @@ concepts:
       - status
       - state
       - provisioningState
-      id:
-      - instanceId
-      - id
       created_at: createdDate
       metadata:
       - properties

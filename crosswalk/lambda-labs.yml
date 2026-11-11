@@ -7,11 +7,11 @@ concepts:
     path_segment:
     - instances
     properties:
+      id: id
       name:
       - name
       - hostname
       status: status
-      id: id
       metadata: tags
       region: region
       instance_type: instance_type

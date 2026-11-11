@@ -7,9 +7,9 @@ concepts:
     path_segment:
     - instances
     properties:
+      id: id
       name: name
       status: status
-      id: id
       region: zone
       instance_type: machineType
     core_coverage: 0.75

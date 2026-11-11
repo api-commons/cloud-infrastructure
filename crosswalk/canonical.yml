@@ -7,9 +7,9 @@ concepts:
     path_segment:
     - instances
     properties:
+      id: id
       name: name
       status: status
-      id: id
       created_at: created_at
       metadata:
       - metadata
@@ -50,6 +50,7 @@ concepts:
       name: name
       status: status
       metadata: metadata
+      size: size
       type: type
       description: description
     core_coverage: 0.75
@@ -94,8 +95,8 @@ concepts:
     path_segment:
     - regions
     properties:
-      available: status
       metadata: metadata
+      available: status
     core_coverage: 0.0
     evidence:
     - openapi/_original/canonical-anbox-stream-gateway-api-openapi.json#GET /1.0/regions
