@@ -1,7 +1,7 @@
 provider: sakura-internet
 apis_io: https://apis.io/providers/sakura-internet/
 context: cloud-infrastructure
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   instance:
     path_segment:

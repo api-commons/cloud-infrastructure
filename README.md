@@ -21,7 +21,7 @@ generated. Every number below is a count of providers.
 | ssh_key | 24 | 24 | name 88%, public_key 88%, id 83%, created_at 58%, fingerprint 54% | ssh-keys 14, sshkeys 4, keypairs 4, keys 2 |
 | region | 29 | 29 | name 79%, id 52% | regions 26, datacenters 6, region 1 |
 
-Cohort: 384 providers with harvested OpenAPI, 88 crosswalks. Of the providers exposing a instance: 62% create, 93% list, 82% fetch, 48% update, 67% delete. Generated 2026-11-10 by build.py.
+Cohort: 384 providers with harvested OpenAPI, 88 crosswalks. Of the providers exposing a instance: 62% create, 93% list, 82% fetch, 48% update, 67% delete. Generated 2026-11-11 by build.py.
 <!-- /commons:summary -->
 
 Shares are of the providers with a readable resource schema for that concept. The
