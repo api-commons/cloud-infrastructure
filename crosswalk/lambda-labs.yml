@@ -1,0 +1,44 @@
+provider: lambda-labs
+apis_io: https://apis.io/providers/lambda-labs/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    properties:
+      name:
+      - name
+      - hostname
+      status: status
+      id: id
+      metadata: tags
+      region: region
+      instance_type: instance_type
+      public_ip: ip
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/lambda-labs-openapi.json#GET /api/v1/instances
+    - openapi/_original/lambda-labs-openapi.json#GET /api/v1/instances/{id}
+    - openapi/_original/lambda-labs-openapi.json#POST /api/v1/instances/{id}
+  ssh_key:
+    path_segment:
+    - ssh-keys
+    properties:
+      name: name
+      public_key: public_key
+      id: id
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/lambda-labs-openapi.json#DELETE /api/v1/ssh-keys/{id}
+    - openapi/_original/lambda-labs-openapi.json#GET /api/v1/ssh-keys
+    - openapi/_original/lambda-labs-openapi.json#POST /api/v1/ssh-keys
+  region:
+    path_segment:
+    - regions
+    properties:
+      name: name
+      description: description
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/lambda-labs-openapi.json#GET /api/v1/regions

@@ -1,0 +1,19 @@
+provider: webscale-networks
+apis_io: https://apis.io/providers/webscale-networks/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - servers
+    properties:
+      name: name
+      status: state
+      created_at: created
+      public_ip: networks
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/webscale-networks-webscale-apis-openapi.json#DELETE /servers/{id}
+    - openapi/_original/webscale-networks-webscale-apis-openapi.json#GET /servers
+    - openapi/_original/webscale-networks-webscale-apis-openapi_2.json#DELETE /servers/{id}
+    - openapi/_original/webscale-networks-webscale-apis-openapi_2.json#GET /servers

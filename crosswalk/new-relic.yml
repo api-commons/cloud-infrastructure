@@ -1,0 +1,14 @@
+provider: new-relic
+apis_io: https://apis.io/providers/new-relic/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    properties:
+      id: id
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/new-relic-openapi.yml#GET /applications/{application_id}/instances.json
+    - openapi/_original/new-relic-openapi.yml#GET /applications/{application_id}/instances/{id}.json

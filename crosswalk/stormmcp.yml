@@ -1,0 +1,13 @@
+provider: stormmcp
+apis_io: https://apis.io/providers/stormmcp/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - servers
+    properties:
+      metadata: metadata
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/stormmcp-openapi.json#GET /mcp-registry/{tenantId}/v0.1/servers

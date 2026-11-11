@@ -1,0 +1,34 @@
+provider: vmware
+apis_io: https://apis.io/providers/vmware/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - vm
+    properties:
+      name: name
+      status: power_state
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/vmware-vsphere-api-openapi.yml#DELETE /vcenter/vm/{vm}
+    - openapi/_original/vmware-vsphere-api-openapi.yml#GET /vcenter/vm
+    - openapi/_original/vmware-vsphere-api-openapi.yml#GET /vcenter/vm/{vm}
+    - openapi/_original/vmware-vsphere-api-openapi.yml#POST /vcenter/vm
+  volume:
+    path_segment:
+    - disk
+    properties:
+      type: type
+    core_coverage: 0.167
+    evidence:
+    - openapi/_original/vmware-vsphere-api-openapi.yml#GET /vcenter/vm/{vm}/hardware/disk
+    - openapi/_original/vmware-vsphere-api-openapi.yml#POST /vcenter/vm/{vm}/hardware/disk
+  network:
+    path_segment:
+    - network
+    properties:
+      name: name
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/vmware-vsphere-api-openapi.yml#GET /vcenter/network

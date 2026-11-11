@@ -1,0 +1,21 @@
+provider: haproxy
+apis_io: https://apis.io/providers/haproxy/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - servers
+    properties:
+      name: name
+      id:
+      - guid
+      - id
+      metadata: metadata
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/haproxy-data-plane-api-openapi.yml#DELETE /services/haproxy/configuration/backends/{parent_name}/servers/{name}
+    - openapi/_original/haproxy-data-plane-api-openapi.yml#DELETE /services/haproxy/configuration/peers/{parent_name}/servers/{name}
+    - openapi/_original/haproxy-data-plane-api-openapi.yml#DELETE /services/haproxy/configuration/rings/{parent_name}/servers/{name}
+    - openapi/_original/haproxy-data-plane-api-openapi.yml#DELETE /services/haproxy/runtime/backends/{parent_name}/servers/{name}
+    - openapi/_original/haproxy-data-plane-api-openapi.yml#GET /services/haproxy/configuration/backends/{parent_name}/servers

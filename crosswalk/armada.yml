@@ -1,0 +1,60 @@
+provider: armada
+apis_io: https://apis.io/providers/armada/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - vms
+    - servers
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/armada-orchestrator-openapi-original.yml#DELETE /cms/api/v1/tenants/{tenantID}/vms/{vmId}
+    - openapi/_original/armada-orchestrator-openapi-original.yml#DELETE /netq/servers/{id}
+    - openapi/_original/armada-orchestrator-openapi-original.yml#DELETE /tenants/{tenant}/vms/{vmId}
+    - openapi/_original/armada-orchestrator-openapi-original.yml#GET /cms/api/v1/tenants/{tenantID}/vms
+    - openapi/_original/armada-orchestrator-openapi-original.yml#GET /cms/api/v1/tenants/{tenantID}/vms/{vmId}
+  volume:
+    path_segment:
+    - volumes
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/armada-orchestrator-openapi-original.yml#DELETE /tenants/{tenant}/clusters/{clusterID}/volumes/{id}
+    - openapi/_original/armada-orchestrator-openapi-original.yml#DELETE /tenants/{tenant}/storage/volumes/{id}
+    - openapi/_original/armada-orchestrator-openapi-original.yml#GET /tenants/{tenant}/clusters/{clusterID}/volumes
+    - openapi/_original/armada-orchestrator-openapi-original.yml#GET /tenants/{tenant}/clusters/{clusterID}/volumes/{id}
+    - openapi/_original/armada-orchestrator-openapi-original.yml#GET /tenants/{tenant}/storage/volumes
+  network:
+    path_segment:
+    - vpcs
+    - subnets
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/armada-orchestrator-openapi-original.yml#DELETE /tenants/{tenant}/subnets/{id}
+    - openapi/_original/armada-orchestrator-openapi-original.yml#DELETE /tenants/{tenant}/vpcs/{id}
+    - openapi/_original/armada-orchestrator-openapi-original.yml#GET /tenants/{tenant}/subnets
+    - openapi/_original/armada-orchestrator-openapi-original.yml#GET /tenants/{tenant}/vpcs
+    - openapi/_original/armada-orchestrator-openapi-original.yml#GET /tenants/{tenant}/vpcs/{id}
+  firewall:
+    path_segment:
+    - security-groups
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/armada-orchestrator-openapi-original.yml#DELETE /tenants/{tenant}/security-groups/{id}
+    - openapi/_original/armada-orchestrator-openapi-original.yml#GET /tenants/{tenant}/security-groups
+    - openapi/_original/armada-orchestrator-openapi-original.yml#GET /tenants/{tenant}/security-groups/{id}
+    - openapi/_original/armada-orchestrator-openapi-original.yml#POST /tenants/{tenant}/security-groups
+  load_balancer:
+    path_segment:
+    - load-balancers
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/armada-orchestrator-openapi-original.yml#DELETE /tenants/{tenant}/load-balancers/{id}
+    - openapi/_original/armada-orchestrator-openapi-original.yml#GET /tenants/{tenant}/load-balancers
+    - openapi/_original/armada-orchestrator-openapi-original.yml#GET /tenants/{tenant}/load-balancers/{id}
+    - openapi/_original/armada-orchestrator-openapi-original.yml#POST /tenants/{tenant}/load-balancers

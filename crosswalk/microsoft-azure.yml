@@ -1,0 +1,167 @@
+provider: microsoft-azure
+apis_io: https://apis.io/providers/microsoft-azure/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    - virtualmachines
+    - machines
+    - servers
+    - instance
+    properties:
+      name:
+      - displayName
+      - name
+      - hostName
+      status:
+      - status
+      - state
+      - provisioningState
+      id:
+      - instanceId
+      - id
+      created_at: createdDate
+      metadata:
+      - properties
+      - tags
+      region:
+      - location
+      - availabilityZone
+      instance_type:
+      - type
+      - serverType
+      - size
+      image:
+      - operatingSystem
+      - os
+      public_ip: ipAddresses
+      description:
+      - description
+      - notes
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/anomaly-detector-client-openapi-original.yml#DELETE /rootCauseAnalysis/instances/{instanceId}
+    - openapi/_original/anomaly-detector-client-openapi-original.yml#GET /rootCauseAnalysis/instances
+    - openapi/_original/anomaly-detector-client-openapi-original.yml#GET /rootCauseAnalysis/instances/{instanceId}
+    - openapi/_original/anomaly-detector-client-openapi-original.yml#PUT /rootCauseAnalysis/instances/{instanceId}
+    - openapi/_original/authorizationmanagementclient-openapi-original.yml#GET /providers/Microsoft.Authorization/accessReviewScheduleDefinitions/{scheduleDefinitionId}/instances
+  volume:
+    path_segment:
+    - volumes
+    - disks
+    properties:
+      id: id
+      name: name
+      status:
+      - provisioningState
+      - status
+      created_at: createdDate
+      type:
+      - volumeType
+      - diskType
+      - type
+      region: location
+      metadata:
+      - labels
+      - properties
+      - tags
+      description: description
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/azure-containerstoragerp-openapi-original.yml#DELETE /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerStorage/pools/{poolName}/volumes/{volumeName}
+    - openapi/_original/azure-containerstoragerp-openapi-original.yml#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerStorage/pools/{poolName}/volumes
+    - openapi/_original/azure-containerstoragerp-openapi-original.yml#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerStorage/pools/{poolName}/volumes/{volumeName}
+    - openapi/_original/azure-containerstoragerp-openapi-original.yml#PATCH /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerStorage/pools/{poolName}/volumes/{volumeName}
+    - openapi/_original/azure-containerstoragerp-openapi-original.yml#PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerStorage/pools/{poolName}/volumes/{volumeName}
+  snapshot:
+    path_segment:
+    - snapshots
+    properties:
+      id:
+      - id
+      - objectId
+      name: name
+      status:
+      - provisioningState
+      - status
+      created_at:
+      - createdAt
+      - created
+      metadata:
+      - tags
+      - properties
+      size: size
+      type: type
+      source_id: source
+      region: location
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/app-compliance-automation-tool-for-microsoft-365-openapi-original.yml#GET /providers/Microsoft.AppComplianceAutomation/reports/{reportName}/snapshots
+    - openapi/_original/app-compliance-automation-tool-for-microsoft-365-openapi-original.yml#GET /providers/Microsoft.AppComplianceAutomation/reports/{reportName}/snapshots/{snapshotName}
+    - openapi/_original/azure-app-configuration-openapi-original.yml#GET /snapshots
+    - openapi/_original/azure-app-configuration-openapi-original.yml#GET /snapshots/{name}
+    - openapi/_original/azure-app-configuration-openapi-original.yml#PATCH /snapshots/{name}
+  network:
+    path_segment:
+    - networks
+    - subnets
+    properties:
+      name: name
+      id: id
+      status: provisioningState
+      description: description
+      metadata: properties
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/networkresourceproviderclient-openapi-original.yml#DELETE /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualnetworks/{virtualNetworkName}/subnets/{subnetName}
+    - openapi/_original/networkresourceproviderclient-openapi-original.yml#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualnetworks/{virtualNetworkName}/subnets
+    - openapi/_original/networkresourceproviderclient-openapi-original.yml#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualnetworks/{virtualNetworkName}/subnets/{subnetName}
+    - openapi/_original/networkresourceproviderclient-openapi-original.yml#PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualnetworks/{virtualNetworkName}/subnets/{subnetName}
+    - openapi/_original/seabreezemanagementclient-openapi-original.yml#DELETE /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceFabricMesh/networks/{networkName}
+  firewall:
+    path_segment:
+    - firewalls
+    properties:
+      metadata:
+      - properties
+      - tags
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/paloaltonetworkscloudngfw-openapi-original.yml#DELETE /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/PaloAltoNetworks.Cloudngfw/firewalls/{firewallName}
+    - openapi/_original/paloaltonetworkscloudngfw-openapi-original.yml#GET /subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/firewalls
+    - openapi/_original/paloaltonetworkscloudngfw-openapi-original.yml#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/PaloAltoNetworks.Cloudngfw/firewalls
+    - openapi/_original/paloaltonetworkscloudngfw-openapi-original.yml#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/PaloAltoNetworks.Cloudngfw/firewalls/{firewallName}
+    - openapi/_original/paloaltonetworkscloudngfw-openapi-original.yml#PATCH /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/PaloAltoNetworks.Cloudngfw/firewalls/{firewallName}
+  load_balancer:
+    path_segment:
+    - loadbalancers
+    properties:
+      name: name
+      id: id
+      metadata:
+      - tags
+      - properties
+      region: location
+      status: provisioningState
+      type: type
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/microsoftkubernetesruntime-openapi-original.yml#DELETE /{resourceUri}/providers/Microsoft.KubernetesRuntime/loadBalancers/{loadBalancerName}
+    - openapi/_original/microsoftkubernetesruntime-openapi-original.yml#GET /{resourceUri}/providers/Microsoft.KubernetesRuntime/loadBalancers
+    - openapi/_original/microsoftkubernetesruntime-openapi-original.yml#GET /{resourceUri}/providers/Microsoft.KubernetesRuntime/loadBalancers/{loadBalancerName}
+    - openapi/_original/microsoftkubernetesruntime-openapi-original.yml#PUT /{resourceUri}/providers/Microsoft.KubernetesRuntime/loadBalancers/{loadBalancerName}
+    - openapi/_original/networkresourceproviderclient-openapi-original.yml#DELETE /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}
+  region:
+    path_segment:
+    - datacenters
+    - regions
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/cosmos-db-managed-cassandra-openapi-original.yml#DELETE /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/dataCenters/{dataCenterName}
+    - openapi/_original/cosmos-db-managed-cassandra-openapi-original.yml#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/dataCenters
+    - openapi/_original/cosmos-db-managed-cassandra-openapi-original.yml#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/dataCenters/{dataCenterName}
+    - openapi/_original/cosmos-db-managed-cassandra-openapi-original.yml#PATCH /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/dataCenters/{dataCenterName}
+    - openapi/_original/cosmos-db-managed-cassandra-openapi-original.yml#PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/dataCenters/{dataCenterName}

@@ -1,0 +1,17 @@
+provider: deutsche-telekom
+apis_io: https://apis.io/providers/deutsche-telekom/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    properties:
+      name: displayName
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/controlplane-identity-openapi.yml#DELETE /{realm}/identity-provider/instances/{alias}
+    - openapi/_original/controlplane-identity-openapi.yml#GET /{realm}/identity-provider/instances
+    - openapi/_original/controlplane-identity-openapi.yml#GET /{realm}/identity-provider/instances/{alias}
+    - openapi/_original/controlplane-identity-openapi.yml#POST /{realm}/identity-provider/instances
+    - openapi/_original/controlplane-identity-openapi.yml#PUT /{realm}/identity-provider/instances/{alias}

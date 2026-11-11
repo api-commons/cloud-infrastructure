@@ -1,0 +1,92 @@
+provider: spectro-cloud
+apis_io: https://apis.io/providers/spectro-cloud/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - machines
+    - vms
+    properties:
+      status: status
+      metadata: metadata
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/spectro-cloud-palette-openapi.json#DELETE /v1/cloudconfigs/aks/{configUid}/machinePools/{machinePoolName}/machines/{machineUid}
+    - openapi/_original/spectro-cloud-palette-openapi.json#DELETE /v1/cloudconfigs/apache-cloudstack/{configUid}/machinePools/{machinePoolName}/machines/{machineUid}
+    - openapi/_original/spectro-cloud-palette-openapi.json#DELETE /v1/cloudconfigs/aws/{configUid}/machinePools/{machinePoolName}/machines/{machineUid}
+    - openapi/_original/spectro-cloud-palette-openapi.json#DELETE /v1/cloudconfigs/azure/{configUid}/machinePools/{machinePoolName}/machines/{machineUid}
+    - openapi/_original/spectro-cloud-palette-openapi.json#DELETE /v1/cloudconfigs/cloudTypes/{cloudType}/{configUid}/machinePools/{machinePoolName}/machines/{machineUid}
+  snapshot:
+    path_segment:
+    - snapshot
+    properties:
+      status: status
+      metadata: metadata
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/spectro-cloud-palette-openapi.json#DELETE /v1/spectroclusters/{uid}/vms/{vmName}/snapshot/{snapshotName}
+    - openapi/_original/spectro-cloud-palette-openapi.json#GET /v1/spectroclusters/{uid}/vms/snapshot
+    - openapi/_original/spectro-cloud-palette-openapi.json#GET /v1/spectroclusters/{uid}/vms/{vmName}/snapshot/{snapshotName}
+    - openapi/_original/spectro-cloud-palette-openapi.json#POST /v1/spectroclusters/{uid}/vms/{vmName}/snapshot
+    - openapi/_original/spectro-cloud-palette-openapi.json#PUT /v1/spectroclusters/{uid}/vms/{vmName}/snapshot/{snapshotName}
+  network:
+    path_segment:
+    - networks
+    - vpcs
+    - subnets
+    properties:
+      name: name
+      id: id
+      status: state
+      description: description
+      cidr:
+      - cidr
+      - cidrBlock
+      project_id: projectId
+      region: location
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/spectro-cloud-palette-openapi.json#GET /v1/cloudaccounts/apache-cloudstack/{uid}/properties/networks
+    - openapi/_original/spectro-cloud-palette-openapi.json#GET /v1/cloudaccounts/apache-cloudstack/{uid}/properties/vpcs
+    - openapi/_original/spectro-cloud-palette-openapi.json#GET /v1/cloudaccounts/maas/{uid}/properties/subnets
+    - openapi/_original/spectro-cloud-palette-openapi.json#GET /v1/clouds/apache-cloudstack/networks
+    - openapi/_original/spectro-cloud-palette-openapi.json#GET /v1/clouds/apache-cloudstack/vpcs
+  firewall:
+    path_segment:
+    - securitygroups
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/spectro-cloud-palette-openapi.json#GET /v1/clouds/aws/securitygroups
+    - openapi/_original/spectrocloud-palette.yaml#GET /v1/clouds/aws/securitygroups
+  ssh_key:
+    path_segment:
+    - sshkeys
+    - keypairs
+    properties:
+      name: name
+      public_key: publicKey
+      fingerprint: fingerprint
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/spectro-cloud-palette-openapi.json#DELETE /v1/users/assets/sshkeys/{uid}
+    - openapi/_original/spectro-cloud-palette-openapi.json#GET /v1/cloudaccounts/apache-cloudstack/{uid}/properties/keypairs
+    - openapi/_original/spectro-cloud-palette-openapi.json#GET /v1/clouds/apache-cloudstack/keypairs
+    - openapi/_original/spectro-cloud-palette-openapi.json#GET /v1/clouds/aws/regions/{region}/keypairs
+    - openapi/_original/spectro-cloud-palette-openapi.json#GET /v1/users/assets/sshkeys
+  region:
+    path_segment:
+    - regions
+    - datacenters
+    properties:
+      name:
+      - name
+      - displayName
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/spectro-cloud-palette-openapi.json#GET /v1/cloudaccounts/vsphere/{uid}/properties/datacenters
+    - openapi/_original/spectro-cloud-palette-openapi.json#GET /v1/clouds/aws/regions
+    - openapi/_original/spectro-cloud-palette-openapi.json#GET /v1/clouds/azure/regions
+    - openapi/_original/spectro-cloud-palette-openapi.json#GET /v1/clouds/gcp/projects/{project}/regions
+    - openapi/_original/spectro-cloud-palette-openapi.json#GET /v1/clouds/vsphere/datacenters

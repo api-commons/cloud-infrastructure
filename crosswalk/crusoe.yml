@@ -1,0 +1,101 @@
+provider: crusoe
+apis_io: https://apis.io/providers/crusoe/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    - vms
+    properties:
+      name: name
+      status: state
+      id: id
+      created_at: created_at
+      metadata: metadata
+      region: location
+      instance_type: type
+      image: image
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#DELETE /projects/{project_id}/compute/vms/instances/{vm_id}
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#GET /projects/{project_id}/compute/vms/instances
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#GET /projects/{project_id}/compute/vms/instances/{vm_id}
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#GET /projects/{project_id}/kubernetes/nodepools/{node_pool_id}/vms
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#PATCH /projects/{project_id}/compute/vms/instances/{vm_id}
+  volume:
+    path_segment:
+    - disks
+    properties:
+      id: id
+      name: name
+      status: state
+      created_at: created_at
+      size: size
+      type: type
+      region: location
+      metadata: metadata
+      instance_id: attached_to
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#DELETE /projects/{project_id}/storage/disks/{disk_id}
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#GET /projects/{project_id}/storage/disks
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#GET /projects/{project_id}/storage/disks/{disk_id}
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#PATCH /projects/{project_id}/storage/disks/{disk_id}
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#POST /projects/{project_id}/storage/disks
+  snapshot:
+    path_segment:
+    - snapshots
+    - images
+    properties:
+      id: id
+      name: name
+      status: state
+      created_at: created_at
+      metadata:
+      - tags
+      - metadata
+      size: size
+      description: description
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#DELETE /projects/{project_id}/storage/snapshots/{snapshot_id}
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#GET /compute/images
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#GET /compute/images/{image_id}
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#GET /projects/{project_id}/storage/snapshots
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#GET /projects/{project_id}/storage/snapshots/{snapshot_id}
+  load_balancer:
+    path_segment:
+    - load-balancers
+    properties:
+      name: name
+      id: id
+      metadata: metadata
+      region: location
+      status: state
+      ip: vip
+      project_id: project_id
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#DELETE /projects/{project_id}/networking/load-balancers/{load_balancer_id}
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#GET /projects/{project_id}/networking/load-balancers
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#GET /projects/{project_id}/networking/load-balancers/{load_balancer_id}
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#PATCH /projects/{project_id}/networking/load-balancers/{load_balancer_id}
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#POST /projects/{project_id}/networking/load-balancers
+  ssh_key:
+    path_segment:
+    - ssh-keys
+    properties:
+      name: name
+      public_key: public_key
+      id: id
+      created_at: created_at
+      fingerprint: fingerprints
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#DELETE /users/ssh-keys
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#GET /users/ssh-keys
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#POST /users/ssh-keys
+    - openapi/_original/crusoe-cloud-api-gateway-v1alpha5-openapi.json#DELETE /users/ssh-keys
+    - openapi/_original/crusoe-cloud-api-gateway-v1alpha5-openapi.json#GET /users/ssh-keys

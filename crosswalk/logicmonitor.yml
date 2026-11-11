@@ -1,0 +1,21 @@
+provider: logicmonitor
+apis_io: https://apis.io/providers/logicmonitor/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    properties:
+      name:
+      - displayName
+      - name
+      id: id
+      description: description
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/logicmonitor-rest-api-v2-swagger.json#DELETE /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id}
+    - openapi/_original/logicmonitor-rest-api-v2-swagger.json#GET /device/devices/{deviceId}/devicedatasources/{hdsId}/instances
+    - openapi/_original/logicmonitor-rest-api-v2-swagger.json#GET /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id}
+    - openapi/_original/logicmonitor-rest-api-v2-swagger.json#GET /device/devices/{id}/instances
+    - openapi/_original/logicmonitor-rest-api-v2-swagger.json#PATCH /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id}

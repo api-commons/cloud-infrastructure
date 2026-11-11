@@ -1,0 +1,32 @@
+provider: netlify
+apis_io: https://apis.io/providers/netlify/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    properties:
+      id: id
+      created_at: created_at
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/netlify-openapi-2.57.0-swagger.json#DELETE /sites/{site_id}/services/{addon}/instances/{instance_id}
+    - openapi/_original/netlify-openapi-2.57.0-swagger.json#GET /sites/{site_id}/services/{addon}/instances/{instance_id}
+    - openapi/_original/netlify-openapi-2.57.0-swagger.json#POST /sites/{site_id}/services/{addon}/instances
+    - openapi/_original/netlify-openapi-2.57.0-swagger.json#PUT /sites/{site_id}/services/{addon}/instances/{instance_id}
+    - openapi/_original/netlify-openapi-original.yml#DELETE /sites/{site_id}/services/{addon}/instances/{instance_id}
+  snapshot:
+    path_segment:
+    - snapshot
+    - snapshots
+    properties:
+      id: id
+      name: name
+      created_at: created_at
+      metadata: metadata
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/netlify-openapi-2.57.0-swagger.json#DELETE /sites/{site_id}/database/snapshot/{snapshot_id}
+    - openapi/_original/netlify-openapi-2.57.0-swagger.json#GET /sites/{site_id}/database/snapshots
+    - openapi/_original/netlify-openapi-2.57.0-swagger.json#POST /sites/{site_id}/database/snapshot

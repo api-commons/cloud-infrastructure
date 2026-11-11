@@ -1,0 +1,16 @@
+provider: salesforce-sales-cloud
+apis_io: https://apis.io/providers/salesforce-sales-cloud/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    properties:
+      status: status
+      id: id
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/salesforce-sales-cloud-analytics-api-openapi.yml#GET /reports/{reportId}/instances
+    - openapi/_original/salesforce-sales-cloud-analytics-api-openapi.yml#GET /reports/{reportId}/instances/{instanceId}
+    - openapi/_original/salesforce-sales-cloud-analytics-api-openapi.yml#POST /reports/{reportId}/instances

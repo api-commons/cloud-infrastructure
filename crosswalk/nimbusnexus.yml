@@ -1,0 +1,67 @@
+provider: nimbusnexus
+apis_io: https://apis.io/providers/nimbusnexus/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instance
+    - vm
+    properties:
+      name: name
+      status: status
+      id:
+      - id
+      - instance_id
+      metadata: metadata
+      image: image
+      description: description
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/external.json#GET /api/v1/instance/
+    - openapi/_original/external.json#GET /api/v1/instance/{instance_id}
+    - openapi/_original/external.json#GET /api/v1/pricing/vm
+    - openapi/_original/external.json#GET /api/v1/security_group/instance
+    - openapi/_original/external.json#PATCH /api/v1/instance/{instance_id}
+  network:
+    path_segment:
+    - network
+    properties:
+      name: name
+      id: id
+      created_at: created_at
+      status: status
+      description: description
+      metadata: tags
+      project_id:
+      - tenant_id
+      - project_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/external.json#DELETE /api/v1/network/{network_id}
+    - openapi/_original/external.json#GET /api/v1/network/
+    - openapi/_original/external.json#GET /api/v1/network/{network_id}
+    - openapi/_original/external.json#POST /api/v1/network/
+    - openapi/_original/external.json#PUT /api/v1/network/{network_id}
+  load_balancer:
+    path_segment:
+    - loadbalancers
+    properties:
+      name: name
+      id: id
+      metadata: tags
+      description: description
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/external.json#DELETE /api/v1/loadbalancers/{loadbalancer_id}
+    - openapi/_original/external.json#GET /api/v1/loadbalancers/
+    - openapi/_original/external.json#GET /api/v1/loadbalancers/{loadbalancer_id}
+    - openapi/_original/external.json#PATCH /api/v1/loadbalancers/{loadbalancer_id}
+    - openapi/_original/external.json#POST /api/v1/loadbalancers/
+  region:
+    path_segment:
+    - datacenters
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/external.json#GET /api/v1/account/datacenters

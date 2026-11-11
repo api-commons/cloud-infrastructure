@@ -1,0 +1,61 @@
+provider: pure-storage
+apis_io: https://apis.io/providers/pure-storage/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - servers
+    - virtual-machines
+    properties:
+      name: name
+      id: id
+      created_at: created
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/flasharray-rest-api-openapi.yml#DELETE /api/2.52/servers
+    - openapi/_original/flasharray-rest-api-openapi.yml#GET /api/2.52/servers
+    - openapi/_original/flasharray-rest-api-openapi.yml#GET /api/2.52/virtual-machines
+    - openapi/_original/flasharray-rest-api-openapi.yml#PATCH /api/2.52/servers
+    - openapi/_original/flasharray-rest-api-openapi.yml#PATCH /api/2.52/virtual-machines
+  volume:
+    path_segment:
+    - volumes
+    properties:
+      id: id
+      name: name
+      created_at: created
+      metadata: tags
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/flasharray-rest-api-openapi.yml#DELETE /api/2.52/protection-groups/volumes
+    - openapi/_original/flasharray-rest-api-openapi.yml#DELETE /api/2.52/volumes
+    - openapi/_original/flasharray-rest-api-openapi.yml#GET /api/2.52/protection-groups/volumes
+    - openapi/_original/flasharray-rest-api-openapi.yml#GET /api/2.52/volume-groups/volumes
+    - openapi/_original/flasharray-rest-api-openapi.yml#GET /api/2.52/volumes
+  snapshot:
+    path_segment:
+    - snapshot
+    properties:
+      id: id
+      name: name
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/flasharray-rest-api-openapi.yml#DELETE /api/2.52/directories/policies/snapshot
+    - openapi/_original/flasharray-rest-api-openapi.yml#DELETE /api/2.52/policies/snapshot
+    - openapi/_original/flasharray-rest-api-openapi.yml#GET /api/2.52/directories/policies/snapshot
+    - openapi/_original/flasharray-rest-api-openapi.yml#GET /api/2.52/policies/snapshot
+    - openapi/_original/flasharray-rest-api-openapi.yml#PATCH /api/2.52/policies/snapshot
+  network:
+    path_segment:
+    - subnets
+    properties:
+      name: name
+      id: id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/flasharray-rest-api-openapi.yml#DELETE /api/2.52/subnets
+    - openapi/_original/flasharray-rest-api-openapi.yml#GET /api/2.52/subnets
+    - openapi/_original/flasharray-rest-api-openapi.yml#PATCH /api/2.52/subnets
+    - openapi/_original/flasharray-rest-api-openapi.yml#POST /api/2.52/subnets
+    - openapi/_original/flashblade-rest-api-openapi.yml#DELETE /api/2.26/subnets

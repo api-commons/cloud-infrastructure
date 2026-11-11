@@ -1,0 +1,61 @@
+provider: sakura-internet
+apis_io: https://apis.io/providers/sakura-internet/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - servers
+    properties:
+      region: zone
+      public_ip: ipv4
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/phy-api-original-swagger.json#GET /servers/
+    - openapi/_original/phy-api-original-swagger.json#GET /servers/{server_id}/
+    - openapi/_original/sakura-internet-phy-openapi.yml#GET /servers/
+    - openapi/_original/sakura-internet-phy-openapi.yml#GET /servers/{server_id}/
+  network:
+    path_segment:
+    - subnets
+    - private_networks
+    properties:
+      name: Name
+      description: Description
+      region:
+      - Zone
+      - zone
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/networking-suite-api.yaml#DELETE /networking-suite/subnets/{subnetid}
+    - openapi/_original/networking-suite-api.yaml#GET /networking-suite/subnets
+    - openapi/_original/networking-suite-api.yaml#GET /networking-suite/subnets/{subnetid}
+    - openapi/_original/networking-suite-api.yaml#POST /networking-suite/subnets
+    - openapi/_original/networking-suite-api.yaml#PUT /networking-suite/subnets/{subnetid}
+  load_balancer:
+    path_segment:
+    - load_balancers
+    properties:
+      name: name
+      id: loadBalancerID
+      created_at: created
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/apprun-dedicated-api.yaml#DELETE /clusters/{clusterID}/asg/{autoScalingGroupID}/load_balancers/{loadBalancerID}
+    - openapi/_original/apprun-dedicated-api.yaml#GET /clusters/{clusterID}/asg/{autoScalingGroupID}/load_balancers
+    - openapi/_original/apprun-dedicated-api.yaml#GET /clusters/{clusterID}/asg/{autoScalingGroupID}/load_balancers/{loadBalancerID}
+    - openapi/_original/apprun-dedicated-api.yaml#POST /clusters/{clusterID}/asg/{autoScalingGroupID}/load_balancers
+    - openapi/_original/sakura-internet-apprun-dedicated-openapi.yml#DELETE /clusters/{clusterID}/asg/{autoScalingGroupID}/load_balancers/{loadBalancerID}
+  ssh_key:
+    path_segment:
+    - keys
+    properties:
+      id: id
+      created_at: created_at
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/objectstorage-api.yaml#DELETE /account/keys/{id}
+    - openapi/_original/objectstorage-api.yaml#GET /account/keys
+    - openapi/_original/objectstorage-api.yaml#GET /account/keys/{id}
+    - openapi/_original/objectstorage-api.yaml#POST /account/keys
+    - openapi/_original/sakura-internet-objectstorage-openapi.yml#DELETE /account/keys/{id}

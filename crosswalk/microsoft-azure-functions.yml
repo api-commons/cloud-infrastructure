@@ -1,0 +1,31 @@
+provider: microsoft-azure-functions
+apis_io: https://apis.io/providers/microsoft-azure-functions/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    properties:
+      metadata: properties
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/azure-functions-management-api.json#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/instances
+    - openapi/_original/azure-functions-management-api.json#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/instances/{instanceId}
+    - openapi/_original/azure-functions-management-api.json#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/instances
+    - openapi/_original/azure-functions-management-api.json#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/instances/{instanceId}
+  snapshot:
+    path_segment:
+    - snapshots
+    properties:
+      id: id
+      name: name
+      metadata: properties
+      type: type
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/azure-functions-management-api.json#GET /subscriptions/{subscriptionId}/providers/Microsoft.Web/deletedSites/{deletedSiteId}/snapshots
+    - openapi/_original/azure-functions-management-api.json#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/config/web/snapshots
+    - openapi/_original/azure-functions-management-api.json#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/config/web/snapshots/{snapshotId}
+    - openapi/_original/azure-functions-management-api.json#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/config/web/snapshots
+    - openapi/_original/azure-functions-management-api.json#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/config/web/snapshots/{snapshotId}

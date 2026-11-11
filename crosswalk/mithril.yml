@@ -1,0 +1,46 @@
+provider: mithril
+apis_io: https://apis.io/providers/mithril/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    properties:
+      name: name
+      status: status
+      created_at: created_at
+      region: region
+      instance_type: instance_type
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/mithril-compute-openapi-original.json#GET /v2/instances
+    - openapi/_original/mithril-compute-openapi-original.json#PATCH /v2/instances
+  volume:
+    path_segment:
+    - volumes
+    properties:
+      name: name
+      created_at: created_at
+      size: size_gb
+      region: region
+      instance_id: attachments
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/mithril-compute-openapi-original.json#DELETE /v2/volumes/{volume_fid}
+    - openapi/_original/mithril-compute-openapi-original.json#GET /v2/volumes
+    - openapi/_original/mithril-compute-openapi-original.json#PATCH /v2/volumes/{volume_fid}
+    - openapi/_original/mithril-compute-openapi-original.json#POST /v2/volumes
+  ssh_key:
+    path_segment:
+    - ssh-keys
+    properties:
+      name: name
+      public_key: public_key
+      created_at: created_at
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/mithril-compute-openapi-original.json#DELETE /v2/ssh-keys/{ssh_key_fid}
+    - openapi/_original/mithril-compute-openapi-original.json#GET /v2/ssh-keys
+    - openapi/_original/mithril-compute-openapi-original.json#PATCH /v2/ssh-keys/{ssh_key_fid}
+    - openapi/_original/mithril-compute-openapi-original.json#POST /v2/ssh-keys

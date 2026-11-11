@@ -1,0 +1,23 @@
+provider: jarvislabs
+apis_io: https://apis.io/providers/jarvislabs/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    properties:
+      name: name
+      status: status
+      region: region
+      instance_type:
+      - instance_type
+      - gpu_type
+      image: template
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/jarvislabs-openapi.yml#DELETE /instances/{machine_id}
+    - openapi/_original/jarvislabs-openapi.yml#GET /instances
+    - openapi/_original/jarvislabs-openapi.yml#GET /instances/{machine_id}
+    - openapi/_original/jarvislabs-openapi.yml#PATCH /instances/{machine_id}
+    - openapi/_original/jarvislabs-openapi.yml#POST /instances

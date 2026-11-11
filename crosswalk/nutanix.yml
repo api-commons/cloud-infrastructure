@@ -1,0 +1,36 @@
+provider: nutanix
+apis_io: https://apis.io/providers/nutanix/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - vms
+    properties:
+      status: status
+      metadata: metadata
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/nutanix-prism-central-v3-openapi.yml#DELETE /vms/{uuid}
+    - openapi/_original/nutanix-prism-central-v3-openapi.yml#GET /vms/{uuid}
+    - openapi/_original/nutanix-prism-central-v3-openapi.yml#POST /vms
+    - openapi/_original/nutanix-prism-central-v3-openapi.yml#PUT /vms/{uuid}
+    - openapi/_original/nutanix-prism-element-v2-openapi.yml#GET /vms
+  snapshot:
+    path_segment:
+    - snapshots
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/nutanix-prism-element-v2-openapi.yml#GET /snapshots
+  network:
+    path_segment:
+    - subnets
+    properties:
+      metadata: metadata
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/nutanix-prism-central-v3-openapi.yml#DELETE /subnets/{uuid}
+    - openapi/_original/nutanix-prism-central-v3-openapi.yml#GET /subnets/{uuid}
+    - openapi/_original/nutanix-prism-central-v3-openapi.yml#POST /subnets
+    - openapi/_original/nutanix-prism-central-v3-openapi.yml#PUT /subnets/{uuid}

@@ -1,0 +1,61 @@
+provider: google-cloud
+apis_io: https://apis.io/providers/google-cloud/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    properties:
+      name: name
+      status: status
+      id: id
+      created_at: creationTimestamp
+      metadata:
+      - metadata
+      - tags
+      region: zone
+      instance_type: machineType
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/google-cloud-openapi.yml#DELETE /projects/{project}/zones/{zone}/instances/{instance}
+    - openapi/_original/google-cloud-openapi.yml#GET /projects/{project}/zones/{zone}/instances
+    - openapi/_original/google-cloud-openapi.yml#GET /projects/{project}/zones/{zone}/instances/{instance}
+    - openapi/_original/google-cloud-openapi.yml#POST /projects/{project}/zones/{zone}/instances
+  volume:
+    path_segment:
+    - disks
+    properties:
+      id: id
+      name: name
+      status: status
+      size: sizeGb
+      type: type
+      region: zone
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/google-cloud-openapi.yml#GET /projects/{project}/zones/{zone}/disks
+    - openapi/_original/google-cloud-openapi.yml#POST /projects/{project}/zones/{zone}/disks
+  network:
+    path_segment:
+    - networks
+    properties:
+      name: name
+      id: id
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/google-cloud-openapi.yml#GET /projects/{project}/global/networks
+    - openapi/_original/google-cloud-openapi.yml#POST /projects/{project}/global/networks
+  firewall:
+    path_segment:
+    - firewalls
+    properties:
+      id: id
+      name: name
+      status: status
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/google-cloud-openapi.yml#GET /projects/{project}/global/firewalls
+    - openapi/_original/google-cloud-openapi.yml#POST /projects/{project}/global/firewalls

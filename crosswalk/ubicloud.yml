@@ -1,0 +1,37 @@
+provider: ubicloud
+apis_io: https://apis.io/providers/ubicloud/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - vm
+    - servers
+    properties:
+      name: name
+      status: state
+      id: id
+      region: location
+      instance_type: size
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/ubicloud-openapi.yml#DELETE /project/{project_id}/location/{location}/vm/{vm_reference}
+    - openapi/_original/ubicloud-openapi.yml#GET /project/{project_id}/location/{location}/postgres/{postgres_database_reference}/servers
+    - openapi/_original/ubicloud-openapi.yml#GET /project/{project_id}/location/{location}/vm
+    - openapi/_original/ubicloud-openapi.yml#GET /project/{project_id}/location/{location}/vm/{vm_reference}
+    - openapi/_original/ubicloud-openapi.yml#GET /project/{project_id}/vm
+  firewall:
+    path_segment:
+    - firewall
+    properties:
+      id: id
+      name: name
+      status: state
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/ubicloud-openapi.yml#DELETE /project/{project_id}/location/{location}/firewall/{firewall_reference}
+    - openapi/_original/ubicloud-openapi.yml#GET /project/{project_id}/firewall
+    - openapi/_original/ubicloud-openapi.yml#GET /project/{project_id}/location/{location}/firewall
+    - openapi/_original/ubicloud-openapi.yml#GET /project/{project_id}/location/{location}/firewall/{firewall_reference}
+    - openapi/_original/ubicloud-openapi.yml#PATCH /project/{project_id}/location/{location}/firewall/{firewall_reference}

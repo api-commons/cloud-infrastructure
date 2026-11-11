@@ -1,0 +1,117 @@
+provider: oracle
+apis_io: https://apis.io/providers/oracle/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    - servers
+    properties:
+      name:
+      - displayName
+      - hostName
+      - name
+      status:
+      - state
+      - lifecycleState
+      - status
+      id:
+      - id
+      - instanceId
+      metadata: metadata
+      region: region
+      instance_type: shape
+      image: imageId
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/oci-iaas-openapi.yaml#DELETE /instances/{instanceId}
+    - openapi/_original/oci-iaas-openapi.yaml#GET /clusterNetworks/{clusterNetworkId}/instances
+    - openapi/_original/oci-iaas-openapi.yaml#GET /computeCapacityReservations/{capacityReservationId}/instances
+    - openapi/_original/oci-iaas-openapi.yaml#GET /computeGpuMemoryClusters/{computeGpuMemoryClusterId}/instances
+    - openapi/_original/oci-iaas-openapi.yaml#GET /dedicatedVmHosts/{dedicatedVmHostId}/instances
+  volume:
+    path_segment:
+    - volumes
+    properties:
+      id: id
+      name:
+      - displayName
+      - name
+      status: lifecycleState
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/oci-iaas-openapi.yaml#DELETE /volumes/{volumeId}
+    - openapi/_original/oci-iaas-openapi.yaml#GET /volumes
+    - openapi/_original/oci-iaas-openapi.yaml#GET /volumes/{volumeId}
+    - openapi/_original/oci-iaas-openapi.yaml#POST /volumes
+    - openapi/_original/oci-iaas-openapi.yaml#PUT /volumes/{volumeId}
+  snapshot:
+    path_segment:
+    - snapshots
+    - backups
+    - snapshot
+    properties:
+      id: id
+      name: name
+      status: lifecycleState
+      type: type
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/oci-datalabeling-openapi.yaml#POST /datasets/{datasetId}/actions/snapshot
+    - openapi/_original/oci-filestorage-openapi.yaml#DELETE /snapshots/{snapshotId}
+    - openapi/_original/oci-filestorage-openapi.yaml#GET /snapshots
+    - openapi/_original/oci-filestorage-openapi.yaml#GET /snapshots/{snapshotId}
+    - openapi/_original/oci-filestorage-openapi.yaml#POST /snapshots
+  network:
+    path_segment:
+    - subnets
+    properties:
+      name: displayName
+      id: id
+      status: lifecycleState
+      cidr: cidrBlock
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/oci-iaas-openapi.yaml#DELETE /subnets/{subnetId}
+    - openapi/_original/oci-iaas-openapi.yaml#GET /ipInventory/subnets/{subnetId}
+    - openapi/_original/oci-iaas-openapi.yaml#GET /subnets
+    - openapi/_original/oci-iaas-openapi.yaml#GET /subnets/{subnetId}
+    - openapi/_original/oci-iaas-openapi.yaml#POST /subnets
+  firewall:
+    path_segment:
+    - securitygroups
+    properties:
+      id: id
+      name: name
+      description: description
+      rules: rules
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/oci-itas-openapi.yaml#DELETE /{domain}/myservices/api/v1/serviceEntitlements/{serviceEntitlementId}/serviceConfigurations/{serviceConfigurationId}/securityGroups/{id}
+    - openapi/_original/oci-itas-openapi.yaml#GET /{domain}/myservices/api/v1/serviceEntitlements/{serviceEntitlementId}/serviceConfigurations/{serviceConfigurationId}/securityGroups
+    - openapi/_original/oci-itas-openapi.yaml#GET /{domain}/myservices/api/v1/serviceEntitlements/{serviceEntitlementId}/serviceConfigurations/{serviceConfigurationId}/securityGroups/{id}
+    - openapi/_original/oci-itas-openapi.yaml#POST /{domain}/myservices/api/v1/serviceEntitlements/{serviceEntitlementId}/serviceConfigurations/{serviceConfigurationId}/securityGroups
+    - openapi/_original/oci-itas-openapi.yaml#PUT /{domain}/myservices/api/v1/serviceEntitlements/{serviceEntitlementId}/serviceConfigurations/{serviceConfigurationId}/securityGroups/{id}
+  load_balancer:
+    path_segment:
+    - loadbalancers
+    properties:
+      name: displayName
+      id: id
+      status: lifecycleState
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/oci-loadbalancer-openapi.yaml#DELETE /loadBalancers/{loadBalancerId}
+    - openapi/_original/oci-loadbalancer-openapi.yaml#GET /loadBalancers
+    - openapi/_original/oci-loadbalancer-openapi.yaml#GET /loadBalancers/{loadBalancerId}
+    - openapi/_original/oci-loadbalancer-openapi.yaml#POST /loadBalancers
+    - openapi/_original/oci-loadbalancer-openapi.yaml#PUT /loadBalancers/{loadBalancerId}
+  region:
+    path_segment:
+    - regions
+    properties:
+      name: name
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/oci-identity-openapi.yaml#GET /regions

@@ -1,0 +1,17 @@
+provider: synadia-communications
+apis_io: https://apis.io/providers/synadia-communications/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - servers
+    properties:
+      name: name
+      id: id
+      metadata: tags
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/synadia-communications-control-plane-openapi.yaml#GET /core/beta/systems/{systemId}/health/servers
+    - openapi/_original/synadia-communications-control-plane-openapi.yaml#GET /core/beta/systems/{systemId}/info/servers
+    - openapi/_original/synadia-communications-control-plane-openapi.yaml#GET /core/beta/systems/{systemId}/servers

@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/cloud-infrastructure/main/schema/region.json",
+  "title": "Region",
+  "description": "The common region in Cloud Infrastructure, distilled from 29 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.69,
+      "x-commons-providers": 20,
+      "x-commons-spellings": [
+        "name",
+        "label",
+        "displayName"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.517,
+      "x-commons-providers": 15,
+      "x-commons-spellings": [
+        "id",
+        "slug",
+        "uuid"
+      ]
+    },
+    "available": {
+      "type": "boolean",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.241,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "status",
+        "available"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.241,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "description",
+        "details"
+      ]
+    },
+    "metadata": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.241,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "tags",
+        "metadata",
+        "custom_fields",
+        "attributes",
+        "labels"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "cloud-infrastructure",
+    "concept": "region",
+    "providers": 29,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

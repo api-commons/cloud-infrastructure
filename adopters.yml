@@ -1,0 +1,636 @@
+context: cloud-infrastructure
+generated: '2026-11-10'
+adopters:
+- provider: advanced-micro-devices
+  apis_io: https://apis.io/providers/advanced-micro-devices/
+  crosswalk: crosswalk/advanced-micro-devices.yml
+  concepts:
+  - instance
+- provider: amazon-lightsail
+  apis_io: https://apis.io/providers/amazon-lightsail/
+  crosswalk: crosswalk/amazon-lightsail.yml
+  concepts:
+  - instance
+- provider: armada
+  apis_io: https://apis.io/providers/armada/
+  crosswalk: crosswalk/armada.yml
+  concepts:
+  - firewall
+  - instance
+  - load_balancer
+  - network
+  - volume
+- provider: azure-cloud
+  apis_io: https://apis.io/providers/azure-cloud/
+  crosswalk: crosswalk/azure-cloud.yml
+  concepts:
+  - instance
+  - snapshot
+  - volume
+- provider: azure-test-labs
+  apis_io: https://apis.io/providers/azure-test-labs/
+  crosswalk: crosswalk/azure-test-labs.yml
+  concepts:
+  - instance
+  - volume
+- provider: canonical
+  apis_io: https://apis.io/providers/canonical/
+  crosswalk: crosswalk/canonical.yml
+  concepts:
+  - instance
+  - load_balancer
+  - network
+  - region
+  - snapshot
+  - volume
+- provider: chef-software
+  apis_io: https://apis.io/providers/chef-software/
+  crosswalk: crosswalk/chef-software.yml
+  concepts:
+  - instance
+- provider: cisco-hardware
+  apis_io: https://apis.io/providers/cisco-hardware/
+  crosswalk: crosswalk/cisco-hardware.yml
+  concepts:
+  - instance
+  - network
+  - region
+- provider: cloudflare
+  apis_io: https://apis.io/providers/cloudflare/
+  crosswalk: crosswalk/cloudflare.yml
+  concepts:
+  - instance
+  - load_balancer
+  - network
+  - region
+  - snapshot
+- provider: contabo
+  apis_io: https://apis.io/providers/contabo/
+  crosswalk: crosswalk/contabo.yml
+  concepts:
+  - firewall
+  - instance
+  - network
+  - snapshot
+- provider: coralogix
+  apis_io: https://apis.io/providers/coralogix/
+  crosswalk: crosswalk/coralogix.yml
+  concepts:
+  - instance
+- provider: crusoe
+  apis_io: https://apis.io/providers/crusoe/
+  crosswalk: crosswalk/crusoe.yml
+  concepts:
+  - instance
+  - load_balancer
+  - snapshot
+  - ssh_key
+  - volume
+- provider: cudo-compute
+  apis_io: https://apis.io/providers/cudo-compute/
+  crosswalk: crosswalk/cudo-compute.yml
+  concepts:
+  - firewall
+  - instance
+  - network
+  - ssh_key
+  - volume
+- provider: datacrunch
+  apis_io: https://apis.io/providers/datacrunch/
+  crosswalk: crosswalk/datacrunch.yml
+  concepts:
+  - instance
+  - network
+  - ssh_key
+  - volume
+- provider: dedaluslabs
+  apis_io: https://apis.io/providers/dedaluslabs/
+  crosswalk: crosswalk/dedaluslabs.yml
+  concepts:
+  - instance
+- provider: deutsche-telekom
+  apis_io: https://apis.io/providers/deutsche-telekom/
+  crosswalk: crosswalk/deutsche-telekom.yml
+  concepts:
+  - instance
+- provider: digital-ocean
+  apis_io: https://apis.io/providers/digital-ocean/
+  crosswalk: crosswalk/digital-ocean.yml
+  concepts:
+  - firewall
+  - instance
+  - load_balancer
+  - network
+  - region
+  - snapshot
+  - ssh_key
+  - volume
+- provider: eu-sovereign-cloud-api
+  apis_io: https://apis.io/providers/eu-sovereign-cloud-api/
+  crosswalk: crosswalk/eu-sovereign-cloud-api.yml
+  concepts:
+  - firewall
+  - instance
+  - network
+  - region
+- provider: exoscale
+  apis_io: https://apis.io/providers/exoscale/
+  crosswalk: crosswalk/exoscale.yml
+  concepts:
+  - instance
+  - snapshot
+  - volume
+- provider: fastgpu
+  apis_io: https://apis.io/providers/fastgpu/
+  crosswalk: crosswalk/fastgpu.yml
+  concepts:
+  - instance
+- provider: fluence
+  apis_io: https://apis.io/providers/fluence/
+  crosswalk: crosswalk/fluence.yml
+  concepts:
+  - firewall
+  - instance
+  - network
+  - region
+  - ssh_key
+- provider: fluidstack
+  apis_io: https://apis.io/providers/fluidstack/
+  crosswalk: crosswalk/fluidstack.yml
+  concepts:
+  - instance
+  - region
+- provider: fly-io
+  apis_io: https://apis.io/providers/fly-io/
+  crosswalk: crosswalk/fly-io.yml
+  concepts:
+  - instance
+  - region
+  - snapshot
+  - volume
+- provider: freestyle-sh
+  apis_io: https://apis.io/providers/freestyle-sh/
+  crosswalk: crosswalk/freestyle-sh.yml
+  concepts:
+  - instance
+  - network
+  - snapshot
+- provider: gcp
+  apis_io: https://apis.io/providers/gcp/
+  crosswalk: crosswalk/gcp.yml
+  concepts:
+  - firewall
+  - instance
+  - network
+  - snapshot
+  - volume
+- provider: google
+  apis_io: https://apis.io/providers/google/
+  crosswalk: crosswalk/google.yml
+  concepts:
+  - instance
+  - ssh_key
+  - volume
+- provider: google-cloud
+  apis_io: https://apis.io/providers/google-cloud/
+  crosswalk: crosswalk/google-cloud.yml
+  concepts:
+  - firewall
+  - instance
+  - network
+  - volume
+- provider: google-cloud-app-engine
+  apis_io: https://apis.io/providers/google-cloud-app-engine/
+  crosswalk: crosswalk/google-cloud-app-engine.yml
+  concepts:
+  - instance
+- provider: google-cloud-compute-engine
+  apis_io: https://apis.io/providers/google-cloud-compute-engine/
+  crosswalk: crosswalk/google-cloud-compute-engine.yml
+  concepts:
+  - firewall
+  - instance
+  - network
+  - volume
+- provider: google-cloud-platform-gcp
+  apis_io: https://apis.io/providers/google-cloud-platform-gcp/
+  crosswalk: crosswalk/google-cloud-platform-gcp.yml
+  concepts:
+  - firewall
+  - instance
+  - network
+  - volume
+- provider: haproxy
+  apis_io: https://apis.io/providers/haproxy/
+  crosswalk: crosswalk/haproxy.yml
+  concepts:
+  - instance
+- provider: hetzner
+  apis_io: https://apis.io/providers/hetzner/
+  crosswalk: crosswalk/hetzner.yml
+  concepts:
+  - firewall
+  - instance
+  - load_balancer
+  - network
+  - region
+  - ssh_key
+  - volume
+- provider: horizoniq
+  apis_io: https://apis.io/providers/horizoniq/
+  crosswalk: crosswalk/horizoniq.yml
+  concepts:
+  - firewall
+  - instance
+  - network
+  - snapshot
+- provider: intersight
+  apis_io: https://apis.io/providers/intersight/
+  crosswalk: crosswalk/intersight.yml
+  concepts:
+  - instance
+  - network
+  - volume
+- provider: jarvislabs
+  apis_io: https://apis.io/providers/jarvislabs/
+  crosswalk: crosswalk/jarvislabs.yml
+  concepts:
+  - instance
+- provider: koyeb
+  apis_io: https://apis.io/providers/koyeb/
+  crosswalk: crosswalk/koyeb.yml
+  concepts:
+  - instance
+  - region
+  - snapshot
+  - volume
+- provider: lambda
+  apis_io: https://apis.io/providers/lambda/
+  crosswalk: crosswalk/lambda.yml
+  concepts:
+  - instance
+  - ssh_key
+- provider: lambda-labs
+  apis_io: https://apis.io/providers/lambda-labs/
+  crosswalk: crosswalk/lambda-labs.yml
+  concepts:
+  - instance
+  - region
+  - ssh_key
+- provider: laravel
+  apis_io: https://apis.io/providers/laravel/
+  crosswalk: crosswalk/laravel.yml
+  concepts:
+  - instance
+  - network
+  - region
+  - snapshot
+  - ssh_key
+- provider: leaseweb
+  apis_io: https://apis.io/providers/leaseweb/
+  crosswalk: crosswalk/leaseweb.yml
+  concepts:
+  - instance
+- provider: linode
+  apis_io: https://apis.io/providers/linode/
+  crosswalk: crosswalk/linode.yml
+  concepts:
+  - firewall
+  - instance
+  - load_balancer
+  - network
+  - region
+  - snapshot
+  - ssh_key
+  - volume
+- provider: logicmonitor
+  apis_io: https://apis.io/providers/logicmonitor/
+  crosswalk: crosswalk/logicmonitor.yml
+  concepts:
+  - instance
+- provider: microsoft-azure
+  apis_io: https://apis.io/providers/microsoft-azure/
+  crosswalk: crosswalk/microsoft-azure.yml
+  concepts:
+  - firewall
+  - instance
+  - load_balancer
+  - network
+  - region
+  - snapshot
+  - volume
+- provider: microsoft-azure-functions
+  apis_io: https://apis.io/providers/microsoft-azure-functions/
+  crosswalk: crosswalk/microsoft-azure-functions.yml
+  concepts:
+  - instance
+  - snapshot
+- provider: mithril
+  apis_io: https://apis.io/providers/mithril/
+  crosswalk: crosswalk/mithril.yml
+  concepts:
+  - instance
+  - ssh_key
+  - volume
+- provider: neo4j
+  apis_io: https://apis.io/providers/neo4j/
+  crosswalk: crosswalk/neo4j.yml
+  concepts:
+  - instance
+  - snapshot
+- provider: netbox
+  apis_io: https://apis.io/providers/netbox/
+  crosswalk: crosswalk/netbox.yml
+  concepts:
+  - instance
+  - region
+- provider: netbox-labs
+  apis_io: https://apis.io/providers/netbox-labs/
+  crosswalk: crosswalk/netbox-labs.yml
+  concepts:
+  - instance
+  - region
+- provider: netlify
+  apis_io: https://apis.io/providers/netlify/
+  crosswalk: crosswalk/netlify.yml
+  concepts:
+  - instance
+  - snapshot
+- provider: new-relic
+  apis_io: https://apis.io/providers/new-relic/
+  crosswalk: crosswalk/new-relic.yml
+  concepts:
+  - instance
+- provider: nexgen-cloud
+  apis_io: https://apis.io/providers/nexgen-cloud/
+  crosswalk: crosswalk/nexgen-cloud.yml
+  concepts:
+  - firewall
+  - instance
+  - region
+  - snapshot
+  - ssh_key
+  - volume
+- provider: nimbusnexus
+  apis_io: https://apis.io/providers/nimbusnexus/
+  crosswalk: crosswalk/nimbusnexus.yml
+  concepts:
+  - instance
+  - load_balancer
+  - network
+  - region
+- provider: nutanix
+  apis_io: https://apis.io/providers/nutanix/
+  crosswalk: crosswalk/nutanix.yml
+  concepts:
+  - instance
+  - network
+  - snapshot
+- provider: onshape
+  apis_io: https://apis.io/providers/onshape/
+  crosswalk: crosswalk/onshape.yml
+  concepts:
+  - instance
+- provider: openrelay
+  apis_io: https://apis.io/providers/openrelay/
+  crosswalk: crosswalk/openrelay.yml
+  concepts:
+  - instance
+  - snapshot
+  - ssh_key
+- provider: oracle
+  apis_io: https://apis.io/providers/oracle/
+  crosswalk: crosswalk/oracle.yml
+  concepts:
+  - firewall
+  - instance
+  - load_balancer
+  - network
+  - region
+  - snapshot
+  - volume
+- provider: oracle-cloud
+  apis_io: https://apis.io/providers/oracle-cloud/
+  crosswalk: crosswalk/oracle-cloud.yml
+  concepts:
+  - instance
+  - network
+  - region
+  - volume
+- provider: oracle-platforms
+  apis_io: https://apis.io/providers/oracle-platforms/
+  crosswalk: crosswalk/oracle-platforms.yml
+  concepts:
+  - instance
+  - network
+  - volume
+- provider: ovh-cloud
+  apis_io: https://apis.io/providers/ovh-cloud/
+  crosswalk: crosswalk/ovh-cloud.yml
+  concepts:
+  - instance
+  - network
+  - region
+  - snapshot
+  - volume
+- provider: oxide-computer
+  apis_io: https://apis.io/providers/oxide-computer/
+  crosswalk: crosswalk/oxide-computer.yml
+  concepts:
+  - instance
+  - network
+  - snapshot
+  - ssh_key
+  - volume
+- provider: pingcap
+  apis_io: https://apis.io/providers/pingcap/
+  crosswalk: crosswalk/pingcap.yml
+  concepts:
+  - instance
+  - region
+- provider: pure-storage
+  apis_io: https://apis.io/providers/pure-storage/
+  crosswalk: crosswalk/pure-storage.yml
+  concepts:
+  - instance
+  - network
+  - snapshot
+  - volume
+- provider: qubrid-ai
+  apis_io: https://apis.io/providers/qubrid-ai/
+  crosswalk: crosswalk/qubrid-ai.yml
+  concepts:
+  - instance
+  - ssh_key
+- provider: render
+  apis_io: https://apis.io/providers/render/
+  crosswalk: crosswalk/render.yml
+  concepts:
+  - instance
+  - snapshot
+  - volume
+- provider: runcrate
+  apis_io: https://apis.io/providers/runcrate/
+  crosswalk: crosswalk/runcrate.yml
+  concepts:
+  - instance
+  - region
+  - ssh_key
+- provider: sakura-internet
+  apis_io: https://apis.io/providers/sakura-internet/
+  crosswalk: crosswalk/sakura-internet.yml
+  concepts:
+  - instance
+  - load_balancer
+  - network
+  - ssh_key
+- provider: salesforce-sales-cloud
+  apis_io: https://apis.io/providers/salesforce-sales-cloud/
+  crosswalk: crosswalk/salesforce-sales-cloud.yml
+  concepts:
+  - instance
+- provider: scaleway
+  apis_io: https://apis.io/providers/scaleway/
+  crosswalk: crosswalk/scaleway.yml
+  concepts:
+  - firewall
+  - instance
+  - load_balancer
+  - network
+  - region
+  - snapshot
+  - ssh_key
+  - volume
+- provider: sfcompute
+  apis_io: https://apis.io/providers/sfcompute/
+  crosswalk: crosswalk/sfcompute.yml
+  concepts:
+  - instance
+- provider: shadeform
+  apis_io: https://apis.io/providers/shadeform/
+  crosswalk: crosswalk/shadeform.yml
+  concepts:
+  - instance
+  - ssh_key
+  - volume
+- provider: simplivity
+  apis_io: https://apis.io/providers/simplivity/
+  crosswalk: crosswalk/simplivity.yml
+  concepts:
+  - instance
+- provider: smithery-ai
+  apis_io: https://apis.io/providers/smithery-ai/
+  crosswalk: crosswalk/smithery-ai.yml
+  concepts:
+  - instance
+- provider: smol-machines
+  apis_io: https://apis.io/providers/smol-machines/
+  crosswalk: crosswalk/smol-machines.yml
+  concepts:
+  - instance
+  - volume
+- provider: spectro-cloud
+  apis_io: https://apis.io/providers/spectro-cloud/
+  crosswalk: crosswalk/spectro-cloud.yml
+  concepts:
+  - firewall
+  - instance
+  - network
+  - region
+  - snapshot
+  - ssh_key
+- provider: stackit
+  apis_io: https://apis.io/providers/stackit/
+  crosswalk: crosswalk/stackit.yml
+  concepts:
+  - firewall
+  - instance
+  - load_balancer
+  - network
+  - region
+  - snapshot
+  - ssh_key
+  - volume
+- provider: stormmcp
+  apis_io: https://apis.io/providers/stormmcp/
+  crosswalk: crosswalk/stormmcp.yml
+  concepts:
+  - instance
+- provider: synadia-communications
+  apis_io: https://apis.io/providers/synadia-communications/
+  crosswalk: crosswalk/synadia-communications.yml
+  concepts:
+  - instance
+- provider: ubicloud
+  apis_io: https://apis.io/providers/ubicloud/
+  crosswalk: crosswalk/ubicloud.yml
+  concepts:
+  - firewall
+  - instance
+- provider: upcloud
+  apis_io: https://apis.io/providers/upcloud/
+  crosswalk: crosswalk/upcloud.yml
+  concepts:
+  - instance
+  - network
+  - region
+  - volume
+- provider: vast-ai
+  apis_io: https://apis.io/providers/vast-ai/
+  crosswalk: crosswalk/vast-ai.yml
+  concepts:
+  - instance
+  - volume
+- provider: vastdata
+  apis_io: https://apis.io/providers/vastdata/
+  crosswalk: crosswalk/vastdata.yml
+  concepts:
+  - instance
+  - snapshot
+  - volume
+- provider: vers
+  apis_io: https://apis.io/providers/vers/
+  crosswalk: crosswalk/vers.yml
+  concepts:
+  - instance
+  - volume
+- provider: vmware
+  apis_io: https://apis.io/providers/vmware/
+  crosswalk: crosswalk/vmware.yml
+  concepts:
+  - instance
+  - network
+  - volume
+- provider: voltage-park
+  apis_io: https://apis.io/providers/voltage-park/
+  crosswalk: crosswalk/voltage-park.yml
+  concepts:
+  - instance
+  - ssh_key
+- provider: vultr
+  apis_io: https://apis.io/providers/vultr/
+  crosswalk: crosswalk/vultr.yml
+  concepts:
+  - firewall
+  - instance
+  - load_balancer
+  - network
+  - region
+  - snapshot
+  - ssh_key
+- provider: webscale-networks
+  apis_io: https://apis.io/providers/webscale-networks/
+  crosswalk: crosswalk/webscale-networks.yml
+  concepts:
+  - instance
+- provider: wherobots
+  apis_io: https://apis.io/providers/wherobots/
+  crosswalk: crosswalk/wherobots.yml
+  concepts:
+  - instance
+- provider: yugabyte
+  apis_io: https://apis.io/providers/yugabyte/
+  crosswalk: crosswalk/yugabyte.yml
+  concepts:
+  - instance
+  - region

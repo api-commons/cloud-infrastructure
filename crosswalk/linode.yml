@@ -1,0 +1,148 @@
+provider: linode
+apis_io: https://apis.io/providers/linode/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    properties:
+      name: label
+      status: status
+      id: id
+      created_at: created
+      metadata:
+      - tags
+      - metadata
+      region: region
+      instance_type: type
+      image: image
+      public_ip: ipv4
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/linode-api-v4-official-openapi.json#DELETE /{apiVersion}/databases/mysql/instances/{mysqlInstanceId}
+    - openapi/_original/linode-api-v4-official-openapi.json#DELETE /{apiVersion}/databases/postgresql/instances/{postgresqlInstanceId}
+    - openapi/_original/linode-api-v4-official-openapi.json#DELETE /{apiVersion}/databases/valkey/instances/{valkeyInstanceId}
+    - openapi/_original/linode-api-v4-official-openapi.json#DELETE /{apiVersion}/linode/instances/{linodeId}
+    - openapi/_original/linode-api-v4-official-openapi.json#GET /{apiVersion}/databases/instances
+  volume:
+    path_segment:
+    - volumes
+    - disks
+    properties:
+      id: id
+      name: label
+      status: status
+      created_at: created
+      size: size
+      region: region
+      metadata: tags
+      instance_id: linode_id
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/linode-api-v4-official-openapi.json#DELETE /{apiVersion}/linode/instances/{linodeId}/disks/{diskId}
+    - openapi/_original/linode-api-v4-official-openapi.json#DELETE /{apiVersion}/volumes/{volumeId}
+    - openapi/_original/linode-api-v4-official-openapi.json#GET /{apiVersion}/linode/instances/{linodeId}/disks
+    - openapi/_original/linode-api-v4-official-openapi.json#GET /{apiVersion}/linode/instances/{linodeId}/disks/{diskId}
+    - openapi/_original/linode-api-v4-official-openapi.json#GET /{apiVersion}/linode/instances/{linodeId}/volumes
+  snapshot:
+    path_segment:
+    - backups
+    properties:
+      id: id
+      name: label
+      status: status
+      created_at: created
+      type: type
+      region: region
+      updated_at: updated
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/linode-api-v4-official-openapi.json#GET /{apiVersion}/linode/instances/{linodeId}/backups
+    - openapi/_original/linode-api-v4-official-openapi.json#GET /{apiVersion}/linode/instances/{linodeId}/backups/{backupId}
+    - openapi/_original/linode-api-v4-official-openapi.json#POST /{apiVersion}/linode/instances/{linodeId}/backups
+    - openapi/_original/linode-api-v4-openapi.yml#GET /linode/instances/{linodeId}/backups
+  network:
+    path_segment:
+    - vpcs
+    properties:
+      name: label
+      id: id
+      created_at: created
+      description: description
+      region: region
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/linode-api-v4-official-openapi.json#DELETE /{apiVersion}/vpcs/{vpcId}
+    - openapi/_original/linode-api-v4-official-openapi.json#GET /{apiVersion}/nodebalancers/{nodeBalancerId}/vpcs
+    - openapi/_original/linode-api-v4-official-openapi.json#GET /{apiVersion}/nodebalancers/{nodeBalancerId}/vpcs/{nodeBalancerVpcConfigId}
+    - openapi/_original/linode-api-v4-official-openapi.json#GET /{apiVersion}/vpcs
+    - openapi/_original/linode-api-v4-official-openapi.json#GET /{apiVersion}/vpcs/{vpcId}
+  firewall:
+    path_segment:
+    - firewalls
+    properties:
+      id: id
+      name: label
+      status: status
+      created_at: created
+      metadata: tags
+      rules: rules
+      updated_at: updated
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/linode-api-v4-official-openapi.json#DELETE /{apiVersion}/networking/firewalls/{firewallId}
+    - openapi/_original/linode-api-v4-official-openapi.json#GET /{apiVersion}/linode/instances/{linodeId}/firewalls
+    - openapi/_original/linode-api-v4-official-openapi.json#GET /{apiVersion}/linode/instances/{linodeId}/interfaces/{interfaceId}/firewalls
+    - openapi/_original/linode-api-v4-official-openapi.json#GET /{apiVersion}/networking/firewalls
+    - openapi/_original/linode-api-v4-official-openapi.json#GET /{apiVersion}/networking/firewalls/{firewallId}
+  load_balancer:
+    path_segment:
+    - nodebalancers
+    properties:
+      name:
+      - hostname
+      - label
+      id: id
+      metadata: tags
+      region: region
+      created_at: created
+      type: type
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/linode-api-v4-official-openapi.json#DELETE /{apiVersion}/nodebalancers/{nodeBalancerId}
+    - openapi/_original/linode-api-v4-official-openapi.json#GET /{apiVersion}/linode/instances/{linodeId}/nodebalancers
+    - openapi/_original/linode-api-v4-official-openapi.json#GET /{apiVersion}/nodebalancers
+    - openapi/_original/linode-api-v4-official-openapi.json#GET /{apiVersion}/nodebalancers/{nodeBalancerId}
+    - openapi/_original/linode-api-v4-official-openapi.json#POST /{apiVersion}/nodebalancers
+  ssh_key:
+    path_segment:
+    - sshkeys
+    properties:
+      name: label
+      public_key: ssh_key
+      id: id
+      created_at: created
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/linode-api-v4-official-openapi.json#DELETE /{apiVersion}/profile/sshkeys/{sshKeyId}
+    - openapi/_original/linode-api-v4-official-openapi.json#GET /{apiVersion}/profile/sshkeys
+    - openapi/_original/linode-api-v4-official-openapi.json#GET /{apiVersion}/profile/sshkeys/{sshKeyId}
+    - openapi/_original/linode-api-v4-official-openapi.json#POST /{apiVersion}/profile/sshkeys
+    - openapi/_original/linode-api-v4-official-openapi.json#PUT /{apiVersion}/profile/sshkeys/{sshKeyId}
+  region:
+    path_segment:
+    - regions
+    properties:
+      name: label
+      id: id
+      available: status
+      description: description
+      metadata: tags
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/linode-api-v4-official-openapi.json#GET /{apiVersion}/regions
+    - openapi/_original/linode-api-v4-official-openapi.json#GET /{apiVersion}/regions/{regionId}
+    - openapi/_original/linode-api-v4-official-openapi.json#POST /{apiVersion}/images/{imageId}/regions
+    - openapi/_original/linode-api-v4-openapi.yml#GET /regions
+    - openapi/_original/linode-api-v4-openapi.yml#GET /regions/{regionId}

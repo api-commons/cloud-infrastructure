@@ -1,0 +1,33 @@
+provider: neo4j
+apis_io: https://apis.io/providers/neo4j/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    properties:
+      name: name
+      status: status
+      id: id
+      region: region
+      instance_type: type
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/neo4j-aura-api-openapi.yml#DELETE /instances/{instanceId}
+    - openapi/_original/neo4j-aura-api-openapi.yml#GET /instances
+    - openapi/_original/neo4j-aura-api-openapi.yml#GET /instances/{instanceId}
+    - openapi/_original/neo4j-aura-api-openapi.yml#PATCH /instances/{instanceId}
+    - openapi/_original/neo4j-aura-api-openapi.yml#POST /instances
+  snapshot:
+    path_segment:
+    - snapshots
+    properties:
+      id: snapshot_id
+      status: status
+      source_id: instance_id
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/neo4j-aura-api-openapi.yml#GET /instances/{instanceId}/snapshots
+    - openapi/_original/neo4j-aura-api-openapi.yml#GET /instances/{instanceId}/snapshots/{snapshotId}
+    - openapi/_original/neo4j-aura-api-openapi.yml#POST /instances/{instanceId}/snapshots

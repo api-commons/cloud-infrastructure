@@ -1,0 +1,12 @@
+provider: coralogix
+apis_io: https://apis.io/providers/coralogix/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/coralogix-openapi.json#DELETE /integrations/integrations/v1/instances/{integration_id}

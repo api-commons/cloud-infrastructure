@@ -1,0 +1,20 @@
+provider: wherobots
+apis_io: https://apis.io/providers/wherobots/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instance
+    properties:
+      name: name
+      status: status
+      id:
+      - id
+      - instanceId
+      created_at: createTime
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/wherobots-cloud-openapi-original.json#GET /me/jupyter/lab/instance
+    - openapi/_original/wherobots-cloud-openapi-original.json#GET /me/jupyter/lab/instance/{notebook_id}
+    - openapi/_original/wherobots-cloud-openapi-original.json#POST /me/jupyter/lab/instance

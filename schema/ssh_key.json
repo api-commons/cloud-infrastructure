@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/cloud-infrastructure/main/schema/ssh_key.json",
+  "title": "Ssh Key",
+  "description": "The common ssh_key in Cloud Infrastructure, distilled from 24 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.875,
+      "x-commons-providers": 21,
+      "x-commons-spellings": [
+        "name",
+        "label"
+      ]
+    },
+    "public_key": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.875,
+      "x-commons-providers": 21,
+      "x-commons-spellings": [
+        "public_key",
+        "publicKey",
+        "key",
+        "ssh_key"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.792,
+      "x-commons-providers": 19,
+      "x-commons-spellings": [
+        "id",
+        "sshKeyId"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.542,
+      "x-commons-providers": 13,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "created",
+        "createTime",
+        "date_created"
+      ],
+      "format": "date-time"
+    },
+    "fingerprint": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.5,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "fingerprint",
+        "fingerprints"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "cloud-infrastructure",
+    "concept": "ssh_key",
+    "providers": 24,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

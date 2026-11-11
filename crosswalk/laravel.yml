@@ -1,0 +1,84 @@
+provider: laravel
+apis_io: https://apis.io/providers/laravel/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - servers
+    - instances
+    properties:
+      name: name
+      id: id
+      metadata:
+      - attributes
+      - tags
+      - custom
+      instance_type:
+      - type
+      - size
+      public_ip: ip_address
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/laravel-forge-openapi.json#DELETE /orgs/{organization}/servers/{server}
+    - openapi/_original/laravel-forge-openapi.json#DELETE /orgs/{organization}/teams/{team}/servers/{server}
+    - openapi/_original/laravel-forge-openapi.json#GET /orgs/{organization}/servers
+    - openapi/_original/laravel-forge-openapi.json#GET /orgs/{organization}/servers/{server}
+    - openapi/_original/laravel-forge-openapi.json#GET /orgs/{organization}/teams/{team}/servers
+  snapshot:
+    path_segment:
+    - backups
+    - snapshots
+    properties:
+      id: id
+      name: name
+      metadata: attributes
+      type: type
+      description: description
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/laravel-forge-openapi.json#DELETE /orgs/{organization}/servers/{server}/database/backups/{backupConfiguration}
+    - openapi/_original/laravel-forge-openapi.json#GET /orgs/{organization}/servers/{server}/database/backups
+    - openapi/_original/laravel-forge-openapi.json#GET /orgs/{organization}/servers/{server}/database/backups/{backupConfiguration}
+    - openapi/_original/laravel-forge-openapi.json#POST /orgs/{organization}/servers/{server}/database/backups
+    - openapi/_original/laravel-forge-openapi.json#PUT /orgs/{organization}/servers/{server}/database/backups/{backupConfiguration}
+  network:
+    path_segment:
+    - vpcs
+    - network
+    properties:
+      name: name
+      id: id
+      metadata: attributes
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/laravel-forge-openapi.json#GET /orgs/{organization}/server-credentials/{credential}/regions/{region}/vpcs
+    - openapi/_original/laravel-forge-openapi.json#GET /orgs/{organization}/server-credentials/{credential}/regions/{region}/vpcs/{vpcId}
+    - openapi/_original/laravel-forge-openapi.json#GET /orgs/{organization}/servers/{server}/network
+    - openapi/_original/laravel-forge-openapi.json#POST /orgs/{organization}/server-credentials/{credential}/regions/{region}/vpcs
+    - openapi/_original/laravel-forge-openapi.json#PUT /orgs/{organization}/servers/{server}/network
+  ssh_key:
+    path_segment:
+    - ssh-keys
+    properties:
+      name: name
+      public_key: key
+      id: id
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/laravel-forge-openapi.json#DELETE /orgs/{organization}/servers/{server}/ssh-keys/{key}
+    - openapi/_original/laravel-forge-openapi.json#GET /orgs/{organization}/servers/{server}/ssh-keys
+    - openapi/_original/laravel-forge-openapi.json#GET /orgs/{organization}/servers/{server}/ssh-keys/{key}
+    - openapi/_original/laravel-forge-openapi.json#POST /orgs/{organization}/servers/{server}/ssh-keys
+  region:
+    path_segment:
+    - regions
+    properties:
+      name: label
+      id: id
+      metadata: attributes
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/laravel-forge-openapi.json#GET /providers/{provider}/regions
+    - openapi/_original/laravel-forge-openapi.json#GET /providers/{provider}/regions/{providerRegion}
+    - openapi/_original/laravel-openapi.json#GET /meta/regions

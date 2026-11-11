@@ -1,0 +1,32 @@
+provider: voltage-park
+apis_io: https://apis.io/providers/voltage-park/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - virtual-machines
+    properties:
+      name: name
+      status: status
+      id: id
+      instance_type: type
+      image: operating_system
+      public_ip: public_ip
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/voltage-park-openapi.yml#DELETE /virtual-machines/{virtual_machine_id}
+    - openapi/_original/voltage-park-openapi.yml#GET /virtual-machines/
+    - openapi/_original/voltage-park-openapi.yml#GET /virtual-machines/{virtual_machine_id}
+    - openapi/_original/voltage-park-openapi.yml#PATCH /virtual-machines/{virtual_machine_id}
+  ssh_key:
+    path_segment:
+    - ssh-keys
+    properties:
+      name: name
+      id: id
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/voltage-park-openapi.yml#DELETE /organization/ssh-keys/{ssh_key_id}
+    - openapi/_original/voltage-park-openapi.yml#GET /organization/ssh-keys
+    - openapi/_original/voltage-park-openapi.yml#POST /organization/ssh-keys

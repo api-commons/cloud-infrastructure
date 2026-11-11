@@ -1,0 +1,69 @@
+provider: vastdata
+apis_io: https://apis.io/providers/vastdata/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - vms
+    - virtual-machines
+    properties:
+      name:
+      - name
+      - title
+      status: state
+      id:
+      - guid
+      - id
+      created_at: created
+      public_ip: ip
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/vastdata-vms-openapi.json#GET /virtual-machines/
+    - openapi/_original/vastdata-vms-openapi.json#GET /virtual-machines/{id}/
+    - openapi/_original/vastdata-vms-openapi.json#GET /vms/
+    - openapi/_original/vastdata-vms-openapi.json#GET /vms/{id}/
+    - openapi/_original/vastdata-vms-openapi.json#PATCH /vms/{id}/
+  volume:
+    path_segment:
+    - volumes
+    properties:
+      id:
+      - id
+      - uuid
+      name: name
+      status: state
+      created_at: created
+      size:
+      - capacity
+      - size
+      metadata: tags
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/vastdata-vms-openapi.json#DELETE /volumes/bulk
+    - openapi/_original/vastdata-vms-openapi.json#DELETE /volumes/{id}/
+    - openapi/_original/vastdata-vms-openapi.json#GET /prometheusmetrics/volumes
+    - openapi/_original/vastdata-vms-openapi.json#GET /volumes/
+    - openapi/_original/vastdata-vms-openapi.json#GET /volumes/{id}/
+  snapshot:
+    path_segment:
+    - snapshots
+    properties:
+      id:
+      - guid
+      - id
+      name:
+      - name
+      - title
+      status: state
+      created_at: created
+      type: type
+      project_id: tenant_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/vastdata-vms-openapi.json#DELETE /snapshots/{id}/
+    - openapi/_original/vastdata-vms-openapi.json#GET /snapshots/
+    - openapi/_original/vastdata-vms-openapi.json#GET /snapshots/{id}/
+    - openapi/_original/vastdata-vms-openapi.json#PATCH /snapshots/{id}/
+    - openapi/_original/vastdata-vms-openapi.json#POST /snapshots/

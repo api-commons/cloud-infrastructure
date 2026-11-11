@@ -1,0 +1,18 @@
+provider: dedaluslabs
+apis_io: https://apis.io/providers/dedaluslabs/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - machines
+    properties:
+      status: status
+      created_at: created_at
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/dedaluslabs-machines-openapi-original.yml#DELETE /v1/machines/{machine_id}
+    - openapi/_original/dedaluslabs-machines-openapi-original.yml#GET /v1/machines
+    - openapi/_original/dedaluslabs-machines-openapi-original.yml#GET /v1/machines/{machine_id}
+    - openapi/_original/dedaluslabs-machines-openapi-original.yml#PATCH /v1/machines/{machine_id}
+    - openapi/_original/dedaluslabs-machines-openapi-original.yml#POST /v1/machines

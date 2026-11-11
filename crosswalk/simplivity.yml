@@ -1,0 +1,20 @@
+provider: simplivity
+apis_io: https://apis.io/providers/simplivity/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - virtual_machines
+    properties:
+      name:
+      - host_name
+      - name
+      status: state
+      id: id
+      created_at: created_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/simplivity-omnistack-openapi-original.json#GET /policies/{policyId}/virtual_machines
+    - openapi/_original/simplivity-omnistack-openapi-original.json#GET /virtual_machines
+    - openapi/_original/simplivity-omnistack-openapi-original.json#GET /virtual_machines/{vmId}

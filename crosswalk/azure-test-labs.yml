@@ -1,0 +1,34 @@
+provider: azure-test-labs
+apis_io: https://apis.io/providers/azure-test-labs/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - virtualmachines
+    properties:
+      status: provisioningState
+      created_at: createdDate
+      instance_type: size
+      description: notes
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/azure-test-labs-openapi.yaml#DELETE /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/virtualmachines/{name}
+    - openapi/_original/azure-test-labs-openapi.yaml#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/virtualmachines
+    - openapi/_original/azure-test-labs-openapi.yaml#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/virtualmachines/{name}
+    - openapi/_original/azure-test-labs-openapi.yaml#PATCH /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/virtualmachines/{name}
+    - openapi/_original/azure-test-labs-openapi.yaml#PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/virtualmachines/{name}
+  volume:
+    path_segment:
+    - disks
+    properties:
+      status: provisioningState
+      created_at: createdDate
+      type: diskType
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/azure-test-labs-openapi.yaml#DELETE /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/users/{userName}/disks/{name}
+    - openapi/_original/azure-test-labs-openapi.yaml#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/users/{userName}/disks
+    - openapi/_original/azure-test-labs-openapi.yaml#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/users/{userName}/disks/{name}
+    - openapi/_original/azure-test-labs-openapi.yaml#PATCH /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/users/{userName}/disks/{name}
+    - openapi/_original/azure-test-labs-openapi.yaml#PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/users/{userName}/disks/{name}

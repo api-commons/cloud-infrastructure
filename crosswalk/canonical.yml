@@ -1,0 +1,101 @@
+provider: canonical
+apis_io: https://apis.io/providers/canonical/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    properties:
+      name: name
+      status: status
+      id: id
+      created_at: created_at
+      metadata:
+      - metadata
+      - tags
+      instance_type:
+      - type
+      - instance_type
+      image: image_id
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/canonical-anbox-cloud-ams-api-openapi.json#DELETE /1.0/instances
+    - openapi/_original/canonical-anbox-cloud-ams-api-openapi.json#DELETE /1.0/instances/{id_or_name}
+    - openapi/_original/canonical-anbox-cloud-ams-api-openapi.json#GET /1.0/instances
+    - openapi/_original/canonical-anbox-cloud-ams-api-openapi.json#GET /1.0/instances/{id_or_name}
+    - openapi/_original/canonical-anbox-cloud-ams-api-openapi.json#PATCH /1.0/instances/{id_or_name}
+  volume:
+    path_segment:
+    - volumes
+    properties:
+      name: name
+      status: status
+      type: type
+      metadata: metadata
+      description: description
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/canonical-lxd-rest-api-openapi.yml#GET /1.0/storage-pools/{poolName}/volumes
+    - openapi/_original/canonical-lxd-rest-api-openapi.yml#GET /1.0/storage-pools/{poolName}/volumes/{type}
+    - openapi/_original/canonical-lxd-rest-api-openapi.yml#POST /1.0/storage-pools/{poolName}/volumes
+    - openapi/_original/canonical-lxd-rest-api-openapi.yml#POST /1.0/storage-pools/{poolName}/volumes/{type}
+  snapshot:
+    path_segment:
+    - snapshots
+    - backups
+    properties:
+      id: id
+      name: name
+      status: status
+      metadata: metadata
+      type: type
+      description: description
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/canonical-lxd-rest-api-openapi.yml#DELETE /1.0/instances/{name}/backups/{backup}
+    - openapi/_original/canonical-lxd-rest-api-openapi.yml#DELETE /1.0/instances/{name}/snapshots/{snapshot}
+    - openapi/_original/canonical-lxd-rest-api-openapi.yml#DELETE /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/backups/{backupName}
+    - openapi/_original/canonical-lxd-rest-api-openapi.yml#DELETE /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/snapshots/{snapshotName}
+    - openapi/_original/canonical-lxd-rest-api-openapi.yml#GET /1.0/instances/{name}/backups
+  network:
+    path_segment:
+    - networks
+    properties:
+      name: name
+      status: status
+      description: description
+      metadata: metadata
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/canonical-lxd-rest-api-openapi.yml#DELETE /1.0/networks/{name}
+    - openapi/_original/canonical-lxd-rest-api-openapi.yml#GET /1.0/networks
+    - openapi/_original/canonical-lxd-rest-api-openapi.yml#GET /1.0/networks/{name}
+    - openapi/_original/canonical-lxd-rest-api-openapi.yml#PATCH /1.0/networks/{name}
+    - openapi/_original/canonical-lxd-rest-api-openapi.yml#POST /1.0/networks
+  load_balancer:
+    path_segment:
+    - load-balancers
+    properties:
+      metadata: metadata
+      status: status
+      type: type
+      description: description
+      targets: backends
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/canonical-lxd-rest-api-openapi.yml#DELETE /1.0/networks/{networkName}/load-balancers/{listenAddress}
+    - openapi/_original/canonical-lxd-rest-api-openapi.yml#GET /1.0/networks/{networkName}/load-balancers
+    - openapi/_original/canonical-lxd-rest-api-openapi.yml#GET /1.0/networks/{networkName}/load-balancers/{listenAddress}
+    - openapi/_original/canonical-lxd-rest-api-openapi.yml#PATCH /1.0/networks/{networkName}/load-balancers/{listenAddress}
+    - openapi/_original/canonical-lxd-rest-api-openapi.yml#POST /1.0/networks/{networkName}/load-balancers
+  region:
+    path_segment:
+    - regions
+    properties:
+      available: status
+      metadata: metadata
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/canonical-anbox-stream-gateway-api-openapi.json#GET /1.0/regions

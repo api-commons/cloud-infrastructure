@@ -1,0 +1,38 @@
+provider: render
+apis_io: https://apis.io/providers/render/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    properties:
+      id: id
+      created_at: createdAt
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/render-openapi.json#GET /services/{serviceId}/instances
+  volume:
+    path_segment:
+    - disks
+    properties:
+      id: id
+      name: name
+      created_at: createdAt
+      size: sizeGB
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/render-openapi.json#DELETE /disks/{diskId}
+    - openapi/_original/render-openapi.json#GET /disks
+    - openapi/_original/render-openapi.json#GET /disks/{diskId}
+    - openapi/_original/render-openapi.json#PATCH /disks/{diskId}
+    - openapi/_original/render-openapi.json#POST /disks
+  snapshot:
+    path_segment:
+    - snapshots
+    properties:
+      created_at: createdAt
+      source_id: instanceId
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/render-openapi.json#GET /disks/{diskId}/snapshots

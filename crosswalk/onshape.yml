@@ -1,0 +1,12 @@
+provider: onshape
+apis_io: https://apis.io/providers/onshape/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/onshape-openapi-original.json#POST /assemblies/d/{did}/w/{wid}/e/{eid}/instances

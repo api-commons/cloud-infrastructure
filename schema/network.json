@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/cloud-infrastructure/main/schema/network.json",
+  "title": "Network",
+  "description": "The common network in Cloud Infrastructure, distilled from 34 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.824,
+      "x-commons-providers": 28,
+      "x-commons-spellings": [
+        "name",
+        "displayName",
+        "Name",
+        "label"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.765,
+      "x-commons-providers": 26,
+      "x-commons-spellings": [
+        "id",
+        "networkId",
+        "network_id",
+        "slug",
+        "NetworkId",
+        "uuid"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.441,
+      "x-commons-providers": 15,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "created",
+        "createdDate",
+        "createTime",
+        "creationTimestamp",
+        "create_time",
+        "date_created"
+      ],
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.441,
+      "x-commons-providers": 15,
+      "x-commons-spellings": [
+        "status",
+        "state",
+        "lifecycleState",
+        "provisioningState"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.382,
+      "x-commons-providers": 13,
+      "x-commons-spellings": [
+        "description",
+        "notes",
+        "Description"
+      ]
+    },
+    "cidr": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.324,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "cidrBlock",
+        "cidr",
+        "subnet",
+        "ip_range",
+        "ipRange"
+      ]
+    },
+    "metadata": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.324,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "metadata",
+        "labels",
+        "tags",
+        "attributes",
+        "properties"
+      ]
+    },
+    "project_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.235,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "projectId",
+        "project_id",
+        "organizationId",
+        "tenantId",
+        "OrganizationId",
+        "tenant_id"
+      ]
+    },
+    "region": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.235,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "region",
+        "zone",
+        "dataCenter",
+        "Zone",
+        "location"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "cloud-infrastructure",
+    "concept": "network",
+    "providers": 34,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

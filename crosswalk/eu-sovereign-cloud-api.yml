@@ -1,0 +1,61 @@
+provider: eu-sovereign-cloud-api
+apis_io: https://apis.io/providers/eu-sovereign-cloud-api/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    properties:
+      status: status
+      metadata:
+      - labels
+      - metadata
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/eu-sovereign-cloud-api-foundation-compute-v1-openapi.yml#DELETE /v1/tenants/{tenant}/workspaces/{workspace}/instances/{name}
+    - openapi/_original/eu-sovereign-cloud-api-foundation-compute-v1-openapi.yml#GET /v1/tenants/{tenant}/workspaces/{workspace}/instances
+    - openapi/_original/eu-sovereign-cloud-api-foundation-compute-v1-openapi.yml#GET /v1/tenants/{tenant}/workspaces/{workspace}/instances/{name}
+    - openapi/_original/eu-sovereign-cloud-api-foundation-compute-v1-openapi.yml#PUT /v1/tenants/{tenant}/workspaces/{workspace}/instances/{name}
+    - openapi/_original/foundation.compute.v1.yaml#DELETE /v1/tenants/{tenant}/workspaces/{workspace}/instances/{name}
+  network:
+    path_segment:
+    - networks
+    properties:
+      status: status
+      metadata:
+      - labels
+      - metadata
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/eu-sovereign-cloud-api-foundation-network-v1-openapi.yml#DELETE /v1/tenants/{tenant}/workspaces/{workspace}/networks/{name}
+    - openapi/_original/eu-sovereign-cloud-api-foundation-network-v1-openapi.yml#GET /v1/tenants/{tenant}/workspaces/{workspace}/networks
+    - openapi/_original/eu-sovereign-cloud-api-foundation-network-v1-openapi.yml#GET /v1/tenants/{tenant}/workspaces/{workspace}/networks/{name}
+    - openapi/_original/eu-sovereign-cloud-api-foundation-network-v1-openapi.yml#PUT /v1/tenants/{tenant}/workspaces/{workspace}/networks/{name}
+    - openapi/_original/foundation.network.v1.yaml#DELETE /v1/tenants/{tenant}/workspaces/{workspace}/networks/{name}
+  firewall:
+    path_segment:
+    - security-groups
+    properties:
+      status: status
+      metadata:
+      - labels
+      - metadata
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/eu-sovereign-cloud-api-foundation-network-v1-openapi.yml#DELETE /v1/tenants/{tenant}/workspaces/{workspace}/security-groups/{name}
+    - openapi/_original/eu-sovereign-cloud-api-foundation-network-v1-openapi.yml#GET /v1/tenants/{tenant}/workspaces/{workspace}/security-groups
+    - openapi/_original/eu-sovereign-cloud-api-foundation-network-v1-openapi.yml#GET /v1/tenants/{tenant}/workspaces/{workspace}/security-groups/{name}
+    - openapi/_original/eu-sovereign-cloud-api-foundation-network-v1-openapi.yml#PUT /v1/tenants/{tenant}/workspaces/{workspace}/security-groups/{name}
+    - openapi/_original/foundation.network.v1.yaml#DELETE /v1/tenants/{tenant}/workspaces/{workspace}/security-groups/{name}
+  region:
+    path_segment:
+    - regions
+    properties:
+      metadata: metadata
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/eu-sovereign-cloud-api-foundation-region-v1-openapi.yml#GET /v1/regions
+    - openapi/_original/eu-sovereign-cloud-api-foundation-region-v1-openapi.yml#GET /v1/regions/{name}
+    - openapi/_original/foundation.region.v1.yaml#GET /v1/regions
+    - openapi/_original/foundation.region.v1.yaml#GET /v1/regions/{name}

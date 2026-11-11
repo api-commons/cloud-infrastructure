@@ -1,0 +1,19 @@
+provider: chef-software
+apis_io: https://apis.io/providers/chef-software/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - servers
+    properties:
+      name: name
+      id: id
+      public_ip: ip_address
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/chef-software-infra_proxy-infra_proxy-openapi.json#DELETE /api/v0/infra/servers/{id}
+    - openapi/_original/chef-software-infra_proxy-infra_proxy-openapi.json#GET /api/v0/infra/servers
+    - openapi/_original/chef-software-infra_proxy-infra_proxy-openapi.json#GET /api/v0/infra/servers/{id}
+    - openapi/_original/chef-software-infra_proxy-infra_proxy-openapi.json#POST /api/v0/infra/servers
+    - openapi/_original/chef-software-infra_proxy-infra_proxy-openapi.json#PUT /api/v0/infra/servers/{id}

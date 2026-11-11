@@ -1,0 +1,775 @@
+openapi: 3.1.0
+info:
+  title: Cloud Infrastructure (API Commons)
+  version: 0.1.0-draft.20261110
+  description: 'The common Cloud Infrastructure interface, distilled from the harvested OpenAPI of 384 providers
+    in the APIs.io catalog. Not a product: no one serves this API. It is the shape the market already shares, measured,
+    so that providers, agents and integrators can map to one vocabulary. See profile.yml.'
+  license:
+    name: CC BY-NC-SA 4.0
+    url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+paths:
+  /instances:
+    get:
+      operationId: listInstances
+      summary: List instances
+      tags:
+      - Instances
+      x-commons-tier: core
+      x-commons-share: 0.932
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id001
+                  $ref: '#/components/schemas/Instance'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createInstance
+      summary: Create an instance
+      tags:
+      - Instances
+      x-commons-tier: core
+      x-commons-share: 0.625
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+  /instances/{instance_id}:
+    parameters:
+    - $ref: '#/components/parameters/instance_id'
+    get:
+      operationId: getInstance
+      summary: Get an instance
+      tags:
+      - Instances
+      x-commons-tier: core
+      x-commons-share: 0.818
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+    delete:
+      operationId: deleteInstance
+      summary: Delete an instance
+      tags:
+      - Instances
+      x-commons-tier: core
+      x-commons-share: 0.67
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+    patch:
+      operationId: updateInstance
+      summary: Update an instance
+      tags:
+      - Instances
+      x-commons-tier: extended
+      x-commons-share: 0.477
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+  /volumes:
+    get:
+      operationId: listVolumes
+      summary: List volumes
+      tags:
+      - Volumes
+      x-commons-tier: core
+      x-commons-share: 0.947
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id002
+                  $ref: '#/components/schemas/Volume'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createVolume
+      summary: Create a volume
+      tags:
+      - Volumes
+      x-commons-tier: core
+      x-commons-share: 0.737
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+  /volumes/{volume_id}:
+    parameters:
+    - $ref: '#/components/parameters/volume_id'
+    get:
+      operationId: getVolume
+      summary: Get a volume
+      tags:
+      - Volumes
+      x-commons-tier: core
+      x-commons-share: 0.737
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+    delete:
+      operationId: deleteVolume
+      summary: Delete a volume
+      tags:
+      - Volumes
+      x-commons-tier: core
+      x-commons-share: 0.658
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+    patch:
+      operationId: updateVolume
+      summary: Update a volume
+      tags:
+      - Volumes
+      x-commons-tier: core
+      x-commons-share: 0.5
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+  /snapshots:
+    get:
+      operationId: listSnapshots
+      summary: List snapshots
+      tags:
+      - Snapshots
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id003
+                  $ref: '#/components/schemas/Snapshot'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createSnapshot
+      summary: Create a snapshot
+      tags:
+      - Snapshots
+      x-commons-tier: core
+      x-commons-share: 0.774
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+  /snapshots/{snapshot_id}:
+    parameters:
+    - $ref: '#/components/parameters/snapshot_id'
+    get:
+      operationId: getSnapshot
+      summary: Get a snapshot
+      tags:
+      - Snapshots
+      x-commons-tier: core
+      x-commons-share: 0.71
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+    delete:
+      operationId: deleteSnapshot
+      summary: Delete a snapshot
+      tags:
+      - Snapshots
+      x-commons-tier: core
+      x-commons-share: 0.645
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+    patch:
+      operationId: updateSnapshot
+      summary: Update a snapshot
+      tags:
+      - Snapshots
+      x-commons-tier: extended
+      x-commons-share: 0.387
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+  /networks:
+    get:
+      operationId: listNetworks
+      summary: List networks
+      tags:
+      - Networks
+      x-commons-tier: core
+      x-commons-share: 0.972
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id004
+                  $ref: '#/components/schemas/Network'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createNetwork
+      summary: Create a network
+      tags:
+      - Networks
+      x-commons-tier: core
+      x-commons-share: 0.722
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id004
+  /networks/{network_id}:
+    parameters:
+    - $ref: '#/components/parameters/network_id'
+    get:
+      operationId: getNetwork
+      summary: Get a network
+      tags:
+      - Networks
+      x-commons-tier: core
+      x-commons-share: 0.722
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+    delete:
+      operationId: deleteNetwork
+      summary: Delete a network
+      tags:
+      - Networks
+      x-commons-tier: core
+      x-commons-share: 0.667
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+    patch:
+      operationId: updateNetwork
+      summary: Update a network
+      tags:
+      - Networks
+      x-commons-tier: core
+      x-commons-share: 0.583
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id004
+  /firewalls:
+    get:
+      operationId: listFirewalls
+      summary: List firewalls
+      tags:
+      - Firewalls
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id005
+                  $ref: '#/components/schemas/Firewall'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createFirewall
+      summary: Create a firewall
+      tags:
+      - Firewalls
+      x-commons-tier: core
+      x-commons-share: 0.714
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id005
+  /firewalls/{firewall_id}:
+    parameters:
+    - $ref: '#/components/parameters/firewall_id'
+    delete:
+      operationId: deleteFirewall
+      summary: Delete a firewall
+      tags:
+      - Firewalls
+      x-commons-tier: core
+      x-commons-share: 0.714
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+    get:
+      operationId: getFirewall
+      summary: Get a firewall
+      tags:
+      - Firewalls
+      x-commons-tier: core
+      x-commons-share: 0.714
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+    patch:
+      operationId: updateFirewall
+      summary: Update a firewall
+      tags:
+      - Firewalls
+      x-commons-tier: core
+      x-commons-share: 0.619
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id005
+  /load-balancers/{load_balancer_id}:
+    parameters:
+    - $ref: '#/components/parameters/load_balancer_id'
+    delete:
+      operationId: deleteLoadBalancer
+      summary: Delete a load balancer
+      tags:
+      - Load Balancers
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: &id006
+                $ref: '#/components/schemas/LoadBalancer'
+    get:
+      operationId: getLoadBalancer
+      summary: Get a load balancer
+      tags:
+      - Load Balancers
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+    patch:
+      operationId: updateLoadBalancer
+      summary: Update a load balancer
+      tags:
+      - Load Balancers
+      x-commons-tier: core
+      x-commons-share: 0.857
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id006
+  /load-balancers:
+    get:
+      operationId: listLoadBalancers
+      summary: List load balancers
+      tags:
+      - Load Balancers
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: *id006
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createLoadBalancer
+      summary: Create a load balancer
+      tags:
+      - Load Balancers
+      x-commons-tier: core
+      x-commons-share: 0.929
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id006
+  /ssh-keys:
+    get:
+      operationId: listSshKeys
+      summary: List ssh keys
+      tags:
+      - Ssh Keys
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id007
+                  $ref: '#/components/schemas/SshKey'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createSshKey
+      summary: Create a ssh key
+      tags:
+      - Ssh Keys
+      x-commons-tier: core
+      x-commons-share: 0.958
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id007
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id007
+  /ssh-keys/{ssh_key_id}:
+    parameters:
+    - $ref: '#/components/parameters/ssh_key_id'
+    delete:
+      operationId: deleteSshKey
+      summary: Delete a ssh key
+      tags:
+      - Ssh Keys
+      x-commons-tier: core
+      x-commons-share: 0.833
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id007
+    get:
+      operationId: getSshKey
+      summary: Get a ssh key
+      tags:
+      - Ssh Keys
+      x-commons-tier: core
+      x-commons-share: 0.542
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id007
+    patch:
+      operationId: updateSshKey
+      summary: Update a ssh key
+      tags:
+      - Ssh Keys
+      x-commons-tier: extended
+      x-commons-share: 0.333
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id007
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id007
+  /regions:
+    get:
+      operationId: listRegions
+      summary: List regions
+      tags:
+      - Regions
+      x-commons-tier: core
+      x-commons-share: 0.966
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id008
+                  $ref: '#/components/schemas/Region'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createRegion
+      summary: Create a region
+      tags:
+      - Regions
+      x-commons-tier: extended
+      x-commons-share: 0.207
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id008
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id008
+  /regions/{region_id}:
+    parameters:
+    - $ref: '#/components/parameters/region_id'
+    get:
+      operationId: getRegion
+      summary: Get a region
+      tags:
+      - Regions
+      x-commons-tier: extended
+      x-commons-share: 0.483
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id008
+components:
+  schemas:
+    Instance:
+      $ref: ./schema/instance.json
+    Volume:
+      $ref: ./schema/volume.json
+    Snapshot:
+      $ref: ./schema/snapshot.json
+    Network:
+      $ref: ./schema/network.json
+    Firewall:
+      $ref: ./schema/firewall.json
+    LoadBalancer:
+      $ref: ./schema/load_balancer.json
+    SshKey:
+      $ref: ./schema/ssh_key.json
+    Region:
+      $ref: ./schema/region.json
+  parameters:
+    instance_id:
+      name: instance_id
+      in: path
+      required: true
+      schema:
+        type: string
+    volume_id:
+      name: volume_id
+      in: path
+      required: true
+      schema:
+        type: string
+    snapshot_id:
+      name: snapshot_id
+      in: path
+      required: true
+      schema:
+        type: string
+    network_id:
+      name: network_id
+      in: path
+      required: true
+      schema:
+        type: string
+    firewall_id:
+      name: firewall_id
+      in: path
+      required: true
+      schema:
+        type: string
+    load_balancer_id:
+      name: load_balancer_id
+      in: path
+      required: true
+      schema:
+        type: string
+    ssh_key_id:
+      name: ssh_key_id
+      in: path
+      required: true
+      schema:
+        type: string
+    region_id:
+      name: region_id
+      in: path
+      required: true
+      schema:
+        type: string

@@ -1,0 +1,65 @@
+provider: freestyle-sh
+apis_io: https://apis.io/providers/freestyle-sh/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - vm
+    - vms
+    properties:
+      name: displayName
+      status: state
+      id:
+      - id
+      - slug
+      created_at: createdAt
+      metadata: metadata
+      image: image
+      public_ip: networks
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/freestyle-identity-api-openapi.yml#DELETE /identity/v1/identities/{identity}/permissions/vm/{vm_id}
+    - openapi/_original/freestyle-identity-api-openapi.yml#GET /identity/v1/identities/{identity}/permissions/vm
+    - openapi/_original/freestyle-identity-api-openapi.yml#GET /identity/v1/identities/{identity}/permissions/vm/{vm_id}
+    - openapi/_original/freestyle-identity-api-openapi.yml#POST /identity/v1/identities/{identity}/permissions/vm/{vm_id}
+    - openapi/_original/freestyle-identity-api-openapi.yml#PUT /identity/v1/identities/{identity}/permissions/vm/{vm_id}
+  snapshot:
+    path_segment:
+    - snapshots
+    - snapshot
+    properties:
+      id:
+      - id
+      - slug
+      - snapshotId
+      name: displayName
+      created_at: createdAt
+      updated_at: updatedAt
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/freestyle-sh-openapi.json#DELETE /snapshots/{snapshotIdOrSlug}
+    - openapi/_original/freestyle-sh-openapi.json#DELETE /v5/snapshots/{snapshotIdOrSlug}
+    - openapi/_original/freestyle-sh-openapi.json#GET /snapshots
+    - openapi/_original/freestyle-sh-openapi.json#GET /snapshots/{snapshotIdOrSlug}
+    - openapi/_original/freestyle-sh-openapi.json#GET /v5/snapshots
+  network:
+    path_segment:
+    - vpcs
+    - networks
+    properties:
+      name: displayName
+      id:
+      - id
+      - slug
+      created_at: createdAt
+      status: state
+      cidr: cidr
+      metadata: metadata
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/freestyle-sh-openapi.json#DELETE /tunnels/{tunnelIdOrSlug}/vpcs/{vpcIdOrSlug}
+    - openapi/_original/freestyle-sh-openapi.json#DELETE /v5/tunnels/{tunnelIdOrSlug}/vpcs/{vpcIdOrSlug}
+    - openapi/_original/freestyle-sh-openapi.json#DELETE /v5/vpcs/{vpcIdOrSlug}
+    - openapi/_original/freestyle-sh-openapi.json#DELETE /vpcs/{vpcIdOrSlug}
+    - openapi/_original/freestyle-sh-openapi.json#GET /v5/vpcs

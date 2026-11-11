@@ -1,0 +1,19 @@
+provider: smithery-ai
+apis_io: https://apis.io/providers/smithery-ai/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - servers
+    properties:
+      name: displayName
+      created_at: createdAt
+      description: description
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/smithery-registry-api-openapi.yml#DELETE /servers/{qualifiedName}
+    - openapi/_original/smithery-registry-api-openapi.yml#GET /servers
+    - openapi/_original/smithery-registry-api-openapi.yml#GET /servers/{qualifiedName}
+    - openapi/_original/smithery-registry-api-openapi.yml#PATCH /servers/{qualifiedName}
+    - openapi/_original/smithery-registry-api-openapi.yml#PUT /namespaces/{namespace}/servers/{server}

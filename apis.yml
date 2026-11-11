@@ -1,0 +1,66 @@
+aid: common-cloud-infrastructure
+name: Cloud Infrastructure
+type: Common
+description: 'The common Cloud Infrastructure vocabulary, distilled from the harvested OpenAPI of 384 providers
+  in APIs.io: shared operations, JSON Schema per concept with measured adoption, and a crosswalk from the common
+  names to each provider''s own.'
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+- Application Programming Interface
+- API
+- Cloud
+- Cloud Computing
+- IaaS
+- Compute
+- Common Schema
+created: '2026-11-10'
+modified: '2026-11-10'
+url: https://raw.githubusercontent.com/api-commons/cloud-infrastructure/main/apis.yml
+specificationVersion: '0.20'
+apis:
+- aid: common-cloud-infrastructure:cloud-infrastructure
+  name: Common Cloud Infrastructure Interface
+  description: The Cloud Infrastructure interface the market already shares, measured.
+  humanURL: https://github.com/api-commons/cloud-infrastructure
+  tags:
+  - Cloud
+  - Cloud Computing
+  properties:
+  - type: OpenAPI
+    url: https://raw.githubusercontent.com/api-commons/cloud-infrastructure/main/openapi.yml
+  - type: Profile
+    url: https://raw.githubusercontent.com/api-commons/cloud-infrastructure/main/profile.yml
+  - type: Adopters
+    url: https://raw.githubusercontent.com/api-commons/cloud-infrastructure/main/adopters.yml
+  - type: Rules
+    url: https://raw.githubusercontent.com/api-commons/schema-commons/main/ruleset/schema-commons-naming.yaml
+  - type: JSONSchema
+    name: instance
+    url: https://raw.githubusercontent.com/api-commons/cloud-infrastructure/main/schema/instance.json
+  - type: JSONSchema
+    name: volume
+    url: https://raw.githubusercontent.com/api-commons/cloud-infrastructure/main/schema/volume.json
+  - type: JSONSchema
+    name: snapshot
+    url: https://raw.githubusercontent.com/api-commons/cloud-infrastructure/main/schema/snapshot.json
+  - type: JSONSchema
+    name: network
+    url: https://raw.githubusercontent.com/api-commons/cloud-infrastructure/main/schema/network.json
+  - type: JSONSchema
+    name: firewall
+    url: https://raw.githubusercontent.com/api-commons/cloud-infrastructure/main/schema/firewall.json
+  - type: JSONSchema
+    name: load_balancer
+    url: https://raw.githubusercontent.com/api-commons/cloud-infrastructure/main/schema/load_balancer.json
+  - type: JSONSchema
+    name: ssh_key
+    url: https://raw.githubusercontent.com/api-commons/cloud-infrastructure/main/schema/ssh_key.json
+  - type: JSONSchema
+    name: region
+    url: https://raw.githubusercontent.com/api-commons/cloud-infrastructure/main/schema/region.json
+common:
+- type: License
+  url: https://raw.githubusercontent.com/api-commons/cloud-infrastructure/main/LICENSE
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

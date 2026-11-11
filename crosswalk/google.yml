@@ -1,0 +1,32 @@
+provider: google
+apis_io: https://apis.io/providers/google/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/google-calendar-api-openapi.yml#GET /calendars/{calendarId}/events/{eventId}/instances
+  volume:
+    path_segment:
+    - volumes
+    properties:
+      id: id
+    core_coverage: 0.167
+    evidence:
+    - openapi/_original/books-api-openapi.yml#GET /mylibrary/bookshelves/{shelf}/volumes
+    - openapi/_original/books-api-openapi.yml#GET /users/{userId}/bookshelves/{shelf}/volumes
+    - openapi/_original/books-api-openapi.yml#GET /volumes
+    - openapi/_original/books-api-openapi.yml#GET /volumes/{volumeId}
+  ssh_key:
+    path_segment:
+    - keypairs
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/google-gmail-api-openapi.yml#GET /gmail/v1/users/{userId}/settings/cse/keypairs
+    - openapi/_original/google-gmail-api-openapi.yml#GET /gmail/v1/users/{userId}/settings/cse/keypairs/{keyPairId}
+    - openapi/_original/google-gmail-api-openapi.yml#POST /gmail/v1/users/{userId}/settings/cse/keypairs

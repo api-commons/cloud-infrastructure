@@ -1,0 +1,56 @@
+provider: upcloud
+apis_io: https://apis.io/providers/upcloud/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - servers
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/upcloud-openapi.json#DELETE /1.3/server-group/{uuid}/servers/{server_uuid}
+    - openapi/_original/upcloud-openapi.json#GET /1.3/firewall-ruleset/{ruleset-uuid}/servers
+    - openapi/_original/upcloud-openapi.json#GET /1.3/server-group/{uuid}/servers
+    - openapi/_original/upcloud-openapi.json#POST /1.3/server-group/{uuid}/servers
+    - openapi/_original/upcloud-openapi.yml#DELETE /1.3/server-group/{uuid}/servers/{server_uuid}
+  volume:
+    path_segment:
+    - disk
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/upcloud-openapi.json#GET /1.3/server/{uuid}/stats/disk/{type}
+    - openapi/_original/upcloud-openapi.yml#GET /1.3/server/{uuid}/stats/disk/{type}
+  network:
+    path_segment:
+    - networks
+    - network
+    properties:
+      name: name
+      id: uuid
+      created_at:
+      - create_time
+      - created_at
+      metadata:
+      - tags
+      - labels
+      region: zone
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/upcloud-openapi.json#DELETE /1.3/database/{uuid}/networks/{network-name}
+    - openapi/_original/upcloud-openapi.json#DELETE /1.3/file-storage/{service-uuid}/networks/{network-name}
+    - openapi/_original/upcloud-openapi.json#DELETE /1.3/network/{uuid}
+    - openapi/_original/upcloud-openapi.json#DELETE /1.3/object-storage-2/{service-uuid}/networks/{network-name}
+    - openapi/_original/upcloud-openapi.json#GET /1.3/database/{uuid}/networks
+  region:
+    path_segment:
+    - regions
+    properties:
+      name: name
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/upcloud-openapi.json#GET /1.3/object-storage-2/regions
+    - openapi/_original/upcloud-openapi.json#GET /1.3/object-storage-2/regions/{region-name}
+    - openapi/_original/upcloud-openapi.yml#GET /1.3/object-storage-2/regions
+    - openapi/_original/upcloud-openapi.yml#GET /1.3/object-storage-2/regions/{region-name}

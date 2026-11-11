@@ -1,0 +1,33 @@
+provider: lambda
+apis_io: https://apis.io/providers/lambda/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    properties:
+      name:
+      - name
+      - hostname
+      status: status
+      id: id
+      region: region
+      instance_type: instance_type
+      public_ip: ip
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/lambda-cloud-api-openapi.yml#GET /instances
+    - openapi/_original/lambda-cloud-api-openapi.yml#GET /instances/{id}
+  ssh_key:
+    path_segment:
+    - ssh-keys
+    properties:
+      name: name
+      public_key: public_key
+      id: id
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/lambda-cloud-api-openapi.yml#DELETE /ssh-keys/{id}
+    - openapi/_original/lambda-cloud-api-openapi.yml#GET /ssh-keys
+    - openapi/_original/lambda-cloud-api-openapi.yml#POST /ssh-keys

@@ -1,0 +1,58 @@
+provider: intersight
+apis_io: https://apis.io/providers/intersight/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    - virtualmachines
+    - servers
+    properties:
+      name: Name
+      status: PowerState
+      created_at: CreateTime
+      metadata:
+      - Tags
+      - Labels
+      description: Description
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/intersight-hyperflex-openapi.json#GET /api/v1/forecast/Instances
+    - openapi/_original/intersight-hyperflex-openapi.json#GET /api/v1/forecast/Instances/{Moid}
+    - openapi/_original/intersight-hyperflex-openapi.json#PATCH /api/v1/forecast/Instances/{Moid}
+    - openapi/_original/intersight-hyperflex-openapi.json#POST /api/v1/forecast/Instances/{Moid}
+    - openapi/_original/intersight-server-openapi.json#GET /api/v1/fault/Instances
+  volume:
+    path_segment:
+    - volumes
+    - disks
+    properties:
+      id: Uuid
+      name: HostName
+      status: Status
+      created_at: CreateTime
+      size: Capacity
+      type: VolumeType
+      region: Location
+      metadata: Tags
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/intersight-hyperflex-openapi.json#GET /api/v1/hyperflex/Volumes
+    - openapi/_original/intersight-hyperflex-openapi.json#GET /api/v1/hyperflex/Volumes/{Moid}
+    - openapi/_original/intersight-hyperflex-openapi.json#PATCH /api/v1/hyperflex/Volumes/{Moid}
+    - openapi/_original/intersight-hyperflex-openapi.json#POST /api/v1/hyperflex/Volumes/{Moid}
+    - openapi/_original/intersight-system-openapi.json#GET /api/v1/hci/Disks
+  network:
+    path_segment:
+    - networks
+    properties:
+      name: Name
+      id: NetworkId
+      project_id: OrganizationId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/intersight-nexus-insight-advisor-openapi.json#GET /api/v1/niatelemetry/Networks
+    - openapi/_original/intersight-nexus-insight-advisor-openapi.json#GET /api/v1/niatelemetry/Networks/{Moid}
+    - openapi/_original/intersight-workflows-openapi.json#GET /api/v1/meraki/Networks
+    - openapi/_original/intersight-workflows-openapi.json#GET /api/v1/meraki/Networks/{Moid}

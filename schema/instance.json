@@ -1,0 +1,173 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/cloud-infrastructure/main/schema/instance.json",
+  "title": "Instance",
+  "description": "The common instance in Cloud Infrastructure, distilled from 83 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.747,
+      "x-commons-providers": 62,
+      "x-commons-spellings": [
+        "name",
+        "displayName",
+        "hostname",
+        "label",
+        "hostName",
+        "Name",
+        "display_name",
+        "host_name"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.747,
+      "x-commons-providers": 62,
+      "x-commons-spellings": [
+        "status",
+        "state",
+        "lifecycleState",
+        "provisioningState",
+        "powerState",
+        "PowerState",
+        "power_state",
+        "instance_state"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.735,
+      "x-commons-providers": 61,
+      "x-commons-spellings": [
+        "id",
+        "instanceId",
+        "instance_id",
+        "slug",
+        "guid",
+        "uuid"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.542,
+      "x-commons-providers": 45,
+      "x-commons-spellings": [
+        "created_at",
+        "created",
+        "createdAt",
+        "createdDate",
+        "creationTimestamp",
+        "createTime",
+        "created_on",
+        "created-at"
+      ],
+      "format": "date-time"
+    },
+    "metadata": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.47,
+      "x-commons-providers": 39,
+      "x-commons-spellings": [
+        "metadata",
+        "tags",
+        "labels",
+        "properties",
+        "custom_fields",
+        "Tags",
+        "Labels",
+        "attributes"
+      ]
+    },
+    "region": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.458,
+      "x-commons-providers": 38,
+      "x-commons-spellings": [
+        "region",
+        "location",
+        "zone",
+        "datacenter",
+        "availabilityZone",
+        "site",
+        "dataCenter",
+        "regionId"
+      ]
+    },
+    "instance_type": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.446,
+      "x-commons-providers": 37,
+      "x-commons-spellings": [
+        "type",
+        "instance_type",
+        "machineType",
+        "size",
+        "gpu_type",
+        "flavor",
+        "shape",
+        "gpuType"
+      ]
+    },
+    "image": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.313,
+      "x-commons-providers": 26,
+      "x-commons-spellings": [
+        "image",
+        "imageId",
+        "os",
+        "template",
+        "image_id",
+        "operatingSystem",
+        "operating_system"
+      ]
+    },
+    "public_ip": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.277,
+      "x-commons-providers": 23,
+      "x-commons-spellings": [
+        "ip",
+        "networks",
+        "ip_address",
+        "ipv4",
+        "ipAddresses",
+        "publicIpAddress",
+        "public-ip",
+        "publicIp"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.229,
+      "x-commons-providers": 19,
+      "x-commons-spellings": [
+        "description",
+        "notes",
+        "Description"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "cloud-infrastructure",
+    "concept": "instance",
+    "providers": 83,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

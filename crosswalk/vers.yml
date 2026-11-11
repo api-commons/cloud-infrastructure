@@ -1,0 +1,25 @@
+provider: vers
+apis_io: https://apis.io/providers/vers/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - vm
+    - vms
+    properties:
+      status: state
+      created_at: created_at
+      metadata: labels
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/vers-openapi-original.json#DELETE /api/v1/vm/{vm_id}
+    - openapi/_original/vers-openapi-original.json#GET /api/v1/vm
+    - openapi/_original/vers-openapi-original.json#GET /api/v1/vms
+  volume:
+    path_segment:
+    - disk
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/vers-openapi-original.json#PATCH /api/v1/vm/{vm_id}/disk

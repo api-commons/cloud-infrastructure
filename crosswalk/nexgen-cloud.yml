@@ -1,0 +1,90 @@
+provider: nexgen-cloud
+apis_io: https://apis.io/providers/nexgen-cloud/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - virtual-machines
+    properties:
+      name: name
+      status: status
+      metadata: labels
+      instance_type: flavor
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/nexgen-cloud-hyperstack-openapi.json#DELETE /core/virtual-machines/{vm_id}
+    - openapi/_original/nexgen-cloud-hyperstack-openapi.json#GET /core/virtual-machines
+    - openapi/_original/nexgen-cloud-hyperstack-openapi.json#GET /core/virtual-machines/{vm_id}
+    - openapi/_original/nexgen-cloud-hyperstack-openapi.json#POST /core/virtual-machines
+    - openapi/_original/nexgen-cloud-infrahub-api-openapi.json#DELETE /core/virtual-machines/{vm_id}
+  volume:
+    path_segment:
+    - volumes
+    - volume
+    properties:
+      name: name
+      status: status
+      size: size
+      type: volume_type
+      description: description
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/nexgen-cloud-hyperstack-openapi.json#DELETE /core/volumes/{volume_id}
+    - openapi/_original/nexgen-cloud-hyperstack-openapi.json#GET /billing/billing/history/volume
+    - openapi/_original/nexgen-cloud-hyperstack-openapi.json#GET /billing/billing/history/volume/{volume_id}
+    - openapi/_original/nexgen-cloud-hyperstack-openapi.json#GET /core/volumes
+    - openapi/_original/nexgen-cloud-hyperstack-openapi.json#GET /core/volumes/{volume_id}
+  snapshot:
+    path_segment:
+    - snapshots
+    - snapshot
+    properties:
+      name: name
+      status: status
+      metadata: labels
+      description: description
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/nexgen-cloud-hyperstack-openapi.json#DELETE /core/snapshots/{id}
+    - openapi/_original/nexgen-cloud-hyperstack-openapi.json#GET /billing/billing/history/snapshot
+    - openapi/_original/nexgen-cloud-hyperstack-openapi.json#GET /billing/billing/history/snapshot/{snapshot_id}
+    - openapi/_original/nexgen-cloud-hyperstack-openapi.json#GET /core/snapshots
+    - openapi/_original/nexgen-cloud-hyperstack-openapi.json#GET /core/snapshots/{id}
+  firewall:
+    path_segment:
+    - firewalls
+    properties:
+      name: name
+      status: status
+      description: description
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/nexgen-cloud-hyperstack-openapi.json#DELETE /core/firewalls/{id}
+    - openapi/_original/nexgen-cloud-hyperstack-openapi.json#GET /core/firewalls
+    - openapi/_original/nexgen-cloud-hyperstack-openapi.json#GET /core/firewalls/{id}
+    - openapi/_original/nexgen-cloud-hyperstack-openapi.json#POST /core/firewalls
+    - openapi/_original/nexgen-cloud-infrahub-api-openapi.json#DELETE /core/firewalls/{id}
+  ssh_key:
+    path_segment:
+    - keypairs
+    properties:
+      name: name
+      public_key: public_key
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/nexgen-cloud-hyperstack-openapi.json#GET /core/keypairs
+    - openapi/_original/nexgen-cloud-hyperstack-openapi.json#POST /core/keypairs
+    - openapi/_original/nexgen-cloud-infrahub-api-openapi.json#GET /core/keypairs
+    - openapi/_original/nexgen-cloud-infrahub-api-openapi.json#POST /core/keypairs
+  region:
+    path_segment:
+    - regions
+    properties:
+      available: status
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/nexgen-cloud-hyperstack-openapi.json#GET /core/regions
+    - openapi/_original/nexgen-cloud-hyperstack-openapi.json#GET /object-storage/regions
+    - openapi/_original/nexgen-cloud-infrahub-api-openapi.json#GET /core/regions
+    - openapi/_original/nexgen-cloud-infrahub-api-openapi.json#GET /object-storage/regions

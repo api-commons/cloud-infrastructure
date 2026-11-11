@@ -1,0 +1,37 @@
+provider: azure-cloud
+apis_io: https://apis.io/providers/azure-cloud/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - virtualmachines
+    properties:
+      name: name
+      id: id
+      metadata:
+      - tags
+      - properties
+      region: location
+      instance_type: type
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/azure-cloud-openapi.yml#DELETE /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}
+    - openapi/_original/azure-cloud-openapi.yml#GET /subscriptions/{subscriptionId}/providers/Microsoft.Compute/virtualMachines
+    - openapi/_original/azure-cloud-openapi.yml#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines
+    - openapi/_original/azure-cloud-openapi.yml#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}
+    - openapi/_original/azure-cloud-openapi.yml#PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}
+  volume:
+    path_segment:
+    - disks
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/azure-cloud-openapi.yml#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/disks
+  snapshot:
+    path_segment:
+    - snapshots
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/azure-cloud-openapi.yml#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/snapshots

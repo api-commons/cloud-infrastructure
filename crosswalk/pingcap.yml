@@ -1,0 +1,27 @@
+provider: pingcap
+apis_io: https://apis.io/providers/pingcap/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/pingcap-tidb-cloud-zero-v1alpha1-openapi-original.json#POST /instances
+  region:
+    path_segment:
+    - regions
+    properties:
+      name:
+      - displayName
+      - name
+      id: id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/pingcap-tidb-cloud-dedicated-v1beta1-openapi-original.json#GET /regions
+    - openapi/_original/pingcap-tidb-cloud-dedicated-v1beta1-openapi-original.json#GET /regions/{regionId}
+    - openapi/_original/pingcap-tidb-cloud-starter-essential-v1beta1-openapi-original.json#GET /regions
+    - openapi/_original/pingcap-tidb-cloud-v1beta-openapi-original.json#GET /api/v1beta/clusters/provider/regions
+    - openapi/_original/tidb-cloud-premium-v1beta2-openapi-original.json#GET /regions

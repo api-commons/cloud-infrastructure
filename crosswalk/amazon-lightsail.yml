@@ -1,0 +1,15 @@
+provider: amazon-lightsail
+apis_io: https://apis.io/providers/amazon-lightsail/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/amazon-lightsail-openapi.yml#DELETE /instances/{instanceName}
+    - openapi/_original/amazon-lightsail-openapi.yml#GET /instances
+    - openapi/_original/amazon-lightsail-openapi.yml#GET /instances/{instanceName}
+    - openapi/_original/amazon-lightsail-openapi.yml#POST /instances

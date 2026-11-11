@@ -1,0 +1,64 @@
+provider: oracle-cloud
+apis_io: https://apis.io/providers/oracle-cloud/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    properties:
+      name: displayName
+      status:
+      - state
+      - lifecycleState
+      id:
+      - id
+      - instanceId
+      metadata: metadata
+      region: region
+      instance_type: shape
+      image: imageId
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/oracle-cloud-core-services-openapi.yaml#DELETE /instances/{instanceId}
+    - openapi/_original/oracle-cloud-core-services-openapi.yaml#GET /clusterNetworks/{clusterNetworkId}/instances
+    - openapi/_original/oracle-cloud-core-services-openapi.yaml#GET /computeCapacityReservations/{capacityReservationId}/instances
+    - openapi/_original/oracle-cloud-core-services-openapi.yaml#GET /computeGpuMemoryClusters/{computeGpuMemoryClusterId}/instances
+    - openapi/_original/oracle-cloud-core-services-openapi.yaml#GET /dedicatedVmHosts/{dedicatedVmHostId}/instances
+  volume:
+    path_segment:
+    - volumes
+    properties:
+      id: id
+      name: displayName
+      status: lifecycleState
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/oracle-cloud-core-services-openapi.yaml#DELETE /volumes/{volumeId}
+    - openapi/_original/oracle-cloud-core-services-openapi.yaml#GET /volumes
+    - openapi/_original/oracle-cloud-core-services-openapi.yaml#GET /volumes/{volumeId}
+    - openapi/_original/oracle-cloud-core-services-openapi.yaml#POST /volumes
+    - openapi/_original/oracle-cloud-core-services-openapi.yaml#PUT /volumes/{volumeId}
+  network:
+    path_segment:
+    - subnets
+    properties:
+      name: displayName
+      id: id
+      status: lifecycleState
+      cidr: cidrBlock
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/oracle-cloud-core-services-openapi.yaml#DELETE /subnets/{subnetId}
+    - openapi/_original/oracle-cloud-core-services-openapi.yaml#GET /ipInventory/subnets/{subnetId}
+    - openapi/_original/oracle-cloud-core-services-openapi.yaml#GET /subnets
+    - openapi/_original/oracle-cloud-core-services-openapi.yaml#GET /subnets/{subnetId}
+    - openapi/_original/oracle-cloud-core-services-openapi.yaml#POST /subnets
+  region:
+    path_segment:
+    - regions
+    properties:
+      name: name
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/oracle-cloud-identity-openapi.yaml#GET /regions

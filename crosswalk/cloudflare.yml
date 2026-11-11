@@ -1,0 +1,94 @@
+provider: cloudflare
+apis_io: https://apis.io/providers/cloudflare/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    - servers
+    properties:
+      name:
+      - hostname
+      - name
+      status: status
+      id:
+      - id
+      - instance_id
+      - instanceId
+      created_at:
+      - created_at
+      - created_on
+      metadata: metadata
+      region: location
+      instance_type: type
+      image: image
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cloudflare-openapi.json#DELETE /accounts/{account_id}/access/ai-controls/mcp/servers/{id}
+    - openapi/_original/cloudflare-openapi.json#DELETE /accounts/{account_id}/ai-search/instances/{id}
+    - openapi/_original/cloudflare-openapi.json#DELETE /accounts/{account_id}/ai-search/namespaces/{name}/instances/{id}
+    - openapi/_original/cloudflare-openapi.json#DELETE /accounts/{account_id}/workflows/{workflow_name}/instances/{instance_id}
+    - openapi/_original/cloudflare-openapi.json#GET /accounts/{account_id}/access/ai-controls/mcp/servers
+  snapshot:
+    path_segment:
+    - snapshot
+    - snapshots
+    properties:
+      status: status
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/cloudflare-accounts--openapi-original.yml#PUT /accounts/{account_id}/intel/indicator-feeds/{feed_id}/snapshot
+    - openapi/_original/cloudflare-openapi-original.yml#PUT /accounts/{account_id}/intel/indicator-feeds/{feed_id}/snapshot
+    - openapi/_original/cloudflare-openapi.json#GET /accounts/{account_id}/magic/connectors/{connector_id}/telemetry/snapshots
+    - openapi/_original/cloudflare-openapi.json#GET /accounts/{account_id}/magic/connectors/{connector_id}/telemetry/snapshots/{snapshot_t}
+    - openapi/_original/cloudflare-openapi.json#GET /radar/bgp/rpki/aspa/snapshot
+  network:
+    path_segment:
+    - networks
+    - network
+    - subnets
+    properties:
+      name: name
+      id:
+      - network_id
+      - id
+      created_at: created_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cloudflare-accounts--openapi-original.yml#DELETE /accounts/{account_id}/devices/networks/{network_id}
+    - openapi/_original/cloudflare-accounts--openapi-original.yml#DELETE /accounts/{account_id}/teamnet/routes/network/{ip_network_encoded}
+    - openapi/_original/cloudflare-accounts--openapi-original.yml#GET /accounts/{account_id}/devices/networks
+    - openapi/_original/cloudflare-accounts--openapi-original.yml#GET /accounts/{account_id}/devices/networks/{network_id}
+    - openapi/_original/cloudflare-accounts--openapi-original.yml#GET /accounts/{account_id}/intel/asn/{asn}/subnets
+  load_balancer:
+    path_segment:
+    - load_balancers
+    properties:
+      name: name
+      id: id
+      created_at: created_on
+      description: description
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/cloudflare-openapi-original.yml#DELETE /zones/{zone_id}/load_balancers/{load_balancer_id}
+    - openapi/_original/cloudflare-openapi-original.yml#GET /zones/{zone_id}/load_balancers
+    - openapi/_original/cloudflare-openapi-original.yml#GET /zones/{zone_id}/load_balancers/{load_balancer_id}
+    - openapi/_original/cloudflare-openapi-original.yml#PATCH /zones/{zone_id}/load_balancers/{load_balancer_id}
+    - openapi/_original/cloudflare-openapi-original.yml#POST /zones/{zone_id}/load_balancers
+  region:
+    path_segment:
+    - regions
+    properties:
+      name:
+      - label
+      - name
+      id: id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cloudflare-accounts--openapi-original.yml#GET /accounts/{account_id}/load_balancers/regions
+    - openapi/_original/cloudflare-accounts--openapi-original.yml#GET /accounts/{account_id}/load_balancers/regions/{region_id}
+    - openapi/_original/cloudflare-openapi-original.yml#GET /accounts/{account_id}/load_balancers/regions
+    - openapi/_original/cloudflare-openapi-original.yml#GET /accounts/{account_id}/load_balancers/regions/{region_id}
+    - openapi/_original/cloudflare-openapi.json#GET /accounts/{account_id}/addressing/regional_hostnames/regions

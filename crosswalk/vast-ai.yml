@@ -1,0 +1,32 @@
+provider: vast-ai
+apis_io: https://apis.io/providers/vast-ai/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instances
+    - machines
+    properties:
+      name: label
+      status: state
+      id: id
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/vast-ai-openapi.json#DELETE /api/v0/instances/{id}/
+    - openapi/_original/vast-ai-openapi.json#GET /api/v0/instances/
+    - openapi/_original/vast-ai-openapi.json#GET /api/v0/instances/{id}/
+    - openapi/_original/vast-ai-openapi.json#GET /api/v0/machines/
+    - openapi/_original/vast-ai-openapi.json#PUT /api/v0/instances/{id}/
+  volume:
+    path_segment:
+    - volumes
+    properties:
+      id: id
+      status: status
+      size: size
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/vast-ai-openapi.json#DELETE /api/v0/volumes
+    - openapi/_original/vast-ai-openapi.json#GET /api/v0/volumes/
+    - openapi/_original/vast-ai-openapi.json#PUT /api/v0/volumes/

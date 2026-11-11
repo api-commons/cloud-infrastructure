@@ -1,0 +1,55 @@
+provider: exoscale
+apis_io: https://apis.io/providers/exoscale/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - instance
+    properties:
+      name: name
+      status: state
+      id: id
+      created_at: created-at
+      metadata: labels
+      instance_type: instance-type
+      image: template
+      public_ip: public-ip
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/exoscale-openapi.yml#DELETE /instance/{id}
+    - openapi/_original/exoscale-openapi.yml#DELETE /reverse-dns/instance/{id}
+    - openapi/_original/exoscale-openapi.yml#GET /instance
+    - openapi/_original/exoscale-openapi.yml#GET /instance/{id}
+    - openapi/_original/exoscale-openapi.yml#GET /reverse-dns/instance/{id}
+  volume:
+    path_segment:
+    - block-storage
+    properties:
+      id: id
+      name: name
+      status: state
+      created_at: created-at
+      size: size
+      metadata: labels
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/exoscale-openapi.yml#DELETE /block-storage/{id}
+    - openapi/_original/exoscale-openapi.yml#GET /block-storage
+    - openapi/_original/exoscale-openapi.yml#GET /block-storage/{id}
+    - openapi/_original/exoscale-openapi.yml#POST /block-storage
+    - openapi/_original/exoscale-openapi.yml#PUT /block-storage/{id}
+  snapshot:
+    path_segment:
+    - snapshot
+    properties:
+      id: id
+      name: name
+      status: state
+      created_at: created-at
+      size: size
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/exoscale-openapi.yml#DELETE /snapshot/{id}
+    - openapi/_original/exoscale-openapi.yml#GET /snapshot
+    - openapi/_original/exoscale-openapi.yml#GET /snapshot/{id}

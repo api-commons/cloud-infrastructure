@@ -1,0 +1,44 @@
+provider: netbox-labs
+apis_io: https://apis.io/providers/netbox-labs/
+context: cloud-infrastructure
+generated: '2026-11-10'
+concepts:
+  instance:
+    path_segment:
+    - virtual-machines
+    properties:
+      name: name
+      status: status
+      id: id
+      created_at: created
+      metadata:
+      - tags
+      - custom_fields
+      region: site
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/netbox-labs-openapi-original.json#DELETE /api/virtualization/virtual-machines/
+    - openapi/_original/netbox-labs-openapi-original.json#DELETE /api/virtualization/virtual-machines/{id}/
+    - openapi/_original/netbox-labs-openapi-original.json#GET /api/virtualization/virtual-machines/
+    - openapi/_original/netbox-labs-openapi-original.json#GET /api/virtualization/virtual-machines/{id}/
+    - openapi/_original/netbox-labs-openapi-original.json#PATCH /api/virtualization/virtual-machines/
+  region:
+    path_segment:
+    - regions
+    properties:
+      name: name
+      id:
+      - id
+      - slug
+      description: description
+      metadata:
+      - tags
+      - custom_fields
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/netbox-labs-openapi-original.json#DELETE /api/dcim/regions/
+    - openapi/_original/netbox-labs-openapi-original.json#DELETE /api/dcim/regions/{id}/
+    - openapi/_original/netbox-labs-openapi-original.json#GET /api/dcim/regions/
+    - openapi/_original/netbox-labs-openapi-original.json#GET /api/dcim/regions/{id}/
+    - openapi/_original/netbox-labs-openapi-original.json#PATCH /api/dcim/regions/
